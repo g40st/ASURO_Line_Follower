@@ -1,0 +1,1174 @@
+GAS LISTING /tmp/ccgi4DnD.s 			page 1
+
+
+   1               		.file	"asuro.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/asuro.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccgi4DnD.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccgi4DnD.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.IsrStandard,"ax",@progbits
+ 119               		.stabs	"IsrStandard:F(0,47)",36,0,138,IsrStandard
+ 120               	.global	IsrStandard
+ 121               		.type	IsrStandard, @function
+ 122               	IsrStandard:
+ 123               		.stabd	46,0,0
+   1:./lib/asuro.c **** /****************************************************************************/
+   2:./lib/asuro.c **** /*!
+   3:./lib/asuro.c ****   \file     asuro.c
+   4:./lib/asuro.c **** 
+   5:./lib/asuro.c ****   \brief    Init- und Interrupt-Funktionen der Asuro Library.\n
+   6:./lib/asuro.c ****             Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten\n
+   7:./lib/asuro.c ****             Version mit 72 kHz.
+   8:./lib/asuro.c **** 
+   9:./lib/asuro.c ****   \par      Interrupt-Doku nur ueber die Datei zu sehen:
+  10:./lib/asuro.c ****             Bitte ueber den oben ausgegebenen Link \b 'gehe \b zum \b Quellcode \n
+  11:./lib/asuro.c ****             \b dieser \b Datei' direkt in der Datei nachsehen.\n
+  12:./lib/asuro.c ****             DoxyGen ist nicht zur Erkennung von Interrupt-Funktionen 'bereit'.\n
+  13:./lib/asuro.c ****             Behandelt werden folgende Interrupts:\n
+  14:./lib/asuro.c ****             - TIMER2_OVF_vect : Timer 2 (fest mit 36 kHz belegt)\n
+  15:./lib/asuro.c ****             - ADC_vect         : Analog-Digital-Wandler
+  16:./lib/asuro.c **** 
+  17:./lib/asuro.c ****   \par      Wichtiger Hinweis:
+  18:./lib/asuro.c ****             Die Init()-Funktion muss von jedem Programm beim Start\n
+  19:./lib/asuro.c ****             aufgerufen werden.\n
+  20:./lib/asuro.c **** 
+  21:./lib/asuro.c ****   \see      Defines zum setzen von Port's und Konfigurationen in asuro.h\n
+  22:./lib/asuro.c ****             IRTX, LEFT_DIR, PWM, GREEN_LED, RIGHT_DIR, FRONT_LED,\n
+  23:./lib/asuro.c ****             ODOMETRIE_LED, RED_LED, ON, OFF, GREEN, FWD, TRUE, FALSE
+  24:./lib/asuro.c **** 
+  25:./lib/asuro.c ****   \version  V--- - 10.11.2003 - Jan Grewe - DLR\n
+  26:./lib/asuro.c ****             Original Version von der ASURO CD\n
+  27:./lib/asuro.c ****   \version  V--- - 20.11.2006 - m.a.r.v.i.n\n
+  28:./lib/asuro.c ****             +++ SIGNAL (ADC_vect)\n
+  29:./lib/asuro.c ****             static Variable toggle mit FALSE initialisiert.\n
+  30:./lib/asuro.c ****             (Bug report von Rolf_Ebert)
+  31:./lib/asuro.c ****   \version  V--- - bis zum 07.01.2007 - \n
+  32:./lib/asuro.c ****             Bitte in Datei CHANGELOG nachsehen.\n
+  33:./lib/asuro.c ****   \version  V001 - 13.01.2007 - m.a.r.v.i.n\n
+  34:./lib/asuro.c ****             +++ Alle Funktionen\n
+  35:./lib/asuro.c ****             Zerlegte Sourcen in einzelne Dateien fuer eine echte Library.
+  36:./lib/asuro.c ****   \version  V002 - 27.01.2007 - Sternthaler\n
+  37:./lib/asuro.c ****             +++ Alle Funktionen\n
+  38:./lib/asuro.c ****             Kommentierte Version (KEINE Funktionsaenderung)
+  39:./lib/asuro.c ****   \version  V003 - 20.02.2007 - m.a.r.v.i.n\n
+  40:./lib/asuro.c ****             Defines fuer Dometrie High/Low Werte aus myasuro.h verwenden
+  41:./lib/asuro.c ****             StopSwitch ersetzt. Deshalb wurde immer die komplette switches.o 
+  42:./lib/asuro.c ****             mitgelinkt
+  43:./lib/asuro.c ****   \version  V004 - 15.11.2007 - m.a.r.v.i.n\n
+  44:./lib/asuro.c ****             RIGHT_DIR und LEFT_DIR waren in der Init Funktion vertauscht
+  45:./lib/asuro.c ****   \version  V005 - 29.01.2008 - m.a.r.v.i.n\n           
+  46:./lib/asuro.c ****             Initialisierung fuer ATmega168\n
+  47:./lib/asuro.c ****             UART Baudrate einstellbar durch Define\n
+  48:./lib/asuro.c ****             Interrupt User Funktionen für Timer und A/D Wandler      
+GAS LISTING /tmp/ccgi4DnD.s 			page 4
+
+
+  49:./lib/asuro.c ****   \version  V006 - 29.03.2009 - rossir\n
+  50:./lib/asuro.c ****             A/D Wandler Abfrage ueber Interrupt  
+  51:./lib/asuro.c ****   \version  V007 - 2013-11-25 - matze
+  52:./lib/asuro.c **** 			Some SIGNALS became deprecated, so I replaced them:
+  53:./lib/asuro.c **** 			SIG_OVERFLOW2			->	TIMER2_OVF_vect
+  54:./lib/asuro.c **** 			SIG_OUTPUT_COMPARE2A	->	TIMER2_COMPA_vect
+  55:./lib/asuro.c **** 			SIG_OUTPUT_COMPARE2		->	TIMER2_COMP_vect
+  56:./lib/asuro.c **** 			SIG_ADC					->	ADC_vect	
+  57:./lib/asuro.c ****           
+  58:./lib/asuro.c **** *****************************************************************************/
+  59:./lib/asuro.c **** /*****************************************************************************
+  60:./lib/asuro.c **** *                                                                            *
+  61:./lib/asuro.c **** *   This program is free software; you can redistribute it and/or modify     *
+  62:./lib/asuro.c **** *   it under the terms of the GNU General Public License as published by     *
+  63:./lib/asuro.c **** *   the Free Software Foundation; either version 2 of the License, or        *
+  64:./lib/asuro.c **** *   any later version.                                                       *
+  65:./lib/asuro.c **** *                                                                            *
+  66:./lib/asuro.c **** *****************************************************************************/
+  67:./lib/asuro.c **** #include "asuro.h"
+  68:./lib/asuro.c **** #include "myasuro.h"
+  69:./lib/asuro.c **** 
+  70:./lib/asuro.c **** #define BAUD_RATE   2400
+  71:./lib/asuro.c **** 
+  72:./lib/asuro.c **** 
+  73:./lib/asuro.c **** /***************************************************************************
+  74:./lib/asuro.c ****   \brief 
+  75:./lib/asuro.c ****   Speicher für die ADC Werte aus IsrStandard().
+  76:./lib/asuro.c ****   Hierauf greifen die nichtinterrupt-Funktionen PollSwitch(), LineData(..) etc. zu.
+  77:./lib/asuro.c ****   */ 
+  78:./lib/asuro.c **** volatile unsigned int	adcValue[6];
+  79:./lib/asuro.c ****   
+  80:./lib/asuro.c **** /***************************************************************************
+  81:./lib/asuro.c ****   \brief 
+  82:./lib/asuro.c ****   Interrupt-Funktion fuer den AD-Wandler. Kann auch, ueber autoencode gesteuert, 
+  83:./lib/asuro.c ****   die Odometrie-Zaehler in encoder hochzaehlen.
+  84:./lib/asuro.c ****   Bemerkung: 
+  85:./lib/asuro.c ****   Alle ADC Werte kommen durch die ADC hardware pipeline 2 Interrupts später an. 
+  86:./lib/asuro.c **** 
+  87:./lib/asuro.c ****   \param 
+  88:./lib/asuro.c ****   keine 
+  89:./lib/asuro.c **** 
+  90:./lib/asuro.c ****   \return 
+  91:./lib/asuro.c ****   nichts 
+  92:./lib/asuro.c **** 
+  93:./lib/asuro.c ****   \see 
+  94:./lib/asuro.c ****   Die globale Variable autoencode wird hier ausgewertet. Ist sie nicht FALSE,\n 
+  95:./lib/asuro.c ****   dann wird der AD-Wandler-Wert zum Zaehlen der Odometriewerte in der globalen\n 
+  96:./lib/asuro.c ****   Variablen encoder benutzt.\n 
+  97:./lib/asuro.c ****   Es wird auch der AD-Wandler-Kanal auf die 'andere' Seite der Odometrie\n 
+  98:./lib/asuro.c ****   umgeschaltete und der AD-Wandler neu gestartet.\n 
+  99:./lib/asuro.c ****   Somit wird erreicht, dass zumindest die Odometriemessung automatisch erfolgt. 
+ 100:./lib/asuro.c **** 	Anmerkungen zu encoder:
+ 101:./lib/asuro.c **** 	1) 
+ 102:./lib/asuro.c **** 	In avg wird ein gleitender Mittelwert mitgeführt: a(n+1) = (a(n)+sensor)/4
+ 103:./lib/asuro.c **** 	(Ich shifte um 2 und habe damit einen Teiler von 4.)
+ 104:./lib/asuro.c **** 
+ 105:./lib/asuro.c **** 	2) 
+GAS LISTING /tmp/ccgi4DnD.s 			page 5
+
+
+ 106:./lib/asuro.c **** 	Ich wollte der Interruptroutine Platz und Zeit ersparen und habe deshalb 
+ 107:./lib/asuro.c **** 	auf eine Initialisierung von avg verzichtet. Durch den kleinen Teiler 4 
+ 108:./lib/asuro.c **** 	passt sich avg sehr rapide den ADC-Werten an. Und verliert in der Realität 
+ 109:./lib/asuro.c **** 	auch "nie" den ersten Tick. (So muss ASURO auch meist erst mal anfahren.) 
+ 110:./lib/asuro.c **** 
+ 111:./lib/asuro.c **** 	3) 
+ 112:./lib/asuro.c **** 	Allerdings - und hier habe ich noch nicht probiert - könnte es mit ein Teiler von 8 
+ 113:./lib/asuro.c **** 	zum ersten mal gelingen, bei Tageslicht, auch ohne eingeschaltetem Encoder-LED, 
+ 114:./lib/asuro.c **** 	Ticks zu sammeln (allerdings verrauscht). Und das spart immerhin Energie - 
+ 115:./lib/asuro.c **** 	falls es wirklich darauf ankommt. 
+ 116:./lib/asuro.c **** 
+ 117:./lib/asuro.c ****   * ADC_vect: handles all ADC and odometry ticking
+ 118:./lib/asuro.c ****   
+ 119:./lib/asuro.c ****   \par  Beispiel: 
+ 120:./lib/asuro.c **** int main(void) { 
+ 121:./lib/asuro.c ****    int lSoll=60, rSoll=30, lPwm=lSoll, rPwm=rSoll, delta=50; 
+ 122:./lib/asuro.c ****    Init();    
+ 123:./lib/asuro.c ****    EncoderInit(); 
+ 124:./lib/asuro.c ****    EncoderStart();    
+ 125:./lib/asuro.c ****     
+ 126:./lib/asuro.c ****    while(1) { 
+ 127:./lib/asuro.c ****       int lIst=encoder[LEFT],   rIst=encoder[RIGHT]; 
+ 128:./lib/asuro.c ****       EncoderSet(0, 0);    
+ 129:./lib/asuro.c ****        
+ 130:./lib/asuro.c ****       lPwm+=(delta*lSoll - 1000*lIst)/300;       
+ 131:./lib/asuro.c ****       rPwm+=(delta*rSoll - 1000*rIst)/300; 
+ 132:./lib/asuro.c ****        
+ 133:./lib/asuro.c ****       SetMotorPower(lPwm, rPwm); 
+ 134:./lib/asuro.c ****       Msleep(delta);       
+ 135:./lib/asuro.c ****    } 
+ 136:./lib/asuro.c **** } 
+ 137:./lib/asuro.c **** *****************************************************************************/ 
+ 138:./lib/asuro.c **** void IsrStandard(void) {
+ 124               		.stabn	68,0,138,.LM0-.LFBB1
+ 125               	.LM0:
+ 126               	.LFBB1:
+ 127               	/* prologue: function */
+ 128               	/* frame size = 0 */
+ 129               	/* stack size = 0 */
+ 130               	.L__stack_usage = 0
+ 139:./lib/asuro.c **** 	static int sign[2]={1,1}, avg[2], adc_cnt = 0;
+ 140:./lib/asuro.c **** 	static unsigned char mux[]={
+ 141:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | IR_RIGHT,	// AVCC reference with external capacitor
+ 142:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | IR_LEFT,	// AVCC reference with external capacitor
+ 143:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | SWITCH,
+ 144:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | BATTERIE | _BV(REFS1),	// internal 2.56V reference with external capaci
+ 145:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | WHEEL_RIGHT,	// AVCC reference with external capacitor
+ 146:./lib/asuro.c **** 		_BV(ADLAR) | _BV(REFS0) | WHEEL_LEFT,	// AVCC reference with external capacitor
+ 147:./lib/asuro.c **** 	};
+ 148:./lib/asuro.c **** 	// Vielleicht hat Rakke ja Recht: 
+ 149:./lib/asuro.c **** 	// ADCL muss zuerst gelesen werden! Sonst können sich zwei Wandlungen überschneiden.
+ 150:./lib/asuro.c ****    	unsigned int sensor = ADCL | (ADCH << 8);	
+ 131               		.stabn	68,0,150,.LM1-.LFBB1
+ 132               	.LM1:
+ 133 0000 84B1      		in r24,0x4
+ 134 0002 25B1      		in r18,0x5
+ 135 0004 90E0      		ldi r25,0
+GAS LISTING /tmp/ccgi4DnD.s 			page 6
+
+
+ 136 0006 922B      		or r25,r18
+ 151:./lib/asuro.c **** 	adcValue[adc_cnt]=sensor;
+ 137               		.stabn	68,0,151,.LM2-.LFBB1
+ 138               	.LM2:
+ 139 0008 2091 0000 		lds r18,adc_cnt.1919
+ 140 000c 3091 0000 		lds r19,adc_cnt.1919+1
+ 141 0010 F901      		movw r30,r18
+ 142 0012 EE0F      		lsl r30
+ 143 0014 FF1F      		rol r31
+ 144 0016 DF01      		movw r26,r30
+ 145 0018 A050      		subi r26,lo8(-(adcValue))
+ 146 001a B040      		sbci r27,hi8(-(adcValue))
+ 147 001c 1196      		adiw r26,1
+ 148 001e 9C93      		st X,r25
+ 149 0020 8E93      		st -X,r24
+ 152:./lib/asuro.c **** 	
+ 153:./lib/asuro.c **** 	if(autoencode)		// Aus Kompatibilitätsgründen wird autoencode weiter benutzt
+ 150               		.stabn	68,0,153,.LM3-.LFBB1
+ 151               	.LM3:
+ 152 0022 4091 0000 		lds r20,autoencode
+ 153 0026 5091 0000 		lds r21,autoencode+1
+ 154 002a 452B      		or r20,r21
+ 155 002c 01F0      		breq .L2
+ 154:./lib/asuro.c **** 	{
+ 155:./lib/asuro.c **** 		if(adc_cnt<2) { // WHEEL_RIGHT || WHEEL_LEFT
+ 156               		.stabn	68,0,155,.LM4-.LFBB1
+ 157               	.LM4:
+ 158 002e 2230      		cpi r18,2
+ 159 0030 3105      		cpc r19,__zero_reg__
+ 160 0032 04F4      		brge .L2
+ 161               	.LBB2:
+ 156:./lib/asuro.c **** 	    	int s=(sensor >> 8); 
+ 162               		.stabn	68,0,156,.LM5-.LFBB1
+ 163               	.LM5:
+ 164 0034 892F      		mov r24,r25
+ 165 0036 9927      		clr r25
+ 157:./lib/asuro.c **** 		    // In avg wird ein gleitender Mittelwert mitgeführt: a(n+1) = 0.75*a(n)+0.25*s
+ 158:./lib/asuro.c **** 		    avg[adc_cnt] += (s-avg[adc_cnt])>>2; 
+ 166               		.stabn	68,0,158,.LM6-.LFBB1
+ 167               	.LM6:
+ 168 0038 DF01      		movw r26,r30
+ 169 003a A050      		subi r26,lo8(-(avg.1918))
+ 170 003c B040      		sbci r27,hi8(-(avg.1918))
+ 171 003e 6D91      		ld r22,X+
+ 172 0040 7C91      		ld r23,X
+ 173 0042 1197      		sbiw r26,1
+ 174 0044 AC01      		movw r20,r24
+ 175 0046 461B      		sub r20,r22
+ 176 0048 570B      		sbc r21,r23
+ 177 004a 5595      		asr r21
+ 178 004c 4795      		ror r20
+ 179 004e 5595      		asr r21
+ 180 0050 4795      		ror r20
+ 181 0052 460F      		add r20,r22
+ 182 0054 571F      		adc r21,r23
+ 183 0056 4D93      		st X+,r20
+ 184 0058 5C93      		st X,r21
+GAS LISTING /tmp/ccgi4DnD.s 			page 7
+
+
+ 159:./lib/asuro.c **** 		
+ 160:./lib/asuro.c **** 			// Schneidet die aktuelle Sensorkurve den gleitenden Mittelwert? Konkret:
+ 161:./lib/asuro.c **** 		    // Weicht der aktuelle Sensorwert um mehr als +/- 2 vom gleitenden Mittelwert ab? 
+ 162:./lib/asuro.c **** 		    if (sign[adc_cnt]*(s-avg[adc_cnt]) > 2) 
+ 185               		.stabn	68,0,162,.LM7-.LFBB1
+ 186               	.LM7:
+ 187 005a E050      		subi r30,lo8(-(sign.1917))
+ 188 005c F040      		sbci r31,hi8(-(sign.1917))
+ 189 005e 6081      		ld r22,Z
+ 190 0060 7181      		ldd r23,Z+1
+ 191 0062 841B      		sub r24,r20
+ 192 0064 950B      		sbc r25,r21
+ 193 0066 689F      		mul r22,r24
+ 194 0068 A001      		movw r20,r0
+ 195 006a 699F      		mul r22,r25
+ 196 006c 500D      		add r21,r0
+ 197 006e 789F      		mul r23,r24
+ 198 0070 500D      		add r21,r0
+ 199 0072 1124      		clr r1
+ 200 0074 4330      		cpi r20,3
+ 201 0076 5105      		cpc r21,__zero_reg__
+ 202 0078 04F0      		brlt .L4
+ 163:./lib/asuro.c **** 		    { 
+ 164:./lib/asuro.c **** 		       // Dann zähle einen Tick weiter. 
+ 165:./lib/asuro.c **** 		       // Und nächster Tick erst wieder bei -/+ 2 Abweichung vom gleitenden Mittelwert. 
+ 166:./lib/asuro.c **** 		       encoder[adc_cnt^RIGHT]++; 
+ 203               		.stabn	68,0,166,.LM8-.LFBB1
+ 204               	.LM8:
+ 205 007a D901      		movw r26,r18
+ 206 007c 81E0      		ldi r24,1
+ 207 007e A827      		eor r26,r24
+ 208 0080 AA0F      		lsl r26
+ 209 0082 BB1F      		rol r27
+ 210 0084 A050      		subi r26,lo8(-(encoder))
+ 211 0086 B040      		sbci r27,hi8(-(encoder))
+ 212 0088 8D91      		ld r24,X+
+ 213 008a 9C91      		ld r25,X
+ 214 008c 1197      		sbiw r26,1
+ 215 008e 0196      		adiw r24,1
+ 216 0090 1196      		adiw r26,1
+ 217 0092 9C93      		st X,r25
+ 218 0094 8E93      		st -X,r24
+ 167:./lib/asuro.c **** 		       sign[adc_cnt] = -sign [adc_cnt]; 
+ 219               		.stabn	68,0,167,.LM9-.LFBB1
+ 220               	.LM9:
+ 221 0096 7195      		neg r23
+ 222 0098 6195      		neg r22
+ 223 009a 7109      		sbc r23,__zero_reg__
+ 224 009c 7183      		std Z+1,r23
+ 225 009e 6083      		st Z,r22
+ 226 00a0 00C0      		rjmp .L4
+ 227               	.L2:
+ 228               	.LBE2:
+ 168:./lib/asuro.c **** 		    } 
+ 169:./lib/asuro.c **** 		}
+ 170:./lib/asuro.c **** 	}
+ 171:./lib/asuro.c **** 	
+GAS LISTING /tmp/ccgi4DnD.s 			page 8
+
+
+ 172:./lib/asuro.c **** 	if(adc_cnt==SWITCH) {
+ 229               		.stabn	68,0,172,.LM10-.LFBB1
+ 230               	.LM10:
+ 231 00a2 2430      		cpi r18,4
+ 232 00a4 3105      		cpc r19,__zero_reg__
+ 233 00a6 01F4      		brne .L4
+ 173:./lib/asuro.c **** 		switched=switched || sensor<(MY_SWITCH_THRESHHOLD<<6);	// Es wurde (ganz sicher) eine Taste gedrü
+ 234               		.stabn	68,0,173,.LM11-.LFBB1
+ 235               	.LM11:
+ 236 00a8 4091 0000 		lds r20,switched
+ 237 00ac 5091 0000 		lds r21,switched+1
+ 238 00b0 452B      		or r20,r21
+ 239 00b2 01F4      		brne .L7
+ 240               		.stabn	68,0,173,.LM12-.LFBB1
+ 241               	.LM12:
+ 242 00b4 51E0      		ldi r21,lo8(1)
+ 243 00b6 40E0      		ldi r20,0
+ 244 00b8 8038      		cpi r24,-128
+ 245 00ba 9C4F      		sbci r25,-4
+ 246 00bc 00F0      		brlo .L6
+ 247 00be 50E0      		ldi r21,0
+ 248               	.L6:
+ 249 00c0 852F      		mov r24,r21
+ 250 00c2 942F      		mov r25,r20
+ 251 00c4 00C0      		rjmp .L5
+ 252               	.L7:
+ 253               		.stabn	68,0,173,.LM13-.LFBB1
+ 254               	.LM13:
+ 255 00c6 81E0      		ldi r24,lo8(1)
+ 256 00c8 90E0      		ldi r25,0
+ 257               	.L5:
+ 258               		.stabn	68,0,173,.LM14-.LFBB1
+ 259               	.LM14:
+ 260 00ca 9093 0000 		sts switched+1,r25
+ 261 00ce 8093 0000 		sts switched,r24
+ 262               	.L4:
+ 174:./lib/asuro.c **** 	}
+ 175:./lib/asuro.c **** 	
+ 176:./lib/asuro.c **** 	ADMUX = mux[adc_cnt];
+ 263               		.stabn	68,0,176,.LM15-.LFBB1
+ 264               	.LM15:
+ 265 00d2 F901      		movw r30,r18
+ 266 00d4 E050      		subi r30,lo8(-(mux.1920))
+ 267 00d6 F040      		sbci r31,hi8(-(mux.1920))
+ 268 00d8 8081      		ld r24,Z
+ 269 00da 87B9      		out 0x7,r24
+ 177:./lib/asuro.c **** 	adc_cnt=(adc_cnt+1) % sizeof(mux);
+ 270               		.stabn	68,0,177,.LM16-.LFBB1
+ 271               	.LM16:
+ 272 00dc 8091 0000 		lds r24,adc_cnt.1919
+ 273 00e0 9091 0000 		lds r25,adc_cnt.1919+1
+ 274 00e4 0196      		adiw r24,1
+ 275 00e6 66E0      		ldi r22,lo8(6)
+ 276 00e8 70E0      		ldi r23,0
+ 277 00ea 00D0      		rcall __udivmodhi4
+ 278 00ec 9093 0000 		sts adc_cnt.1919+1,r25
+ 279 00f0 8093 0000 		sts adc_cnt.1919,r24
+GAS LISTING /tmp/ccgi4DnD.s 			page 9
+
+
+ 280 00f4 0895      		ret
+ 281               		.size	IsrStandard, .-IsrStandard
+ 282               		.stabs	"sign:V(0,48)=ar(0,49)=r(0,49);0;0177777;;0;1;(0,1)",38,0,139,sign.1917
+ 283               		.stabs	"avg:V(0,48)",40,0,139,avg.1918
+ 284               		.stabs	"adc_cnt:V(0,1)",38,0,139,adc_cnt.1919
+ 285               		.stabs	"mux:V(0,50)=ar(0,49);0;5;(0,11)",38,0,140,mux.1920
+ 286               		.stabs	"sensor:r(0,4)",64,0,150,24
+ 287               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 288               		.stabs	"s:r(0,1)",64,0,156,24
+ 289               		.stabn	192,0,0,.LBB2-.LFBB1
+ 290               		.stabn	224,0,0,.LBE2-.LFBB1
+ 291               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 292               	.Lscope1:
+ 293               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 294               		.stabd	78,0,0
+ 295               		.section	.text.Init,"ax",@progbits
+ 296               		.stabs	"Init:F(0,47)",36,0,228,Init
+ 297               	.global	Init
+ 298               		.type	Init, @function
+ 299               	Init:
+ 300               		.stabd	46,0,0
+ 178:./lib/asuro.c **** }
+ 179:./lib/asuro.c **** 
+ 180:./lib/asuro.c **** /****************************************************************************/
+ 181:./lib/asuro.c **** /*!
+ 182:./lib/asuro.c ****   \brief
+ 183:./lib/asuro.c ****   Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM\n
+ 184:./lib/asuro.c ****   Die Init Funktion muss von jeden Programm beim Start aufgerufen werden 
+ 185:./lib/asuro.c **** 
+ 186:./lib/asuro.c ****   \see
+ 187:./lib/asuro.c ****   Die Funktionen Sleep() und Msleep() in time.c werden mit dem hier\n
+ 188:./lib/asuro.c ****   eingestellten 36 kHz-Takt betrieben.\n
+ 189:./lib/asuro.c **** 
+ 190:./lib/asuro.c ****   \par  Funktionsweise der Zeitfunktionen:
+ 191:./lib/asuro.c ****   Msleep() ruft Sleep() auf. In Sleep() wird die globale Variable count36kHz\n
+ 192:./lib/asuro.c ****   zur Zeitverzoegerung benutzt. Diese Variable wird jedesmal im Interrupt\n
+ 193:./lib/asuro.c ****   TIMER2_OVF_vect um 1 hochgezaehlt.\n
+ 194:./lib/asuro.c ****   Der Interrupt selber wird durch den hier eingestellten Timer ausgeloesst.\n
+ 195:./lib/asuro.c ****   Somit ist dieser Timer fuer die Zeitverzoegerung zustaendig.
+ 196:./lib/asuro.c **** 
+ 197:./lib/asuro.c ****   \see
+ 198:./lib/asuro.c ****   Die globale Variable autoencode fuer die automatische Bearbeitung der\n
+ 199:./lib/asuro.c ****   Odometrie-ADC-Wandler wird hier auf FALSE gesetzt.
+ 200:./lib/asuro.c **** 
+ 201:./lib/asuro.c ****   \par  Hinweis zur 36 kHz-Frequenz vom Timer 2
+ 202:./lib/asuro.c ****   Genau diese Frequenz wird von dem Empfaengerbaustein benoetigt und kann\n
+ 203:./lib/asuro.c ****   deshalb nicht geaendert werden.\n
+ 204:./lib/asuro.c ****   In der urspruenglichen, vom Hersteller ausgelieferten LIB, war diese\n
+ 205:./lib/asuro.c ****   Frequenz allerdings auf 72 kHz eingestellt. Durch eine geschickte\n
+ 206:./lib/asuro.c ****   Umkonfigurierung durch waste konnte diese aber halbiert werden.\n
+ 207:./lib/asuro.c ****   Sinnvoll ist dies, da der durch diesen Timer2 auch ausgeloesste Timer-\n
+ 208:./lib/asuro.c ****   Interrupt dann nur noch die Haelfte an Rechenzeit in Anspruch nimmt.
+ 209:./lib/asuro.c **** 
+ 210:./lib/asuro.c ****   \par  Beispiel:
+ 211:./lib/asuro.c ****   (Nur zur Demonstration der Parameter/Returnwerte)
+ 212:./lib/asuro.c ****   \code
+ 213:./lib/asuro.c ****   // Die Init()-Funktion MUSS IMMER zu Anfang aufgerufen werden.
+GAS LISTING /tmp/ccgi4DnD.s 			page 10
+
+
+ 214:./lib/asuro.c ****   int main (void)
+ 215:./lib/asuro.c ****   {
+ 216:./lib/asuro.c ****     int wert;
+ 217:./lib/asuro.c **** 
+ 218:./lib/asuro.c ****     Init ();
+ 219:./lib/asuro.c **** 
+ 220:./lib/asuro.c ****     while (1)
+ 221:./lib/asuro.c ****     (
+ 222:./lib/asuro.c ****         // Dein Programm
+ 223:./lib/asuro.c ****     }
+ 224:./lib/asuro.c ****     return 0;
+ 225:./lib/asuro.c ****   }
+ 226:./lib/asuro.c ****   \endcode
+ 227:./lib/asuro.c **** *****************************************************************************/
+ 228:./lib/asuro.c **** void Init (
+ 229:./lib/asuro.c ****   void)
+ 230:./lib/asuro.c **** {
+ 301               		.stabn	68,0,230,.LM17-.LFBB2
+ 302               	.LM17:
+ 303               	.LFBB2:
+ 304               	/* prologue: function */
+ 305               	/* frame size = 0 */
+ 306               	/* stack size = 0 */
+ 307               	.L__stack_usage = 0
+ 231:./lib/asuro.c ****   /*
+ 232:./lib/asuro.c ****     Timer2, zum Betrieb mit der seriellen Schnittstelle, fuer die
+ 233:./lib/asuro.c ****     IR-Kommunikation auf 36 kHz eingestellt.
+ 234:./lib/asuro.c ****   */
+ 235:./lib/asuro.c **** #if defined(__AVR_ATmega168__)
+ 236:./lib/asuro.c ****   // fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1
+ 237:./lib/asuro.c ****   TCCR2A = _BV(WGM20) | _BV(WGM21) | _BV(COM2A0) | _BV(COM2A1);
+ 238:./lib/asuro.c ****   TCCR2B = _BV(CS20);
+ 239:./lib/asuro.c ****   // interrupt on timer overflow
+ 240:./lib/asuro.c ****   TIMSK2 |= _BV(TOIE2); 
+ 241:./lib/asuro.c **** #else
+ 242:./lib/asuro.c ****   // fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1
+ 243:./lib/asuro.c ****   TCCR2 = _BV(WGM20) | _BV(WGM21) | _BV(COM20) | _BV(COM21) | _BV(CS20);
+ 308               		.stabn	68,0,243,.LM18-.LFBB2
+ 309               	.LM18:
+ 310 0000 89E7      		ldi r24,lo8(121)
+ 311 0002 85BD      		out 0x25,r24
+ 244:./lib/asuro.c ****   // interrupt on timer overflow
+ 245:./lib/asuro.c ****   TIMSK |= _BV(TOIE2); 
+ 312               		.stabn	68,0,245,.LM19-.LFBB2
+ 313               	.LM19:
+ 314 0004 89B7      		in r24,0x39
+ 315 0006 8064      		ori r24,lo8(64)
+ 316 0008 89BF      		out 0x39,r24
+ 246:./lib/asuro.c **** #endif
+ 247:./lib/asuro.c ****   // 36kHz carrier/timer
+ 248:./lib/asuro.c ****   OCR2  = 0x91;
+ 317               		.stabn	68,0,248,.LM20-.LFBB2
+ 318               	.LM20:
+ 319 000a 81E9      		ldi r24,lo8(-111)
+ 320 000c 83BD      		out 0x23,r24
+ 249:./lib/asuro.c **** 
+ 250:./lib/asuro.c ****   /*
+GAS LISTING /tmp/ccgi4DnD.s 			page 11
+
+
+ 251:./lib/asuro.c ****     Die serielle Schnittstelle wurde waerend der Boot-Phase schon
+ 252:./lib/asuro.c ****     programmiert und gestartet. Hier werden die Parameter auf 2400 1N8 gesetzt.
+ 253:./lib/asuro.c ****   */
+ 254:./lib/asuro.c **** #if defined(__AVR_ATmega168__)
+ 255:./lib/asuro.c ****    UBRR0L = (uint8_t)(F_CPU/(BAUD_RATE*16L)-1);
+ 256:./lib/asuro.c ****    UBRR0H = (F_CPU/(BAUD_RATE*16L)-1) >> 8;
+ 257:./lib/asuro.c ****    UCSR0B = (1<<RXEN0) | (1<<TXEN0);
+ 258:./lib/asuro.c ****    UCSR0C = (1<<UCSZ00) | (1<<UCSZ01);
+ 259:./lib/asuro.c **** #else
+ 260:./lib/asuro.c ****   UBRRH = (((F_CPU/BAUD_RATE)/16)-1)>>8; 	// set baud rate
+ 321               		.stabn	68,0,260,.LM21-.LFBB2
+ 322               	.LM21:
+ 323 000e 10BC      		out 0x20,__zero_reg__
+ 261:./lib/asuro.c ****   UBRRL = (((F_CPU/BAUD_RATE)/16)-1);
+ 324               		.stabn	68,0,261,.LM22-.LFBB2
+ 325               	.LM22:
+ 326 0010 8FEC      		ldi r24,lo8(-49)
+ 327 0012 89B9      		out 0x9,r24
+ 262:./lib/asuro.c ****   UCSRB = (1<<RXEN)|(1<<TXEN);  // enable Rx & Tx
+ 328               		.stabn	68,0,262,.LM23-.LFBB2
+ 329               	.LM23:
+ 330 0014 88E1      		ldi r24,lo8(24)
+ 331 0016 8AB9      		out 0xa,r24
+ 263:./lib/asuro.c ****   UCSRC = (1<<URSEL)|(1<<UCSZ1)|(1<<UCSZ0);  // config USART; 8N1
+ 332               		.stabn	68,0,263,.LM24-.LFBB2
+ 333               	.LM24:
+ 334 0018 86E8      		ldi r24,lo8(-122)
+ 335 001a 80BD      		out 0x20,r24
+ 264:./lib/asuro.c **** #endif
+ 265:./lib/asuro.c **** 
+ 266:./lib/asuro.c ****   /*
+ 267:./lib/asuro.c ****     Datenrichtung der I/O-Ports festlegen. Dies ist durch die Beschaltung der
+ 268:./lib/asuro.c ****     Asuro-Hardware nicht aenderbar.
+ 269:./lib/asuro.c ****     Port B: Seriell Senden; Richtungsvorgabe Motor links; Takt fuer die
+ 270:./lib/asuro.c ****             Geschwindigkeit beider Motoren; Grueneanteil-Status-LED
+ 271:./lib/asuro.c ****     Port D: Richtungsvorgabe Motor rechts; Vordere LED;
+ 272:./lib/asuro.c ****             Odometrie-LED (Radsensor); Rotanteil-Status-LED
+ 273:./lib/asuro.c ****   */
+ 274:./lib/asuro.c ****   DDRB = IRTX | RIGHT_DIR | PWM | GREEN_LED;
+ 336               		.stabn	68,0,274,.LM25-.LFBB2
+ 337               	.LM25:
+ 338 001c 8FE3      		ldi r24,lo8(63)
+ 339 001e 87BB      		out 0x17,r24
+ 275:./lib/asuro.c ****   DDRD = LEFT_DIR | FRONT_LED | ODOMETRIE_LED | RED_LED | SWITCHES;  // Port-Bits als Output
+ 340               		.stabn	68,0,275,.LM26-.LFBB2
+ 341               	.LM26:
+ 342 0020 8CEF      		ldi r24,lo8(-4)
+ 343 0022 81BB      		out 0x11,r24
+ 276:./lib/asuro.c **** 
+ 277:./lib/asuro.c **** 
+ 278:./lib/asuro.c ****   /*
+ 279:./lib/asuro.c ****     PWM-Kanaele OC1A und OC1B auf 8-Bit einstellen.
+ 280:./lib/asuro.c ****     Sie werden fuer die Geschwindigkeitsvorgaben der Motoren benutzt.
+ 281:./lib/asuro.c ****   */
+ 282:./lib/asuro.c ****   TCCR1A = _BV(WGM10) | _BV(COM1A1) | _BV(COM1B1);
+ 344               		.stabn	68,0,282,.LM27-.LFBB2
+ 345               	.LM27:
+GAS LISTING /tmp/ccgi4DnD.s 			page 12
+
+
+ 346 0024 81EA      		ldi r24,lo8(-95)
+ 347 0026 8FBD      		out 0x2f,r24
+ 283:./lib/asuro.c ****   TCCR1B = _BV(CS11);                 // tmr1-Timer mit MCU-Takt/8 betreiben.
+ 348               		.stabn	68,0,283,.LM28-.LFBB2
+ 349               	.LM28:
+ 350 0028 82E0      		ldi r24,lo8(2)
+ 351 002a 8EBD      		out 0x2e,r24
+ 284:./lib/asuro.c **** 
+ 285:./lib/asuro.c ****   /*
+ 286:./lib/asuro.c ****     Sonstige Vorbereitungen.
+ 287:./lib/asuro.c ****     - Alle LED's ausschalten
+ 288:./lib/asuro.c ****     - Motoren stoppen und schon mal auf Vorwaerts einstellen.
+ 289:./lib/asuro.c ****     - Globale Variable autoencoder ausschalten.
+ 290:./lib/asuro.c ****   */
+ 291:./lib/asuro.c ****   FrontLED (OFF);
+ 352               		.stabn	68,0,291,.LM29-.LFBB2
+ 353               	.LM29:
+ 354 002c 80E0      		ldi r24,0
+ 355 002e 00D0      		rcall FrontLED
+ 292:./lib/asuro.c ****   BackLED (ON, ON);
+ 356               		.stabn	68,0,292,.LM30-.LFBB2
+ 357               	.LM30:
+ 358 0030 61E0      		ldi r22,lo8(1)
+ 359 0032 81E0      		ldi r24,lo8(1)
+ 360 0034 00D0      		rcall BackLED
+ 293:./lib/asuro.c ****   BackLED (OFF, OFF);
+ 361               		.stabn	68,0,293,.LM31-.LFBB2
+ 362               	.LM31:
+ 363 0036 60E0      		ldi r22,0
+ 364 0038 80E0      		ldi r24,0
+ 365 003a 00D0      		rcall BackLED
+ 294:./lib/asuro.c ****   StatusLED (GREEN);
+ 366               		.stabn	68,0,294,.LM32-.LFBB2
+ 367               	.LM32:
+ 368 003c 81E0      		ldi r24,lo8(1)
+ 369 003e 00D0      		rcall StatusLED
+ 295:./lib/asuro.c ****   SWITCH_ON; 
+ 370               		.stabn	68,0,295,.LM33-.LFBB2
+ 371               	.LM33:
+ 372 0040 939A      		sbi 0x12,3
+ 296:./lib/asuro.c **** 
+ 297:./lib/asuro.c ****   MotorDir (FWD, FWD);
+ 373               		.stabn	68,0,297,.LM34-.LFBB2
+ 374               	.LM34:
+ 375 0042 60E2      		ldi r22,lo8(32)
+ 376 0044 80E2      		ldi r24,lo8(32)
+ 377 0046 00D0      		rcall MotorDir
+ 298:./lib/asuro.c ****   MotorSpeed (0, 0);
+ 378               		.stabn	68,0,298,.LM35-.LFBB2
+ 379               	.LM35:
+ 380 0048 60E0      		ldi r22,0
+ 381 004a 80E0      		ldi r24,0
+ 382 004c 00D0      		rcall MotorSpeed
+ 299:./lib/asuro.c **** 
+ 300:./lib/asuro.c ****   autoencode = FALSE;
+ 383               		.stabn	68,0,300,.LM36-.LFBB2
+ 384               	.LM36:
+GAS LISTING /tmp/ccgi4DnD.s 			page 13
+
+
+ 385 004e 1092 0000 		sts autoencode+1,__zero_reg__
+ 386 0052 1092 0000 		sts autoencode,__zero_reg__
+ 301:./lib/asuro.c **** 
+ 302:./lib/asuro.c ****   Ovr2IntFunc = 0;
+ 387               		.stabn	68,0,302,.LM37-.LFBB2
+ 388               	.LM37:
+ 389 0056 1092 0000 		sts Ovr2IntFunc+1,__zero_reg__
+ 390 005a 1092 0000 		sts Ovr2IntFunc,__zero_reg__
+ 303:./lib/asuro.c ****   AdcIntFunc = IsrStandard;
+ 391               		.stabn	68,0,303,.LM38-.LFBB2
+ 392               	.LM38:
+ 393 005e 80E0      		ldi r24,lo8(gs(IsrStandard))
+ 394 0060 90E0      		ldi r25,hi8(gs(IsrStandard))
+ 395 0062 9093 0000 		sts AdcIntFunc+1,r25
+ 396 0066 8093 0000 		sts AdcIntFunc,r24
+ 304:./lib/asuro.c ****   
+ 305:./lib/asuro.c ****   /*
+ 306:./lib/asuro.c ****    * Vorbereitung für WHEEL-Interrupts (Encoder)
+ 307:./lib/asuro.c ****     Port C als Input => dadurch gehen die Back-LED aus ...
+ 308:./lib/asuro.c ****   */
+ 309:./lib/asuro.c ****   DDRC &= ~ (_BV(PC0) | _BV(PC1));
+ 397               		.stabn	68,0,309,.LM39-.LFBB2
+ 398               	.LM39:
+ 399 006a 84B3      		in r24,0x14
+ 400 006c 8C7F      		andi r24,lo8(-4)
+ 401 006e 84BB      		out 0x14,r24
+ 310:./lib/asuro.c **** 
+ 311:./lib/asuro.c ****   /*
+ 312:./lib/asuro.c ****     ... aber nun koennen die LED's am Rad eingeschaltet werden, und die
+ 313:./lib/asuro.c ****         Sensoren koennen gemessen werden.
+ 314:./lib/asuro.c ****   */
+ 315:./lib/asuro.c ****   ODOMETRIE_LED_ON;
+ 402               		.stabn	68,0,315,.LM40-.LFBB2
+ 403               	.LM40:
+ 404 0070 979A      		sbi 0x12,7
+ 316:./lib/asuro.c **** 
+ 317:./lib/asuro.c ****   /*
+ 318:./lib/asuro.c ****     Linken Odometrie-Sensor auswaehlen. (AVCC ref. with external capacitor)
+ 319:./lib/asuro.c ****   */
+ 320:./lib/asuro.c ****   ADMUX = _BV(ADLAR) | _BV(REFS0) | WHEEL_LEFT;
+ 405               		.stabn	68,0,320,.LM41-.LFBB2
+ 406               	.LM41:
+ 407 0072 81E6      		ldi r24,lo8(97)
+ 408 0074 87B9      		out 0x7,r24
+ 321:./lib/asuro.c **** 
+ 322:./lib/asuro.c ****   /*
+ 323:./lib/asuro.c ****     AD-Wandler einschalten, Parameter einstellen und Starten. (clk/128)
+ 324:./lib/asuro.c ****     Startet den ADC im 'free running'-Mode (ADFR). Das heisst, der Wandler
+ 325:./lib/asuro.c ****     nach einer Messung automatisch wieder neu startet.
+ 326:./lib/asuro.c ****   */
+ 327:./lib/asuro.c ****   ADCSRA = _BV(ADEN) | _BV(ADFR) | _BV(ADIE) | _BV(ADSC) | _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2);
+ 409               		.stabn	68,0,327,.LM42-.LFBB2
+ 410               	.LM42:
+ 411 0076 8FEE      		ldi r24,lo8(-17)
+ 412 0078 86B9      		out 0x6,r24
+ 328:./lib/asuro.c ****   
+ 329:./lib/asuro.c ****   /*
+GAS LISTING /tmp/ccgi4DnD.s 			page 14
+
+
+ 330:./lib/asuro.c ****     Funktion zum ALLGEMEINEN ZULASSEN von Interrupts.
+ 331:./lib/asuro.c ****   */
+ 332:./lib/asuro.c ****   sei ();
+ 413               		.stabn	68,0,332,.LM43-.LFBB2
+ 414               	.LM43:
+ 415               	/* #APP */
+ 416               	 ;  332 "./lib/asuro.c" 1
+ 417 007a 7894      		sei
+ 418               	 ;  0 "" 2
+ 419               	/* #NOAPP */
+ 420 007c 0895      		ret
+ 421               		.size	Init, .-Init
+ 422               	.Lscope2:
+ 423               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 424               		.stabd	78,0,0
+ 425               		.section	.text.__vector_4,"ax",@progbits
+ 426               		.stabs	"__vector_4:F(0,47)",36,0,356,__vector_4
+ 427               	.global	__vector_4
+ 428               		.type	__vector_4, @function
+ 429               	__vector_4:
+ 430               		.stabd	46,0,0
+ 333:./lib/asuro.c **** }
+ 334:./lib/asuro.c **** 
+ 335:./lib/asuro.c **** /****************************************************************************/
+ 336:./lib/asuro.c **** /*
+ 337:./lib/asuro.c ****   \brief
+ 338:./lib/asuro.c ****   Interrupt-Funktion fuer Timer-2-Ueberlauf.
+ 339:./lib/asuro.c **** 
+ 340:./lib/asuro.c ****   \see
+ 341:./lib/asuro.c ****   count36kHz, timebase
+ 342:./lib/asuro.c **** 
+ 343:./lib/asuro.c ****   \par
+ 344:./lib/asuro.c ****   Der zum Timer gehoerende Zaehler TCNT2 wird so justiert, dass damit die\n
+ 345:./lib/asuro.c ****   gewuenschten 36 kHz erreicht werden.\n
+ 346:./lib/asuro.c ****   Fuer die Zeitfunktionen werden die globalen Variablen count36kHz und\n
+ 347:./lib/asuro.c ****   timebase hochgezaehlt.
+ 348:./lib/asuro.c **** 
+ 349:./lib/asuro.c ****   \par 
+ 350:./lib/asuro.c ****   Die Variable Ovr2IntFunc kann als Zeiger auf eine User Funktion benutzt werden\n
+ 351:./lib/asuro.c ****   und wird dann, falls ungleich 0, von der Interrupt Funktion aus angesprungen.
+ 352:./lib/asuro.c **** 
+ 353:./lib/asuro.c ****   \par  Beispiel:
+ 354:./lib/asuro.c ****   (Nicht vorhanden)
+ 355:./lib/asuro.c **** *****************************************************************************/
+ 356:./lib/asuro.c **** SIGNAL (TIMER2_OVF_vect)
+ 357:./lib/asuro.c **** {
+ 431               		.stabn	68,0,357,.LM44-.LFBB3
+ 432               	.LM44:
+ 433               	.LFBB3:
+ 434 0000 1F92      		push r1
+ 435 0002 0F92      		push r0
+ 436 0004 0FB6      		in r0,__SREG__
+ 437 0006 0F92      		push r0
+ 438 0008 1124      		clr __zero_reg__
+ 439 000a 2F93      		push r18
+ 440 000c 3F93      		push r19
+ 441 000e 4F93      		push r20
+GAS LISTING /tmp/ccgi4DnD.s 			page 15
+
+
+ 442 0010 5F93      		push r21
+ 443 0012 6F93      		push r22
+ 444 0014 7F93      		push r23
+ 445 0016 8F93      		push r24
+ 446 0018 9F93      		push r25
+ 447 001a AF93      		push r26
+ 448 001c BF93      		push r27
+ 449 001e EF93      		push r30
+ 450 0020 FF93      		push r31
+ 451               	/* prologue: Signal */
+ 452               	/* frame size = 0 */
+ 453               	/* stack size = 15 */
+ 454               	.L__stack_usage = 15
+ 358:./lib/asuro.c ****   TCNT2 += 0x25;
+ 455               		.stabn	68,0,358,.LM45-.LFBB3
+ 456               	.LM45:
+ 457 0022 84B5      		in r24,0x24
+ 458 0024 8B5D      		subi r24,lo8(-(37))
+ 459 0026 84BD      		out 0x24,r24
+ 359:./lib/asuro.c ****   count36kHz ++;
+ 460               		.stabn	68,0,359,.LM46-.LFBB3
+ 461               	.LM46:
+ 462 0028 8091 0000 		lds r24,count36kHz
+ 463 002c 8F5F      		subi r24,lo8(-(1))
+ 464 002e 8093 0000 		sts count36kHz,r24
+ 360:./lib/asuro.c ****   if (!count36kHz)
+ 465               		.stabn	68,0,360,.LM47-.LFBB3
+ 466               	.LM47:
+ 467 0032 8091 0000 		lds r24,count36kHz
+ 468 0036 8111      		cpse r24,__zero_reg__
+ 469 0038 00C0      		rjmp .L14
+ 361:./lib/asuro.c ****     timebase ++;
+ 470               		.stabn	68,0,361,.LM48-.LFBB3
+ 471               	.LM48:
+ 472 003a 8091 0000 		lds r24,timebase
+ 473 003e 9091 0000 		lds r25,timebase+1
+ 474 0042 A091 0000 		lds r26,timebase+2
+ 475 0046 B091 0000 		lds r27,timebase+3
+ 476 004a 0196      		adiw r24,1
+ 477 004c A11D      		adc r26,__zero_reg__
+ 478 004e B11D      		adc r27,__zero_reg__
+ 479 0050 8093 0000 		sts timebase,r24
+ 480 0054 9093 0000 		sts timebase+1,r25
+ 481 0058 A093 0000 		sts timebase+2,r26
+ 482 005c B093 0000 		sts timebase+3,r27
+ 483               	.L14:
+ 362:./lib/asuro.c ****   if (Ovr2IntFunc)
+ 484               		.stabn	68,0,362,.LM49-.LFBB3
+ 485               	.LM49:
+ 486 0060 8091 0000 		lds r24,Ovr2IntFunc
+ 487 0064 9091 0000 		lds r25,Ovr2IntFunc+1
+ 488 0068 892B      		or r24,r25
+ 489 006a 01F0      		breq .L13
+ 363:./lib/asuro.c ****     Ovr2IntFunc();
+ 490               		.stabn	68,0,363,.LM50-.LFBB3
+ 491               	.LM50:
+ 492 006c E091 0000 		lds r30,Ovr2IntFunc
+GAS LISTING /tmp/ccgi4DnD.s 			page 16
+
+
+ 493 0070 F091 0000 		lds r31,Ovr2IntFunc+1
+ 494 0074 0995      		icall
+ 495               	.L13:
+ 496               	/* epilogue start */
+ 364:./lib/asuro.c **** }
+ 497               		.stabn	68,0,364,.LM51-.LFBB3
+ 498               	.LM51:
+ 499 0076 FF91      		pop r31
+ 500 0078 EF91      		pop r30
+ 501 007a BF91      		pop r27
+ 502 007c AF91      		pop r26
+ 503 007e 9F91      		pop r25
+ 504 0080 8F91      		pop r24
+ 505 0082 7F91      		pop r23
+ 506 0084 6F91      		pop r22
+ 507 0086 5F91      		pop r21
+ 508 0088 4F91      		pop r20
+ 509 008a 3F91      		pop r19
+ 510 008c 2F91      		pop r18
+ 511 008e 0F90      		pop r0
+ 512 0090 0FBE      		out __SREG__,r0
+ 513 0092 0F90      		pop r0
+ 514 0094 1F90      		pop r1
+ 515 0096 1895      		reti
+ 516               		.size	__vector_4, .-__vector_4
+ 517               	.Lscope3:
+ 518               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 519               		.stabd	78,0,0
+ 520               		.section	.text.__vector_3,"ax",@progbits
+ 521               		.stabs	"__vector_3:F(0,47)",36,0,373,__vector_3
+ 522               	.global	__vector_3
+ 523               		.type	__vector_3, @function
+ 524               	__vector_3:
+ 525               		.stabd	46,0,0
+ 365:./lib/asuro.c **** 
+ 366:./lib/asuro.c **** 
+ 367:./lib/asuro.c **** /**
+ 368:./lib/asuro.c ****  * being used insted TIMER2_OVF_vect during ultrasonic polling
+ 369:./lib/asuro.c ****  */
+ 370:./lib/asuro.c **** #if defined(__AVR_ATmega168__)
+ 371:./lib/asuro.c **** SIGNAL(TIMER2_COMPA_vect)
+ 372:./lib/asuro.c **** #else
+ 373:./lib/asuro.c **** SIGNAL(TIMER2_COMP_vect) 
+ 374:./lib/asuro.c **** #endif
+ 375:./lib/asuro.c **** {
+ 526               		.stabn	68,0,375,.LM52-.LFBB4
+ 527               	.LM52:
+ 528               	.LFBB4:
+ 529 0000 1F92      		push r1
+ 530 0002 0F92      		push r0
+ 531 0004 0FB6      		in r0,__SREG__
+ 532 0006 0F92      		push r0
+ 533 0008 1124      		clr __zero_reg__
+ 534 000a 8F93      		push r24
+ 535 000c 9F93      		push r25
+ 536 000e AF93      		push r26
+ 537 0010 BF93      		push r27
+GAS LISTING /tmp/ccgi4DnD.s 			page 17
+
+
+ 538               	/* prologue: Signal */
+ 539               	/* frame size = 0 */
+ 540               	/* stack size = 7 */
+ 541               	.L__stack_usage = 7
+ 376:./lib/asuro.c **** 	count36kHz++;
+ 542               		.stabn	68,0,376,.LM53-.LFBB4
+ 543               	.LM53:
+ 544 0012 8091 0000 		lds r24,count36kHz
+ 545 0016 8F5F      		subi r24,lo8(-(1))
+ 546 0018 8093 0000 		sts count36kHz,r24
+ 377:./lib/asuro.c ****   if (!count36kHz)
+ 547               		.stabn	68,0,377,.LM54-.LFBB4
+ 548               	.LM54:
+ 549 001c 8091 0000 		lds r24,count36kHz
+ 550 0020 8111      		cpse r24,__zero_reg__
+ 551 0022 00C0      		rjmp .L19
+ 378:./lib/asuro.c ****     timebase ++;
+ 552               		.stabn	68,0,378,.LM55-.LFBB4
+ 553               	.LM55:
+ 554 0024 8091 0000 		lds r24,timebase
+ 555 0028 9091 0000 		lds r25,timebase+1
+ 556 002c A091 0000 		lds r26,timebase+2
+ 557 0030 B091 0000 		lds r27,timebase+3
+ 558 0034 0196      		adiw r24,1
+ 559 0036 A11D      		adc r26,__zero_reg__
+ 560 0038 B11D      		adc r27,__zero_reg__
+ 561 003a 8093 0000 		sts timebase,r24
+ 562 003e 9093 0000 		sts timebase+1,r25
+ 563 0042 A093 0000 		sts timebase+2,r26
+ 564 0046 B093 0000 		sts timebase+3,r27
+ 565               	.L19:
+ 566               	/* epilogue start */
+ 379:./lib/asuro.c **** }
+ 567               		.stabn	68,0,379,.LM56-.LFBB4
+ 568               	.LM56:
+ 569 004a BF91      		pop r27
+ 570 004c AF91      		pop r26
+ 571 004e 9F91      		pop r25
+ 572 0050 8F91      		pop r24
+ 573 0052 0F90      		pop r0
+ 574 0054 0FBE      		out __SREG__,r0
+ 575 0056 0F90      		pop r0
+ 576 0058 1F90      		pop r1
+ 577 005a 1895      		reti
+ 578               		.size	__vector_3, .-__vector_3
+ 579               	.Lscope4:
+ 580               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 581               		.stabd	78,0,0
+ 582               		.section	.text.__vector_14,"ax",@progbits
+ 583               		.stabs	"__vector_14:F(0,47)",36,0,403,__vector_14
+ 584               	.global	__vector_14
+ 585               		.type	__vector_14, @function
+ 586               	__vector_14:
+ 587               		.stabd	46,0,0
+ 380:./lib/asuro.c **** 
+ 381:./lib/asuro.c **** 
+ 382:./lib/asuro.c **** /****************************************************************************/
+GAS LISTING /tmp/ccgi4DnD.s 			page 18
+
+
+ 383:./lib/asuro.c **** /*
+ 384:./lib/asuro.c ****   \brief
+ 385:./lib/asuro.c ****   Interrupt-Funktion fuer den AD-Wandler. Kann ueber autoencode gesteuert\n
+ 386:./lib/asuro.c ****   die Odometrie-Zaehler in encoder hochzaehlen.
+ 387:./lib/asuro.c **** 
+ 388:./lib/asuro.c ****   \see
+ 389:./lib/asuro.c ****   Die globale Variable autoencode wird hier ausgewertet. Ist sie nicht FALSE,\n
+ 390:./lib/asuro.c ****   dann wird der AD-Wandler-Wert zum Zaehlen der Odometriewerte in der globalen\n
+ 391:./lib/asuro.c ****   Variablen encoder benutzt.\n
+ 392:./lib/asuro.c ****   Es wird auch der AD-Wandler-Kanal auf die 'andere' Seite der Odometrie\n
+ 393:./lib/asuro.c ****   umgeschaltete und der AD-Wandler neu gestartet.\n
+ 394:./lib/asuro.c ****   Somit wird erreicht, dass zumindest die Odometriemessung automatisch erfolgt.
+ 395:./lib/asuro.c **** 
+ 396:./lib/asuro.c ****   \par 
+ 397:./lib/asuro.c ****   Die Variable AdcIntFunc kann als Zeiger auf eine User Funktion benutzt werden\n
+ 398:./lib/asuro.c ****   und wird dann, falls ungleich 0, von der Interrupt Funktion aus angesprungen.
+ 399:./lib/asuro.c **** 
+ 400:./lib/asuro.c ****   \par  Beispiel:
+ 401:./lib/asuro.c ****   (Nicht vorhanden)
+ 402:./lib/asuro.c **** *****************************************************************************/
+ 403:./lib/asuro.c **** SIGNAL (ADC_vect)
+ 404:./lib/asuro.c **** {
+ 588               		.stabn	68,0,404,.LM57-.LFBB5
+ 589               	.LM57:
+ 590               	.LFBB5:
+ 591 0000 1F92      		push r1
+ 592 0002 0F92      		push r0
+ 593 0004 0FB6      		in r0,__SREG__
+ 594 0006 0F92      		push r0
+ 595 0008 1124      		clr __zero_reg__
+ 596 000a 2F93      		push r18
+ 597 000c 3F93      		push r19
+ 598 000e 4F93      		push r20
+ 599 0010 5F93      		push r21
+ 600 0012 6F93      		push r22
+ 601 0014 7F93      		push r23
+ 602 0016 8F93      		push r24
+ 603 0018 9F93      		push r25
+ 604 001a AF93      		push r26
+ 605 001c BF93      		push r27
+ 606 001e EF93      		push r30
+ 607 0020 FF93      		push r31
+ 608               	/* prologue: Signal */
+ 609               	/* frame size = 0 */
+ 610               	/* stack size = 15 */
+ 611               	.L__stack_usage = 15
+ 405:./lib/asuro.c ****     AdcIntFunc();
+ 612               		.stabn	68,0,405,.LM58-.LFBB5
+ 613               	.LM58:
+ 614 0022 E091 0000 		lds r30,AdcIntFunc
+ 615 0026 F091 0000 		lds r31,AdcIntFunc+1
+ 616 002a 0995      		icall
+ 617               	/* epilogue start */
+ 406:./lib/asuro.c **** }
+ 618               		.stabn	68,0,406,.LM59-.LFBB5
+ 619               	.LM59:
+ 620 002c FF91      		pop r31
+GAS LISTING /tmp/ccgi4DnD.s 			page 19
+
+
+ 621 002e EF91      		pop r30
+ 622 0030 BF91      		pop r27
+ 623 0032 AF91      		pop r26
+ 624 0034 9F91      		pop r25
+ 625 0036 8F91      		pop r24
+ 626 0038 7F91      		pop r23
+ 627 003a 6F91      		pop r22
+ 628 003c 5F91      		pop r21
+ 629 003e 4F91      		pop r20
+ 630 0040 3F91      		pop r19
+ 631 0042 2F91      		pop r18
+ 632 0044 0F90      		pop r0
+ 633 0046 0FBE      		out __SREG__,r0
+ 634 0048 0F90      		pop r0
+ 635 004a 1F90      		pop r1
+ 636 004c 1895      		reti
+ 637               		.size	__vector_14, .-__vector_14
+ 638               	.Lscope5:
+ 639               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 640               		.stabd	78,0,0
+ 641               		.section	.rodata.mux.1920,"a",@progbits
+ 642               		.type	mux.1920, @object
+ 643               		.size	mux.1920, 6
+ 644               	mux.1920:
+ 645 0000 62        		.byte	98
+ 646 0001 63        		.byte	99
+ 647 0002 64        		.byte	100
+ 648 0003 E5        		.byte	-27
+ 649 0004 60        		.byte	96
+ 650 0005 61        		.byte	97
+ 651               		.section	.data.sign.1917,"aw",@progbits
+ 652               		.type	sign.1917, @object
+ 653               		.size	sign.1917, 4
+ 654               	sign.1917:
+ 655 0000 0100      		.word	1
+ 656 0002 0100      		.word	1
+ 657               		.section	.bss.avg.1918,"aw",@nobits
+ 658               		.type	avg.1918, @object
+ 659               		.size	avg.1918, 4
+ 660               	avg.1918:
+ 661 0000 0000 0000 		.zero	4
+ 662               		.section	.bss.adc_cnt.1919,"aw",@nobits
+ 663               		.type	adc_cnt.1919, @object
+ 664               		.size	adc_cnt.1919, 2
+ 665               	adc_cnt.1919:
+ 666 0000 0000      		.zero	2
+ 667               		.comm	adcValue,12,1
+ 668               		.stabs	"adcValue:G(0,51)=ar(0,49);0;5;(0,52)=B(0,4)",32,0,78,0
+ 669               		.text
+ 670               		.stabs	"",100,0,0,.Letext0
+ 671               	.Letext0:
+ 672               		.ident	"GCC: (GNU) 4.9.2"
+ 673               	.global __do_copy_data
+ 674               	.global __do_clear_bss
+GAS LISTING /tmp/ccgi4DnD.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 asuro.c
+     /tmp/ccgi4DnD.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccgi4DnD.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccgi4DnD.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccgi4DnD.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccgi4DnD.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccgi4DnD.s:122    .text.IsrStandard:0000000000000000 IsrStandard
+     /tmp/ccgi4DnD.s:665    .bss.adc_cnt.1919:0000000000000000 adc_cnt.1919
+                            *COM*:000000000000000c adcValue
+     /tmp/ccgi4DnD.s:660    .bss.avg.1918:0000000000000000 avg.1918
+     /tmp/ccgi4DnD.s:654    .data.sign.1917:0000000000000000 sign.1917
+     /tmp/ccgi4DnD.s:644    .rodata.mux.1920:0000000000000000 mux.1920
+     /tmp/ccgi4DnD.s:299    .text.Init:0000000000000000 Init
+     /tmp/ccgi4DnD.s:429    .text.__vector_4:0000000000000000 __vector_4
+     /tmp/ccgi4DnD.s:524    .text.__vector_3:0000000000000000 __vector_3
+     /tmp/ccgi4DnD.s:586    .text.__vector_14:0000000000000000 __vector_14
+
+UNDEFINED SYMBOLS
+autoencode
+encoder
+switched
+__udivmodhi4
+FrontLED
+BackLED
+StatusLED
+MotorDir
+MotorSpeed
+Ovr2IntFunc
+AdcIntFunc
+count36kHz
+timebase
+__do_copy_data
+__do_clear_bss

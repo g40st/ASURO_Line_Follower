@@ -1,0 +1,615 @@
+GAS LISTING /tmp/ccjVGLU3.s 			page 1
+
+
+   1               		.file	"rc5.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/rc5.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccjVGLU3.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccjVGLU3.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(7,1)=(7,2)=*(7,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.IsrRC5,"ax",@progbits
+ 119               		.stabs	"IsrRC5:F(0,47)",36,0,79,IsrRC5
+ 120               	.global	IsrRC5
+ 121               		.type	IsrRC5, @function
+ 122               	IsrRC5:
+ 123               		.stabd	46,0,0
+   1:./lib/rc5.c   **** /*
+   2:./lib/rc5.c   ****  * rc5.c Infrarot Fernbedienung Funktionen
+   3:./lib/rc5.c   ****  *
+   4:./lib/rc5.c   ****  * This program is free software; you can redistribute it
+   5:./lib/rc5.c   ****  * and/or modify it under the terms of the GNU General
+   6:./lib/rc5.c   ****  * Public License as published by the Free Software
+   7:./lib/rc5.c   ****  * Foundation; either version 2 of the License, or (at your
+   8:./lib/rc5.c   ****  * option) any later version.
+   9:./lib/rc5.c   ****  * This program is distributed in the hope that it will be
+  10:./lib/rc5.c   ****  * useful, but WITHOUT ANY WARRANTY; without even the implied
+  11:./lib/rc5.c   ****  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  12:./lib/rc5.c   ****  * PURPOSE. See the GNU General Public License for more details.
+  13:./lib/rc5.c   ****  * You should have received a copy of the GNU General Public
+  14:./lib/rc5.c   ****  * License along with this program; if not, write to the Free
+  15:./lib/rc5.c   ****  * Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+  16:./lib/rc5.c   ****  * MA 02111-1307, USA.
+  17:./lib/rc5.c   ****  *
+  18:./lib/rc5.c   ****  */
+  19:./lib/rc5.c   **** 
+  20:./lib/rc5.c   **** /*! 
+  21:./lib/rc5.c   ****   /file     rc5.c
+  22:./lib/rc5.c   ****   /brief    Funktionen fuer die Dekodierung von RC5-Fernbedienungs-Codes
+  23:./lib/rc5.c   ****   /author   Benjamin Benz (bbe@heise.de),\n
+  24:./lib/rc5.c   ****             m.a.r.v.i.n
+  25:./lib/rc5.c   **** 
+  26:./lib/rc5.c   ****   /version      V001 - 20.12.2005 - Benjamin Benz (bbe@heise.de)\n
+  27:./lib/rc5.c   ****                 Version fuer den c't-Bot
+  28:./lib/rc5.c   ****   /version      V002 - 11.02.2007 - m.a.r.v.i.n\n
+  29:./lib/rc5.c   ****                 portiert fuer den ASURO
+  30:./lib/rc5.c   ****   /version      V003 - 22.01.2008 - m.a.r.v.i.n\n
+  31:./lib/rc5.c   ****                 Ovr2IntFunc Variable als Zeiger auf die Funktion IsrRC5\n
+  32:./lib/rc5.c   ****                 Wird von der Timer Overflow Interrupt Funtkion aus angesprungen. 
+  33:./lib/rc5.c   **** */
+  34:./lib/rc5.c   **** 
+  35:./lib/rc5.c   **** // Infos ueber RC6: http://www.xs4all.nl/~sbp/knowledge/ir/rc6.htm
+  36:./lib/rc5.c   **** // http://www.xs4all.nl/~sbp/knowledge/ir/ir.htm
+  37:./lib/rc5.c   **** 
+  38:./lib/rc5.c   **** // ========================================================================
+  39:./lib/rc5.c   **** // RC5 Infrarot-Empfaenger
+  40:./lib/rc5.c   **** // ========================================================================
+  41:./lib/rc5.c   **** #include <avr/io.h>
+  42:./lib/rc5.c   **** #include "asuro.h"
+  43:./lib/rc5.c   **** #include "rc5.h"
+  44:./lib/rc5.c   **** 
+  45:./lib/rc5.c   **** 
+  46:./lib/rc5.c   **** // -----------------------------------------------------------------------------
+  47:./lib/rc5.c   **** // Timing
+  48:./lib/rc5.c   **** // -----------------------------------------------------------------------------
+GAS LISTING /tmp/ccjVGLU3.s 			page 4
+
+
+  49:./lib/rc5.c   **** #define IR_SAMPLES_PER_BIT     8   /*!< 8 Samples per Bit */
+  50:./lib/rc5.c   **** #define IR_SAMPLES_PER_BIT_EARLY 6  /*!< Flanke fruehestens nach 7 Samples */
+  51:./lib/rc5.c   **** #define IR_SAMPLES_PER_BIT_LATE 10  /*!< Flanke spaetestens nach 9 Samples */
+  52:./lib/rc5.c   **** #define IR_SAMPLES_PER_BIT_MIN   3  /*!< Flanke vor 3 Samples -> paket verwerfen */
+  53:./lib/rc5.c   **** #define IR_PAUSE_SAMPLES       250  /*!< Startbit ist erst nach 200 Samples ohne */
+  54:./lib/rc5.c   **** // Pegelaenderung gueltig -- eigentlich muesste
+  55:./lib/rc5.c   **** // man rund 500 Samples abwarten (50 x
+  56:./lib/rc5.c   **** // Bitzeit), doch weil der Samplezaehler ein
+  57:./lib/rc5.c   **** // Byte ist, beschraenken wir uns hier auf ein
+  58:./lib/rc5.c   **** // Minimum von 250 Samples
+  59:./lib/rc5.c   **** 
+  60:./lib/rc5.c   **** #define IR_PORT   PORTD     /*!< Port D */
+  61:./lib/rc5.c   **** #define IR_DDR    DDRD      /*!< DDR of Port D */
+  62:./lib/rc5.c   **** #define IR_PINR   PIND      /*!< Port D input */
+  63:./lib/rc5.c   **** #define IR_PIN    PD0       /*!< Pin 0 */
+  64:./lib/rc5.c   **** 
+  65:./lib/rc5.c   **** 
+  66:./lib/rc5.c   **** static uint8_t     RC5lastsample = 0;  /*!< zuletzt gelesenes Sample */
+  67:./lib/rc5.c   **** static uint8_t     RC5bittimer   = 0;  /*!< zaehlt die Aufrufe von ir_isr() */
+  68:./lib/rc5.c   **** 
+  69:./lib/rc5.c   **** static uint16_t    RC5data_tmp = 0;    /*!< RC5-Bitstream */
+  70:./lib/rc5.c   **** static uint8_t     RC5bitcount = 0;    /*!< anzahl gelesener bits */
+  71:./lib/rc5.c   **** 
+  72:./lib/rc5.c   **** volatile uint16_t  RC5data = 0;        /*!< letztes komplett gelesenes RC5-paket */
+  73:./lib/rc5.c   **** volatile uint8_t   enableRC5 = 0;      /*!< schaltet die RC5 Abfrage ein/aus */
+  74:./lib/rc5.c   **** 
+  75:./lib/rc5.c   **** /*!
+  76:./lib/rc5.c   ****  * Interrupt Serviceroutine
+  77:./lib/rc5.c   ****  * wird alle 27.7us aufgerufen
+  78:./lib/rc5.c   ****  */
+  79:./lib/rc5.c   **** void IsrRC5 (void)
+  80:./lib/rc5.c   **** {
+ 124               		.stabn	68,0,80,.LM0-.LFBB1
+ 125               	.LM0:
+ 126               	.LFBB1:
+ 127               	/* prologue: function */
+ 128               	/* frame size = 0 */
+ 129               	/* stack size = 0 */
+ 130               	.L__stack_usage = 0
+  81:./lib/rc5.c   ****   // sample lesen
+  82:./lib/rc5.c   ****   uint8_t sample = 1;
+  83:./lib/rc5.c   ****   if (enableRC5 && !(count36kHz % 8)) 
+ 131               		.stabn	68,0,83,.LM1-.LFBB1
+ 132               	.LM1:
+ 133 0000 8091 0000 		lds r24,enableRC5
+ 134 0004 8823      		tst r24
+ 135 0006 01F4      		brne .+2
+ 136 0008 00C0      		rjmp .L1
+ 137               		.stabn	68,0,83,.LM2-.LFBB1
+ 138               	.LM2:
+ 139 000a 8091 0000 		lds r24,count36kHz
+ 140 000e 8770      		andi r24,lo8(7)
+ 141 0010 01F0      		breq .+2
+ 142 0012 00C0      		rjmp .L1
+ 143               	.LBB4:
+  84:./lib/rc5.c   ****   {  
+  85:./lib/rc5.c   ****     if ((IR_PINR & (1<<IR_PIN)) != 0)
+GAS LISTING /tmp/ccjVGLU3.s 			page 5
+
+
+ 144               		.stabn	68,0,85,.LM3-.LFBB1
+ 145               	.LM3:
+ 146 0014 80B3      		in r24,0x10
+ 147 0016 8095      		com r24
+ 148 0018 8170      		andi r24,lo8(1)
+  86:./lib/rc5.c   ****     {
+  87:./lib/rc5.c   ****       sample = 0;
+  88:./lib/rc5.c   ****     }
+  89:./lib/rc5.c   **** 
+  90:./lib/rc5.c   ****     // bittimer erhoehen (bleibt bei 255 stehen)
+  91:./lib/rc5.c   ****     if (RC5bittimer<255)
+ 149               		.stabn	68,0,91,.LM4-.LFBB1
+ 150               	.LM4:
+ 151 001a 9091 0000 		lds r25,RC5bittimer
+ 152 001e 9F3F      		cpi r25,lo8(-1)
+ 153 0020 01F0      		breq .L3
+  92:./lib/rc5.c   ****     {
+  93:./lib/rc5.c   ****       RC5bittimer++;
+ 154               		.stabn	68,0,93,.LM5-.LFBB1
+ 155               	.LM5:
+ 156 0022 9F5F      		subi r25,lo8(-(1))
+ 157 0024 9093 0000 		sts RC5bittimer,r25
+ 158               	.L3:
+  94:./lib/rc5.c   ****     }
+  95:./lib/rc5.c   **** 
+  96:./lib/rc5.c   ****     // flankenerkennung
+  97:./lib/rc5.c   ****     if ( RC5lastsample != sample)
+ 159               		.stabn	68,0,97,.LM6-.LFBB1
+ 160               	.LM6:
+ 161 0028 2091 0000 		lds r18,RC5lastsample
+ 162 002c 9091 0000 		lds r25,RC5bittimer
+ 163 0030 2817      		cp r18,r24
+ 164 0032 01F0      		breq .L4
+  98:./lib/rc5.c   ****     {
+  99:./lib/rc5.c   ****       if (RC5bittimer<=IR_SAMPLES_PER_BIT_MIN)
+ 165               		.stabn	68,0,99,.LM7-.LFBB1
+ 166               	.LM7:
+ 167 0034 9430      		cpi r25,lo8(4)
+ 168 0036 00F4      		brsh .L5
+ 169               	.L11:
+ 100:./lib/rc5.c   ****       {
+ 101:./lib/rc5.c   ****         // flanke kommt zu frueh: paket verwerfen
+ 102:./lib/rc5.c   ****         RC5bitcount=0;
+ 170               		.stabn	68,0,102,.LM8-.LFBB1
+ 171               	.LM8:
+ 172 0038 1092 0000 		sts RC5bitcount,__zero_reg__
+ 173 003c 00C0      		rjmp .L6
+ 174               	.L5:
+ 103:./lib/rc5.c   ****       }
+ 104:./lib/rc5.c   ****       else
+ 105:./lib/rc5.c   ****       {
+ 106:./lib/rc5.c   ****         // Startbit
+ 107:./lib/rc5.c   ****         if (RC5bitcount==0)
+ 175               		.stabn	68,0,107,.LM9-.LFBB1
+ 176               	.LM9:
+ 177 003e 4091 0000 		lds r20,RC5bitcount
+ 178 0042 4111      		cpse r20,__zero_reg__
+GAS LISTING /tmp/ccjVGLU3.s 			page 6
+
+
+ 179 0044 00C0      		rjmp .L7
+ 108:./lib/rc5.c   ****         {
+ 109:./lib/rc5.c   ****           if ( (sample==1) && (RC5bittimer>IR_PAUSE_SAMPLES) )
+ 180               		.stabn	68,0,109,.LM10-.LFBB1
+ 181               	.LM10:
+ 182 0046 8130      		cpi r24,lo8(1)
+ 183 0048 01F4      		brne .L8
+ 184 004a 9B3F      		cpi r25,lo8(-5)
+ 185 004c 00F0      		brlo .L8
+ 110:./lib/rc5.c   ****           {
+ 111:./lib/rc5.c   ****             // Startbit speichern
+ 112:./lib/rc5.c   ****             RC5data_tmp = 1;
+ 186               		.stabn	68,0,112,.LM11-.LFBB1
+ 187               	.LM11:
+ 188 004e 21E0      		ldi r18,lo8(1)
+ 189 0050 30E0      		ldi r19,0
+ 190 0052 3093 0000 		sts RC5data_tmp+1,r19
+ 191 0056 2093 0000 		sts RC5data_tmp,r18
+ 113:./lib/rc5.c   ****             RC5bitcount++;
+ 192               		.stabn	68,0,113,.LM12-.LFBB1
+ 193               	.LM12:
+ 194 005a 8093 0000 		sts RC5bitcount,r24
+ 195 005e 00C0      		rjmp .L9
+ 196               	.L8:
+ 114:./lib/rc5.c   ****           }
+ 115:./lib/rc5.c   ****           else
+ 116:./lib/rc5.c   ****           {
+ 117:./lib/rc5.c   ****             // error
+ 118:./lib/rc5.c   ****             RC5data_tmp = 0;
+ 197               		.stabn	68,0,118,.LM13-.LFBB1
+ 198               	.LM13:
+ 199 0060 1092 0000 		sts RC5data_tmp+1,__zero_reg__
+ 200 0064 1092 0000 		sts RC5data_tmp,__zero_reg__
+ 201               	.L9:
+ 119:./lib/rc5.c   ****           }
+ 120:./lib/rc5.c   **** 
+ 121:./lib/rc5.c   ****           // bittimer-reset
+ 122:./lib/rc5.c   ****           RC5bittimer = 0;
+ 202               		.stabn	68,0,122,.LM14-.LFBB1
+ 203               	.LM14:
+ 204 0068 1092 0000 		sts RC5bittimer,__zero_reg__
+ 205 006c 00C0      		rjmp .L6
+ 206               	.L7:
+ 123:./lib/rc5.c   **** 
+ 124:./lib/rc5.c   ****         // Bits 2..14: nur Flanken innerhalb des Bits beruecksichtigen
+ 125:./lib/rc5.c   ****         }
+ 126:./lib/rc5.c   ****         else
+ 127:./lib/rc5.c   ****         {
+ 128:./lib/rc5.c   ****           if (RC5bittimer >= IR_SAMPLES_PER_BIT_EARLY)
+ 207               		.stabn	68,0,128,.LM15-.LFBB1
+ 208               	.LM15:
+ 209 006e 9630      		cpi r25,lo8(6)
+ 210 0070 00F0      		brlo .L6
+ 129:./lib/rc5.c   ****           {
+ 130:./lib/rc5.c   ****             if (RC5bittimer<=IR_SAMPLES_PER_BIT_LATE)
+ 211               		.stabn	68,0,130,.LM16-.LFBB1
+ 212               	.LM16:
+GAS LISTING /tmp/ccjVGLU3.s 			page 7
+
+
+ 213 0072 9B30      		cpi r25,lo8(11)
+ 214 0074 00F4      		brsh .L10
+ 131:./lib/rc5.c   ****             {
+ 132:./lib/rc5.c   ****               // Bit speichern
+ 133:./lib/rc5.c   ****               RC5data_tmp = (RC5data_tmp<<1) | sample;
+ 215               		.stabn	68,0,133,.LM17-.LFBB1
+ 216               	.LM17:
+ 217 0076 2091 0000 		lds r18,RC5data_tmp
+ 218 007a 3091 0000 		lds r19,RC5data_tmp+1
+ 219 007e 220F      		lsl r18
+ 220 0080 331F      		rol r19
+ 221 0082 282B      		or r18,r24
+ 222 0084 3093 0000 		sts RC5data_tmp+1,r19
+ 223 0088 2093 0000 		sts RC5data_tmp,r18
+ 134:./lib/rc5.c   ****               RC5bitcount++;
+ 224               		.stabn	68,0,134,.LM18-.LFBB1
+ 225               	.LM18:
+ 226 008c 4F5F      		subi r20,lo8(-(1))
+ 227 008e 4093 0000 		sts RC5bitcount,r20
+ 228 0092 00C0      		rjmp .L9
+ 229               	.L10:
+ 135:./lib/rc5.c   ****             }
+ 136:./lib/rc5.c   ****             else
+ 137:./lib/rc5.c   ****             {
+ 138:./lib/rc5.c   ****               // zu spaet: paket verwerfen
+ 139:./lib/rc5.c   ****               RC5bitcount = 0;
+ 230               		.stabn	68,0,139,.LM19-.LFBB1
+ 231               	.LM19:
+ 232 0094 1092 0000 		sts RC5bitcount,__zero_reg__
+ 233 0098 00C0      		rjmp .L9
+ 234               	.L4:
+ 140:./lib/rc5.c   ****             }
+ 141:./lib/rc5.c   **** 
+ 142:./lib/rc5.c   ****             // bittimer-reset
+ 143:./lib/rc5.c   ****             RC5bittimer = 0;
+ 144:./lib/rc5.c   ****           }
+ 145:./lib/rc5.c   ****         }
+ 146:./lib/rc5.c   ****       }
+ 147:./lib/rc5.c   **** 
+ 148:./lib/rc5.c   ****     }
+ 149:./lib/rc5.c   ****     else
+ 150:./lib/rc5.c   ****     {
+ 151:./lib/rc5.c   ****       // keine flanke innerhalb bitzeit?
+ 152:./lib/rc5.c   ****       if (RC5bittimer > IR_SAMPLES_PER_BIT_LATE)
+ 235               		.stabn	68,0,152,.LM20-.LFBB1
+ 236               	.LM20:
+ 237 009a 9B30      		cpi r25,lo8(11)
+ 238 009c 00F0      		brlo .L6
+ 153:./lib/rc5.c   ****       {
+ 154:./lib/rc5.c   ****         // 14 bits gelesen?
+ 155:./lib/rc5.c   ****         if (RC5bitcount==14)
+ 239               		.stabn	68,0,155,.LM21-.LFBB1
+ 240               	.LM21:
+ 241 009e 9091 0000 		lds r25,RC5bitcount
+ 242 00a2 9E30      		cpi r25,lo8(14)
+ 243 00a4 01F4      		brne .L11
+ 156:./lib/rc5.c   ****         {
+GAS LISTING /tmp/ccjVGLU3.s 			page 8
+
+
+ 157:./lib/rc5.c   ****           RC5data = RC5data_tmp;
+ 244               		.stabn	68,0,157,.LM22-.LFBB1
+ 245               	.LM22:
+ 246 00a6 2091 0000 		lds r18,RC5data_tmp
+ 247 00aa 3091 0000 		lds r19,RC5data_tmp+1
+ 248 00ae 3093 0000 		sts RC5data+1,r19
+ 249 00b2 2093 0000 		sts RC5data,r18
+ 250 00b6 00C0      		rjmp .L11
+ 251               	.L6:
+ 158:./lib/rc5.c   ****         }
+ 159:./lib/rc5.c   ****         // paket verwerfen
+ 160:./lib/rc5.c   ****         RC5bitcount = 0;
+ 161:./lib/rc5.c   ****       }
+ 162:./lib/rc5.c   ****     }
+ 163:./lib/rc5.c   **** 
+ 164:./lib/rc5.c   ****     // sample im samplepuffer ablegen
+ 165:./lib/rc5.c   ****     RC5lastsample = sample;
+ 252               		.stabn	68,0,165,.LM23-.LFBB1
+ 253               	.LM23:
+ 254 00b8 8093 0000 		sts RC5lastsample,r24
+ 255               	.L1:
+ 256 00bc 0895      		ret
+ 257               	.LBE4:
+ 258               		.size	IsrRC5, .-IsrRC5
+ 259               	.Lscope1:
+ 260               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 261               		.stabd	78,0,0
+ 262               		.section	.text.ReadRC5,"ax",@progbits
+ 263               		.stabs	"ReadRC5:F(5,4)",36,0,175,ReadRC5
+ 264               	.global	ReadRC5
+ 265               		.type	ReadRC5, @function
+ 266               	ReadRC5:
+ 267               		.stabd	46,0,0
+ 166:./lib/rc5.c   ****   }
+ 167:./lib/rc5.c   **** 
+ 168:./lib/rc5.c   **** }
+ 169:./lib/rc5.c   **** 
+ 170:./lib/rc5.c   **** 
+ 171:./lib/rc5.c   **** /*!
+ 172:./lib/rc5.c   ****  * IR-Daten lesen
+ 173:./lib/rc5.c   ****  * @return wert von ir_data, loescht anschliessend ir_data
+ 174:./lib/rc5.c   ****  */
+ 175:./lib/rc5.c   **** uint16_t ReadRC5 (void)
+ 176:./lib/rc5.c   **** {
+ 268               		.stabn	68,0,176,.LM24-.LFBB2
+ 269               	.LM24:
+ 270               	.LFBB2:
+ 271               	/* prologue: function */
+ 272               	/* frame size = 0 */
+ 273               	/* stack size = 0 */
+ 274               	.L__stack_usage = 0
+ 177:./lib/rc5.c   ****   uint16_t retvalue = RC5data;
+ 275               		.stabn	68,0,177,.LM25-.LFBB2
+ 276               	.LM25:
+ 277 0000 8091 0000 		lds r24,RC5data
+ 278 0004 9091 0000 		lds r25,RC5data+1
+ 178:./lib/rc5.c   ****   RC5data = 0;
+GAS LISTING /tmp/ccjVGLU3.s 			page 9
+
+
+ 279               		.stabn	68,0,178,.LM26-.LFBB2
+ 280               	.LM26:
+ 281 0008 1092 0000 		sts RC5data+1,__zero_reg__
+ 282 000c 1092 0000 		sts RC5data,__zero_reg__
+ 179:./lib/rc5.c   ****   return retvalue;
+ 180:./lib/rc5.c   **** }
+ 283               		.stabn	68,0,180,.LM27-.LFBB2
+ 284               	.LM27:
+ 285 0010 0895      		ret
+ 286               		.size	ReadRC5, .-ReadRC5
+ 287               		.stabs	"retvalue:r(5,4)",64,0,177,24
+ 288               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 289               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 290               	.Lscope2:
+ 291               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 292               		.stabd	78,0,0
+ 293               		.section	.text.InitRC5,"ax",@progbits
+ 294               		.stabs	"InitRC5:F(0,47)",36,0,185,InitRC5
+ 295               	.global	InitRC5
+ 296               		.type	InitRC5, @function
+ 297               	InitRC5:
+ 298               		.stabd	46,0,0
+ 181:./lib/rc5.c   **** 
+ 182:./lib/rc5.c   **** /*!
+ 183:./lib/rc5.c   ****  * Init IR-System
+ 184:./lib/rc5.c   ****  */
+ 185:./lib/rc5.c   **** void InitRC5 (void)
+ 186:./lib/rc5.c   **** {
+ 299               		.stabn	68,0,186,.LM28-.LFBB3
+ 300               	.LM28:
+ 301               	.LFBB3:
+ 302               	/* prologue: function */
+ 303               	/* frame size = 0 */
+ 304               	/* stack size = 0 */
+ 305               	.L__stack_usage = 0
+ 187:./lib/rc5.c   ****   IR_DDR  &= ~IR_PIN;   // Pin auf Input
+ 306               		.stabn	68,0,187,.LM29-.LFBB3
+ 307               	.LM29:
+ 308 0000 81B3      		in r24,0x11
+ 309 0002 81BB      		out 0x11,r24
+ 188:./lib/rc5.c   ****   IR_PORT |= IR_PIN;    // Pullup an
+ 310               		.stabn	68,0,188,.LM30-.LFBB3
+ 311               	.LM30:
+ 312 0004 82B3      		in r24,0x12
+ 313 0006 82BB      		out 0x12,r24
+ 189:./lib/rc5.c   ****   enableRC5 = 1;
+ 314               		.stabn	68,0,189,.LM31-.LFBB3
+ 315               	.LM31:
+ 316 0008 81E0      		ldi r24,lo8(1)
+ 317 000a 8093 0000 		sts enableRC5,r24
+ 190:./lib/rc5.c   ****   Ovr2IntFunc = IsrRC5;
+ 318               		.stabn	68,0,190,.LM32-.LFBB3
+ 319               	.LM32:
+ 320 000e 80E0      		ldi r24,lo8(gs(IsrRC5))
+ 321 0010 90E0      		ldi r25,hi8(gs(IsrRC5))
+ 322 0012 9093 0000 		sts Ovr2IntFunc+1,r25
+ 323 0016 8093 0000 		sts Ovr2IntFunc,r24
+GAS LISTING /tmp/ccjVGLU3.s 			page 10
+
+
+ 324 001a 0895      		ret
+ 325               		.size	InitRC5, .-InitRC5
+ 326               	.Lscope3:
+ 327               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 328               		.stabd	78,0,0
+ 329               	.global	enableRC5
+ 330               		.section	.bss.enableRC5,"aw",@nobits
+ 331               		.type	enableRC5, @object
+ 332               		.size	enableRC5, 1
+ 333               	enableRC5:
+ 334 0000 00        		.zero	1
+ 335               	.global	RC5data
+ 336               		.section	.bss.RC5data,"aw",@nobits
+ 337               		.type	RC5data, @object
+ 338               		.size	RC5data, 2
+ 339               	RC5data:
+ 340 0000 0000      		.zero	2
+ 341               		.section	.bss.RC5bitcount,"aw",@nobits
+ 342               		.type	RC5bitcount, @object
+ 343               		.size	RC5bitcount, 1
+ 344               	RC5bitcount:
+ 345 0000 00        		.zero	1
+ 346               		.section	.bss.RC5data_tmp,"aw",@nobits
+ 347               		.type	RC5data_tmp, @object
+ 348               		.size	RC5data_tmp, 2
+ 349               	RC5data_tmp:
+ 350 0000 0000      		.zero	2
+ 351               		.section	.bss.RC5bittimer,"aw",@nobits
+ 352               		.type	RC5bittimer, @object
+ 353               		.size	RC5bittimer, 1
+ 354               	RC5bittimer:
+ 355 0000 00        		.zero	1
+ 356               		.section	.bss.RC5lastsample,"aw",@nobits
+ 357               		.type	RC5lastsample, @object
+ 358               		.size	RC5lastsample, 1
+ 359               	RC5lastsample:
+ 360 0000 00        		.zero	1
+ 361               		.stabs	"RC5lastsample:S(5,2)",38,0,66,RC5lastsample
+ 362               		.stabs	"RC5bittimer:S(5,2)",38,0,67,RC5bittimer
+ 363               		.stabs	"RC5data_tmp:S(5,4)",38,0,69,RC5data_tmp
+ 364               		.stabs	"RC5bitcount:S(5,2)",38,0,70,RC5bitcount
+ 365               		.stabs	"RC5data:G(0,48)=B(5,4)",32,0,72,0
+ 366               		.stabs	"enableRC5:G(0,49)=B(5,2)",32,0,73,0
+ 367               		.text
+ 368               		.stabs	"",100,0,0,.Letext0
+ 369               	.Letext0:
+ 370               		.ident	"GCC: (GNU) 4.9.2"
+ 371               	.global __do_clear_bss
+GAS LISTING /tmp/ccjVGLU3.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 rc5.c
+     /tmp/ccjVGLU3.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccjVGLU3.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccjVGLU3.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccjVGLU3.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccjVGLU3.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccjVGLU3.s:122    .text.IsrRC5:0000000000000000 IsrRC5
+     /tmp/ccjVGLU3.s:333    .bss.enableRC5:0000000000000000 enableRC5
+     /tmp/ccjVGLU3.s:354    .bss.RC5bittimer:0000000000000000 RC5bittimer
+     /tmp/ccjVGLU3.s:359    .bss.RC5lastsample:0000000000000000 RC5lastsample
+     /tmp/ccjVGLU3.s:344    .bss.RC5bitcount:0000000000000000 RC5bitcount
+     /tmp/ccjVGLU3.s:349    .bss.RC5data_tmp:0000000000000000 RC5data_tmp
+     /tmp/ccjVGLU3.s:339    .bss.RC5data:0000000000000000 RC5data
+     /tmp/ccjVGLU3.s:266    .text.ReadRC5:0000000000000000 ReadRC5
+     /tmp/ccjVGLU3.s:297    .text.InitRC5:0000000000000000 InitRC5
+
+UNDEFINED SYMBOLS
+count36kHz
+Ovr2IntFunc
+__do_clear_bss

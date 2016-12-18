@@ -1,0 +1,514 @@
+GAS LISTING /tmp/ccGg0Ebc.s 			page 1
+
+
+   1               		.file	"uart.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/uart.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccGg0Ebc.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccGg0Ebc.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.SerWrite,"ax",@progbits
+ 119               		.stabs	"SerWrite:F(0,47)",36,0,93,SerWrite
+ 120               		.stabs	"length:P(0,11)",64,0,95,22
+ 121               	.global	SerWrite
+ 122               		.type	SerWrite, @function
+ 123               	SerWrite:
+ 124               		.stabd	46,0,0
+   1:./lib/uart.c  **** /****************************************************************************/
+   2:./lib/uart.c  **** /*!
+   3:./lib/uart.c  ****   \file     uart.c
+   4:./lib/uart.c  **** 
+   5:./lib/uart.c  ****   \brief    Funktionen zur seriellen Kommunikation.
+   6:./lib/uart.c  **** 
+   7:./lib/uart.c  ****             Senden und empfangen von Daten ueber die seriellen Schnittstelle.\n
+   8:./lib/uart.c  ****             Diese Funktionen benoetigen einen laufenden Timer 2-Interrupt, da\n
+   9:./lib/uart.c  ****             die Hardware vom Asuro und die 'Gegenstelle' getaktete Signale\n
+  10:./lib/uart.c  ****             benötigen um sie als gueltig zu erkennen. Dieser Takt muss bei der\n
+  11:./lib/uart.c  ****             verwendeten Hardware 36 kHz betragen. Er wird in der Init()-Funktion\n
+  12:./lib/uart.c  ****             eingestellt und zusaetzlich in den Timer-Funktionen in time.c
+  13:./lib/uart.c  ****             benutzt.
+  14:./lib/uart.c  **** 
+  15:./lib/uart.c  ****   \see      Defines fuer unseren Asuro immer in asuro.h\n
+  16:./lib/uart.c  ****             Hier werden aktuell keine Defines benutzt.
+  17:./lib/uart.c  **** 
+  18:./lib/uart.c  ****   \version  V--- - 10.11.2003 - Jan Grewe - DLR\n
+  19:./lib/uart.c  ****             Original Version von der ASURO CD\n
+  20:./lib/uart.c  ****   \version  V--- - bis zum 07.01.2007 - \n
+  21:./lib/uart.c  ****             Bitte in Datei CHANGELOG nachsehen.\n
+  22:./lib/uart.c  ****   \version  V001 - 13.01.2007 - m.a.r.v.i.n\n
+  23:./lib/uart.c  ****             +++ Alle Funktionen\n
+  24:./lib/uart.c  ****             Zerlegte Sourcen in einzelne Dateien fuer eine echte Library.
+  25:./lib/uart.c  ****   \version  V002 - 22.01.2007 - Sternthaler\n
+  26:./lib/uart.c  ****             +++ Alle Funktionen\n
+  27:./lib/uart.c  ****             Kommentierte Version (KEINE Funktionsaenderung)
+  28:./lib/uart.c  ****   \version  V003 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)\n
+  29:./lib/uart.c  ****             +++ SerWrite ()\n
+  30:./lib/uart.c  ****             + Abschalten des Senders nach der Datenuebertragung zum sparen
+  31:./lib/uart.c  ****               von Energie.\n
+  32:./lib/uart.c  ****             + Erklaerungsversuch fuer die Warteschleife am Ende der Funktion.
+  33:./lib/uart.c  ****   \version  V004 - 31.07.2007 - Sternthaler\n
+  34:./lib/uart.c  ****             +++ SerWrite ()\n
+  35:./lib/uart.c  ****             + Erklaerungsversuch fuer die Warteschleife mit Bezug zum Forum
+  36:./lib/uart.c  ****               unter http://www.roboternetz.de/
+  37:./lib/uart.c  ****   \version  V005 - 14.08.2007 - m.a.r.v.i.n\n
+  38:./lib/uart.c  ****             Magic Numbers ersetzt durch IO Register Defines
+  39:./lib/uart.c  ****   \version  V006 - 27.03.2008 - m.a.r.v.i.n\n
+  40:./lib/uart.c  ****             Warteschlefe am Ende SerWrite Funktion entfernt.
+  41:./lib/uart.c  **** *****************************************************************************/
+  42:./lib/uart.c  **** /*****************************************************************************
+  43:./lib/uart.c  **** *                                                                            *
+  44:./lib/uart.c  **** *   This program is free software; you can redistribute it and/or modify     *
+  45:./lib/uart.c  **** *   it under the terms of the GNU General Public License as published by     *
+  46:./lib/uart.c  **** *   the Free Software Foundation; either version 2 of the License, or        *
+  47:./lib/uart.c  **** *   any later version.                                                       *
+GAS LISTING /tmp/ccGg0Ebc.s 			page 4
+
+
+  48:./lib/uart.c  **** *                                                                            *
+  49:./lib/uart.c  **** *****************************************************************************/
+  50:./lib/uart.c  **** #include "asuro.h"
+  51:./lib/uart.c  **** 
+  52:./lib/uart.c  **** 
+  53:./lib/uart.c  **** 
+  54:./lib/uart.c  **** /****************************************************************************/
+  55:./lib/uart.c  **** /*!
+  56:./lib/uart.c  ****   \brief
+  57:./lib/uart.c  ****   Senden von Daten ueber die serielle Schnittstelle.
+  58:./lib/uart.c  ****   
+  59:./lib/uart.c  ****   Die zu senden Daten werden nicht als 0-terminierter C-String erwartet, sondern\n
+  60:./lib/uart.c  ****   es werden grundsaetzlich so viele Zeichen gesendet wie im 2.ten Parameter\n
+  61:./lib/uart.c  ****   angegeben werden. Deshalb sollte die Funktion eher zum Senden von Rohdaten
+  62:./lib/uart.c  ****   verwendet werden (keine ASCII Zeichen)
+  63:./lib/uart.c  ****   Zum Senden von Strings sollte stattdessen die Funktion SerPrint verwendet werden.
+  64:./lib/uart.c  ****   Bei der aktuellen WinAVR Version (2007055) gibt es eine Warnung, falls ein 
+  65:./lib/uart.c  ****   String als 1. Parameter übergeben wird
+  66:./lib/uart.c  **** 
+  67:./lib/uart.c  ****   \version  V003 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)\n
+  68:./lib/uart.c  ****             + Abschalten des Senders nach der Datenuebertragung zum sparen
+  69:./lib/uart.c  ****               von Energie.\n
+  70:./lib/uart.c  ****             + Erklaerungsversuch fuer die Warteschleife am Ende der Funktion.
+  71:./lib/uart.c  ****   \version  V004 - 31.07.2007 - Sternthaler\n
+  72:./lib/uart.c  ****             + Erklaerungsversuch fuer die Warteschleife mit Bezug zum Forum
+  73:./lib/uart.c  ****               unter http://www.roboternetz.de/
+  74:./lib/uart.c  **** 
+  75:./lib/uart.c  ****   \param[in]
+  76:./lib/uart.c  ****   *data Zu sendende Daten
+  77:./lib/uart.c  ****   \param[in]
+  78:./lib/uart.c  ****   length Die Anzahl der zu sendenden Zeichen.
+  79:./lib/uart.c  **** 
+  80:./lib/uart.c  ****   \see
+  81:./lib/uart.c  ****   Die Initialisierung vom Timer 2-Interrupt erfolgt in der Funktion Init().
+  82:./lib/uart.c  **** 
+  83:./lib/uart.c  ****   \see SerPrint
+  84:./lib/uart.c  **** 
+  85:./lib/uart.c  ****   \par  Beispiel:
+  86:./lib/uart.c  ****   (Nur zur Demonstration der Parameter/Returnwerte)
+  87:./lib/uart.c  ****   \code
+  88:./lib/uart.c  ****   // Senden von Rohdaten ueber die Schnittstelle.
+  89:./lib/uart.c  ****   unsigned char buf[4] = {0x55, 0xaa, 0xab, 0xcd);
+  90:./lib/uart.c  ****   SerWrite (buf, 4);
+  91:./lib/uart.c  ****   \endcode
+  92:./lib/uart.c  **** *****************************************************************************/
+  93:./lib/uart.c  **** void SerWrite (
+  94:./lib/uart.c  ****   unsigned char *data,
+  95:./lib/uart.c  ****   unsigned char length)
+  96:./lib/uart.c  **** {
+ 125               		.stabn	68,0,96,.LM0-.LFBB1
+ 126               	.LM0:
+ 127               	.LFBB1:
+ 128               	/* prologue: function */
+ 129               	/* frame size = 0 */
+ 130               	/* stack size = 0 */
+ 131               	.L__stack_usage = 0
+  97:./lib/uart.c  ****   unsigned char i = 0;
+GAS LISTING /tmp/ccGg0Ebc.s 			page 5
+
+
+  98:./lib/uart.c  **** 
+  99:./lib/uart.c  ****   UCSRB = (1<<TXEN);                    // Sender einschalten
+ 132               		.stabn	68,0,99,.LM1-.LFBB1
+ 133               	.LM1:
+ 134 0000 28E0      		ldi r18,lo8(8)
+ 135 0002 2AB9      		out 0xa,r18
+ 100:./lib/uart.c  ****   while (length > 0)                    // so lange noch Daten da sind
+ 136               		.stabn	68,0,100,.LM2-.LFBB1
+ 137               	.LM2:
+ 138 0004 FC01      		movw r30,r24
+ 139 0006 860F      		add r24,r22
+ 140               	.L3:
+ 141 0008 8E17      		cp r24,r30
+ 142 000a 01F0      		breq .L8
+ 101:./lib/uart.c  ****   {
+ 102:./lib/uart.c  ****     if (UCSRA & (1<<UDRE))
+ 143               		.stabn	68,0,102,.LM3-.LFBB1
+ 144               	.LM3:
+ 145 000c 5D9B      		sbis 0xb,5
+ 146 000e 00C0      		rjmp .L3
+ 103:./lib/uart.c  ****     {                                   // warten, bis der Sendebuffer leer ist
+ 104:./lib/uart.c  ****       UDR = data[i++];
+ 147               		.stabn	68,0,104,.LM4-.LFBB1
+ 148               	.LM4:
+ 149 0010 9191      		ld r25,Z+
+ 150 0012 9CB9      		out 0xc,r25
+ 151 0014 00C0      		rjmp .L3
+ 152               	.L8:
+ 105:./lib/uart.c  ****       length --;
+ 106:./lib/uart.c  ****     }
+ 107:./lib/uart.c  ****   }
+ 108:./lib/uart.c  ****   while (!(UCSRA & (1<<TXC)))           // abwarten, bis das letzte Zeichen 
+ 153               		.stabn	68,0,108,.LM5-.LFBB1
+ 154               	.LM5:
+ 155 0016 5E9B      		sbis 0xb,6
+ 156 0018 00C0      		rjmp .L8
+ 109:./lib/uart.c  ****     ;                                   // uebertragen wurde.        
+ 110:./lib/uart.c  **** 
+ 111:./lib/uart.c  ****   UCSRA |= (1<<TXC);                    // transmission completed Flag setzen
+ 157               		.stabn	68,0,111,.LM6-.LFBB1
+ 158               	.LM6:
+ 159 001a 5E9A      		sbi 0xb,6
+ 112:./lib/uart.c  **** 
+ 113:./lib/uart.c  ****   UCSRB &= ~(1<<TXEN);                  // Sender ausschalten / Powersave
+ 160               		.stabn	68,0,113,.LM7-.LFBB1
+ 161               	.LM7:
+ 162 001c 5398      		cbi 0xa,3
+ 163 001e 0895      		ret
+ 164               		.size	SerWrite, .-SerWrite
+ 165               	.Lscope1:
+ 166               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 167               		.stabd	78,0,0
+ 168               		.section	.text.SerRead,"ax",@progbits
+ 169               		.stabs	"SerRead:F(0,47)",36,0,158,SerRead
+ 170               		.stabs	"data:P(0,48)=*(0,11)",64,0,159,24
+ 171               		.stabs	"length:P(0,11)",64,0,160,22
+ 172               		.stabs	"timeout:P(0,4)",64,0,161,20
+GAS LISTING /tmp/ccGg0Ebc.s 			page 6
+
+
+ 173               	.global	SerRead
+ 174               		.type	SerRead, @function
+ 175               	SerRead:
+ 176               		.stabd	46,0,0
+ 114:./lib/uart.c  **** }
+ 115:./lib/uart.c  **** 
+ 116:./lib/uart.c  **** 
+ 117:./lib/uart.c  **** 
+ 118:./lib/uart.c  **** /****************************************************************************/
+ 119:./lib/uart.c  **** /*!
+ 120:./lib/uart.c  ****   \brief
+ 121:./lib/uart.c  ****   Lesen von Daten ueber die serielle Schnittstelle
+ 122:./lib/uart.c  ****   
+ 123:./lib/uart.c  ****   Die empfangenen Daten werden in der als Pointer uebergeben Variable data\n
+ 124:./lib/uart.c  ****   dem Aufrufer zur verfuegung gestellt.\n
+ 125:./lib/uart.c  ****   Der Aufrufer bestimmt ueber den Parameter Timeout, ob diese Funktion im\n
+ 126:./lib/uart.c  ****   'blocking'- oder im 'nonblocking'-Mode laufen soll. Im 'blocking'-Mode\n
+ 127:./lib/uart.c  ****   bleibt diese Funktion auf alle Faelle so lange aktiv, bis die, uber den\n
+ 128:./lib/uart.c  ****   Parameter length, geforderte Anzahl Zeichen empfamgen wurde.
+ 129:./lib/uart.c  **** 
+ 130:./lib/uart.c  ****   \param[out]
+ 131:./lib/uart.c  ****   data Zeiger auf die einzulesenden Daten
+ 132:./lib/uart.c  ****   \param[in]
+ 133:./lib/uart.c  ****   length Anzahl der zu lesenden Zeichen
+ 134:./lib/uart.c  ****   \param[in]
+ 135:./lib/uart.c  ****   timeout 0 = blockierender Mode\n
+ 136:./lib/uart.c  ****           Wird hier ein Wert groesser 0 uebergeben, wird nur eine gewisse Zeit\n
+ 137:./lib/uart.c  ****           lang versucht ein weiteres Zeichen ueber die Schnittstelle zu empfangen.\n
+ 138:./lib/uart.c  ****           Kommt in dieser Zeit kein weiteres Zeichen, wird im zurueckgegeben\n
+ 139:./lib/uart.c  ****           Parameter date das erste Zeichen auf 'T' gesetzt und die Funktion\n
+ 140:./lib/uart.c  ****           kehrt zum Aufrufer zurueck.\n
+ 141:./lib/uart.c  ****           Ansonsten wird die Funktion auf alle Faelle verlassen, wenn die als\n
+ 142:./lib/uart.c  ****           Parameter length geforderte Anzahl Zeichen empfangen werden konnten.
+ 143:./lib/uart.c  **** 
+ 144:./lib/uart.c  ****   \par  Beispiel:
+ 145:./lib/uart.c  ****   (Nur zur Demonstration der Parameter/Returnwerte)
+ 146:./lib/uart.c  ****   \code
+ 147:./lib/uart.c  ****   // Empfangen von 5 Zeichen. Aber spaetestens nach 20 Versuchen wieder
+ 148:./lib/uart.c  ****   // im Programm weiter machen.
+ 149:./lib/uart.c  ****   char emfangene_daten [10];
+ 150:./lib/uart.c  **** 
+ 151:./lib/uart.c  ****   SerRead (emfangene_daten, 5, 20);
+ 152:./lib/uart.c  ****   if (emfangene_daten [0] == 'T')
+ 153:./lib/uart.c  ****     SerWrite ("Mist, timeout", 13);
+ 154:./lib/uart.c  ****   else
+ 155:./lib/uart.c  ****     SerWrite ("5 Zeichen empfangen", 19);
+ 156:./lib/uart.c  ****   \endcode
+ 157:./lib/uart.c  **** *****************************************************************************/
+ 158:./lib/uart.c  **** void SerRead (
+ 159:./lib/uart.c  ****   unsigned char *data,
+ 160:./lib/uart.c  ****   unsigned char length,
+ 161:./lib/uart.c  ****   unsigned int timeout)
+ 162:./lib/uart.c  **** {
+ 177               		.stabn	68,0,162,.LM8-.LFBB2
+ 178               	.LM8:
+ 179               	.LFBB2:
+ 180 0000 CF93      		push r28
+GAS LISTING /tmp/ccGg0Ebc.s 			page 7
+
+
+ 181               	/* prologue: function */
+ 182               	/* frame size = 0 */
+ 183               	/* stack size = 1 */
+ 184               	.L__stack_usage = 1
+ 163:./lib/uart.c  ****   unsigned char i = 0;
+ 164:./lib/uart.c  ****   unsigned int  time = 0;
+ 165:./lib/uart.c  **** 
+ 166:./lib/uart.c  ****   UCSRB = (1<<RXEN);                         // Empfaenger einschalten
+ 185               		.stabn	68,0,166,.LM9-.LFBB2
+ 186               	.LM9:
+ 187 0002 20E1      		ldi r18,lo8(16)
+ 188 0004 2AB9      		out 0xa,r18
+ 167:./lib/uart.c  **** 
+ 168:./lib/uart.c  ****   if (timeout != 0)
+ 189               		.stabn	68,0,168,.LM10-.LFBB2
+ 190               	.LM10:
+ 191 0006 4115      		cp r20,__zero_reg__
+ 192 0008 5105      		cpc r21,__zero_reg__
+ 193 000a 01F4      		brne .L13
+ 194 000c 282F      		mov r18,r24
+ 195 000e FC01      		movw r30,r24
+ 196 0010 00C0      		rjmp .L14
+ 197               	.L13:
+ 198 0012 782F      		mov r23,r24
+ 199 0014 FC01      		movw r30,r24
+ 200               	.L15:
+ 201 0016 20E0      		ldi r18,0
+ 202 0018 30E0      		ldi r19,0
+ 203 001a CE2F      		mov r28,r30
+ 204 001c C71B      		sub r28,r23
+ 205               	.L16:
+ 169:./lib/uart.c  ****   {
+ 170:./lib/uart.c  ****     /*
+ 171:./lib/uart.c  ****       Die Funktion wird auf alle Faelle, auch ohne empfangene Daten, wieder
+ 172:./lib/uart.c  ****       verlassen. --> nonblocking mode
+ 173:./lib/uart.c  ****     */
+ 174:./lib/uart.c  ****     while (i < length && time++ < timeout)
+ 206               		.stabn	68,0,174,.LM11-.LFBB2
+ 207               	.LM11:
+ 208 001e C617      		cp r28,r22
+ 209 0020 00F4      		brsh .L17
+ 210               		.stabn	68,0,174,.LM12-.LFBB2
+ 211               	.LM12:
+ 212 0022 D901      		movw r26,r18
+ 213 0024 1196      		adiw r26,1
+ 214 0026 2417      		cp r18,r20
+ 215 0028 3507      		cpc r19,r21
+ 216 002a 00F4      		brsh .L26
+ 175:./lib/uart.c  ****     {
+ 176:./lib/uart.c  ****       if (UCSRA & (1<<RXC))
+ 217               		.stabn	68,0,176,.LM13-.LFBB2
+ 218               	.LM13:
+ 219 002c 5F9B      		sbis 0xb,7
+ 220 002e 00C0      		rjmp .L24
+ 177:./lib/uart.c  ****       {
+ 178:./lib/uart.c  ****         data [i++] = UDR;
+ 221               		.stabn	68,0,178,.LM14-.LFBB2
+GAS LISTING /tmp/ccGg0Ebc.s 			page 8
+
+
+ 222               	.LM14:
+ 223 0030 2CB1      		in r18,0xc
+ 224 0032 2193      		st Z+,r18
+ 225 0034 00C0      		rjmp .L15
+ 226               	.L24:
+ 174:./lib/uart.c  ****     {
+ 227               		.stabn	68,0,174,.LM15-.LFBB2
+ 228               	.LM15:
+ 229 0036 9D01      		movw r18,r26
+ 230 0038 00C0      		rjmp .L16
+ 231               	.L26:
+ 232 003a 9D01      		movw r18,r26
+ 233               	.L17:
+ 179:./lib/uart.c  ****         time = 0;
+ 180:./lib/uart.c  ****       }
+ 181:./lib/uart.c  ****     }
+ 182:./lib/uart.c  ****     if (time > timeout)
+ 234               		.stabn	68,0,182,.LM16-.LFBB2
+ 235               	.LM16:
+ 236 003c 4217      		cp r20,r18
+ 237 003e 5307      		cpc r21,r19
+ 238 0040 00F4      		brsh .L12
+ 183:./lib/uart.c  ****       data [0] = 'T';
+ 239               		.stabn	68,0,183,.LM17-.LFBB2
+ 240               	.LM17:
+ 241 0042 24E5      		ldi r18,lo8(84)
+ 242 0044 FC01      		movw r30,r24
+ 243 0046 2083      		st Z,r18
+ 244 0048 00C0      		rjmp .L12
+ 245               	.L21:
+ 184:./lib/uart.c  ****   }
+ 185:./lib/uart.c  ****   else
+ 186:./lib/uart.c  ****   {
+ 187:./lib/uart.c  ****     /*
+ 188:./lib/uart.c  ****       Die Funktion wird auf alle Faelle erst nach dem Empfang von der
+ 189:./lib/uart.c  ****       vorgegebenen Anzahl Zeichen verlassen. blocking mode
+ 190:./lib/uart.c  ****     */
+ 191:./lib/uart.c  ****     while (i < length)
+ 246               		.stabn	68,0,191,.LM18-.LFBB2
+ 247               	.LM18:
+ 248 004a 8617      		cp r24,r22
+ 249 004c 00F4      		brsh .L12
+ 192:./lib/uart.c  ****     {
+ 193:./lib/uart.c  ****       if (UCSRA & (1<<RXC))
+ 250               		.stabn	68,0,193,.LM19-.LFBB2
+ 251               	.LM19:
+ 252 004e 5F9B      		sbis 0xb,7
+ 253 0050 00C0      		rjmp .L21
+ 194:./lib/uart.c  ****         data [i++] = UDR;
+ 254               		.stabn	68,0,194,.LM20-.LFBB2
+ 255               	.LM20:
+ 256 0052 8CB1      		in r24,0xc
+ 257 0054 8193      		st Z+,r24
+ 258               	.L14:
+ 259 0056 8E2F      		mov r24,r30
+ 260 0058 821B      		sub r24,r18
+ 261 005a 00C0      		rjmp .L21
+GAS LISTING /tmp/ccGg0Ebc.s 			page 9
+
+
+ 262               	.L12:
+ 263               	/* epilogue start */
+ 195:./lib/uart.c  ****     }
+ 196:./lib/uart.c  ****   }
+ 197:./lib/uart.c  **** }
+ 264               		.stabn	68,0,197,.LM21-.LFBB2
+ 265               	.LM21:
+ 266 005c CF91      		pop r28
+ 267 005e 0895      		ret
+ 268               		.size	SerRead, .-SerRead
+ 269               	.Lscope2:
+ 270               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 271               		.stabd	78,0,0
+ 272               		.text
+ 273               		.stabs	"",100,0,0,.Letext0
+ 274               	.Letext0:
+ 275               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccGg0Ebc.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 uart.c
+     /tmp/ccGg0Ebc.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccGg0Ebc.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccGg0Ebc.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccGg0Ebc.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccGg0Ebc.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccGg0Ebc.s:123    .text.SerWrite:0000000000000000 SerWrite
+     /tmp/ccGg0Ebc.s:175    .text.SerRead:0000000000000000 SerRead
+
+NO UNDEFINED SYMBOLS

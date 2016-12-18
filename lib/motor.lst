@@ -1,0 +1,379 @@
+GAS LISTING /tmp/ccn8I4EW.s 			page 1
+
+
+   1               		.file	"motor.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/motor.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccn8I4EW.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccn8I4EW.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.SetMotorPower,"ax",@progbits
+ 119               		.stabs	"SetMotorPower:F(0,47)",36,0,89,SetMotorPower
+ 120               		.stabs	"leftpwm:P(6,1)",64,0,90,29
+ 121               		.stabs	"rightpwm:P(6,1)",64,0,91,28
+ 122               	.global	SetMotorPower
+ 123               		.type	SetMotorPower, @function
+ 124               	SetMotorPower:
+ 125               		.stabd	46,0,0
+   1:./lib/motor.c **** /****************************************************************************/
+   2:./lib/motor.c **** /*!
+   3:./lib/motor.c ****   \file     motor.c
+   4:./lib/motor.c **** 
+   5:./lib/motor.c ****   \brief    Funktionen zur Steuerung der Motoren.
+   6:./lib/motor.c **** 
+   7:./lib/motor.c ****   Die Motorsteuerung erfolgt grundsaetzlich ueber die auf der Asuro-Platine\n
+   8:./lib/motor.c ****   aufgebauten H-Bruecken. Dies ist eine Schaltung, ueber die ein Strom in\n
+   9:./lib/motor.c ****   verschiedene Richtungen durch die Motoren geleitet werden kann.\n
+  10:./lib/motor.c ****   Zur Geschwindigkeitssteuerung werden die beiden im Prozessor vorhandenen\n
+  11:./lib/motor.c ****   PWM-Kanaele genutzt, deren Ausgangssignale die Staerke des Stromflusses in\n
+  12:./lib/motor.c ****   den H-Bruecken beinflusst.\n
+  13:./lib/motor.c ****   Die Initialisierung der PWM-Funktionalitaet erfolgt in der Funktion Init().
+  14:./lib/motor.c **** 
+  15:./lib/motor.c ****   \see      Defines fuer die Auswahl der ADC-Kanaele in asuro.h\n
+  16:./lib/motor.c ****             FWD, RWD, BREAK, FREE
+  17:./lib/motor.c **** 
+  18:./lib/motor.c ****   \version  sto1 - 07.01.2006 - stochri\n
+  19:./lib/motor.c ****             +++ SetMotorPower()\n
+  20:./lib/motor.c ****             first implementation
+  21:./lib/motor.c ****   \version  V--- - bis zum 07.01.2007 - \n
+  22:./lib/motor.c ****             Bitte in Datei CHANGELOG nachsehen.\n
+  23:./lib/motor.c ****   \version  V001 - 13.01.2007 - m.a.r.v.i.n\n
+  24:./lib/motor.c ****             +++ Alle Funktionen\n
+  25:./lib/motor.c ****             Zerlegte Sourcen in einzelne Dateien fuer eine echte Library.
+  26:./lib/motor.c ****   \version  V002 - 05.02.2007 - Sternthaler\n
+  27:./lib/motor.c ****             +++ Alle Funktionen\n
+  28:./lib/motor.c ****             Kommentierte Version (KEINE Funktionsaenderung)
+  29:./lib/motor.c ****   \version  V003 - 18.02.2007 - m.a.r.v.i.n\n
+  30:./lib/motor.c ****             Datei gesplitted in motor_low.c und motor.c 
+  31:./lib/motor.c **** 	    
+  32:./lib/motor.c **** *****************************************************************************/
+  33:./lib/motor.c **** /*****************************************************************************
+  34:./lib/motor.c **** *                                                                            *
+  35:./lib/motor.c **** *   This program is free software; you can redistribute it and/or modify     *
+  36:./lib/motor.c **** *   it under the terms of the GNU General Public License as published by     *
+  37:./lib/motor.c **** *   the Free Software Foundation; either version 2 of the License, or        *
+  38:./lib/motor.c **** *   any later version.                                                       *
+  39:./lib/motor.c **** *                                                                            *
+  40:./lib/motor.c **** *****************************************************************************/
+  41:./lib/motor.c **** #include "asuro.h"
+  42:./lib/motor.c **** 
+  43:./lib/motor.c **** 
+  44:./lib/motor.c **** 
+  45:./lib/motor.c **** /***************************************************************************
+  46:./lib/motor.c **** *
+GAS LISTING /tmp/ccn8I4EW.s 			page 4
+
+
+  47:./lib/motor.c **** * 	sto1     07.01.2006   stochri	       first implementation
+  48:./lib/motor.c **** *
+  49:./lib/motor.c **** * control the motors
+  50:./lib/motor.c **** *
+  51:./lib/motor.c **** * input range: -127 full power backturn
+  52:./lib/motor.c **** *                 0 stop motors
+  53:./lib/motor.c **** *              +127 full power vorward
+  54:./lib/motor.c **** *
+  55:./lib/motor.c **** *       motor direction and speed can be set with one parameter
+  56:./lib/motor.c **** *
+  57:./lib/motor.c **** *	last modification:
+  58:./lib/motor.c **** * 	Ver.     Date         Author           Comments
+  59:./lib/motor.c **** * 	-------  ----------   --------------   ---------------------------------
+  60:./lib/motor.c **** * 	sto1     07.01.2006   stochri	       first implementation
+  61:./lib/motor.c **** * 	-------  ----------   --------------   ---------------------------------
+  62:./lib/motor.c **** ****************************************************************************/
+  63:./lib/motor.c **** /****************************************************************************/
+  64:./lib/motor.c **** /*!
+  65:./lib/motor.c ****   \brief
+  66:./lib/motor.c ****   Steuert die Motorgeschwindigkeit und Drehrichtung der Motoren.
+  67:./lib/motor.c **** 
+  68:./lib/motor.c ****   \param[in]
+  69:./lib/motor.c ****   leftpwm   linker Motor (-rückwaerts, + vorwaerts) (Wertebereich -128...127)
+  70:./lib/motor.c **** 
+  71:./lib/motor.c ****   \param[in]
+  72:./lib/motor.c ****   rightpwm  rechter Motor (-rückwaerts, + vorwaerts)  (Wertebereich -128...127)
+  73:./lib/motor.c **** 
+  74:./lib/motor.c ****   \par  Hinweis:
+  75:./lib/motor.c ****   Da der Wertebereich dieser Funktion nur von -128 bis +127 reicht, aber die\n
+  76:./lib/motor.c ****   urspruengliche Funktion MotorSpeed() einen Wertebereich bis +255 hat, werden\n
+  77:./lib/motor.c ****   die hier uebergebene Parameter als Absolutwert mit 2 multipliziert\n
+  78:./lib/motor.c ****   weitergegeben.\n
+  79:./lib/motor.c **** 
+  80:./lib/motor.c ****   \par  Beispiel:
+  81:./lib/motor.c ****   (Nur zur Demonstration der Parameter/Returnwerte)
+  82:./lib/motor.c ****   \code
+  83:./lib/motor.c ****   // Setzt die Geschwindigkeit fuer den linken Motor auf 60 (vorwaerts),
+  84:./lib/motor.c ****   // und für den rechten Motor auf -60 (rueckwaerts)
+  85:./lib/motor.c ****   // Asuro soll auf der Stelle drehen.
+  86:./lib/motor.c ****   SetMotorPower (60, -600);
+  87:./lib/motor.c ****   \endcode
+  88:./lib/motor.c **** *****************************************************************************/
+  89:./lib/motor.c **** void SetMotorPower (
+  90:./lib/motor.c ****   int8_t leftpwm,
+  91:./lib/motor.c ****   int8_t rightpwm)
+  92:./lib/motor.c **** {
+ 126               		.stabn	68,0,92,.LM0-.LFBB1
+ 127               	.LM0:
+ 128               	.LFBB1:
+ 129 0000 CF93      		push r28
+ 130 0002 DF93      		push r29
+ 131               	/* prologue: function */
+ 132               	/* frame size = 0 */
+ 133               	/* stack size = 2 */
+ 134               	.L__stack_usage = 2
+ 135 0004 D82F      		mov r29,r24
+ 136 0006 C62F      		mov r28,r22
+GAS LISTING /tmp/ccn8I4EW.s 			page 5
+
+
+  93:./lib/motor.c ****   unsigned char left, right;
+  94:./lib/motor.c **** 
+  95:./lib/motor.c ****   if (leftpwm < 0)                      // Ein negativer Wert fuehrt ...
+ 137               		.stabn	68,0,95,.LM1-.LFBB1
+ 138               	.LM1:
+ 139 0008 87FF      		sbrs r24,7
+ 140 000a 00C0      		rjmp .L2
+  96:./lib/motor.c ****   {
+  97:./lib/motor.c ****     left = RWD;                         // ... zu einer Rueckwaertsfahrt, ...
+  98:./lib/motor.c ****     leftpwm = -leftpwm;                 // aber immer positiv PWM-Wert
+ 141               		.stabn	68,0,98,.LM2-.LFBB1
+ 142               	.LM2:
+ 143 000c D195      		neg r29
+  97:./lib/motor.c ****     leftpwm = -leftpwm;                 // aber immer positiv PWM-Wert
+ 144               		.stabn	68,0,97,.LM3-.LFBB1
+ 145               	.LM3:
+ 146 000e 80E1      		ldi r24,lo8(16)
+ 147 0010 00C0      		rjmp .L4
+ 148               	.L2:
+  99:./lib/motor.c ****   }
+ 100:./lib/motor.c ****   else
+ 101:./lib/motor.c ****     left = FWD;                         // ... sonst nach vorne, ...
+ 102:./lib/motor.c ****   if (leftpwm == 0)
+ 149               		.stabn	68,0,102,.LM4-.LFBB1
+ 150               	.LM4:
+ 151 0012 8823      		tst r24
+ 152 0014 01F0      		breq .L8
+ 101:./lib/motor.c ****   if (leftpwm == 0)
+ 153               		.stabn	68,0,101,.LM5-.LFBB1
+ 154               	.LM5:
+ 155 0016 80E2      		ldi r24,lo8(32)
+ 156 0018 00C0      		rjmp .L4
+ 157               	.L8:
+ 103:./lib/motor.c ****     left = BREAK;                       // ... oder bei 0 zum Bremsen.
+ 158               		.stabn	68,0,103,.LM6-.LFBB1
+ 159               	.LM6:
+ 160 001a 80E0      		ldi r24,0
+ 161               	.L4:
+ 104:./lib/motor.c **** 
+ 105:./lib/motor.c ****   if (rightpwm < 0)
+ 162               		.stabn	68,0,105,.LM7-.LFBB1
+ 163               	.LM7:
+ 164 001c C7FF      		sbrs r28,7
+ 165 001e 00C0      		rjmp .L5
+ 106:./lib/motor.c ****   {
+ 107:./lib/motor.c ****     right = RWD;
+ 108:./lib/motor.c ****     rightpwm = -rightpwm;
+ 166               		.stabn	68,0,108,.LM8-.LFBB1
+ 167               	.LM8:
+ 168 0020 C195      		neg r28
+ 107:./lib/motor.c ****     rightpwm = -rightpwm;
+ 169               		.stabn	68,0,107,.LM9-.LFBB1
+ 170               	.LM9:
+ 171 0022 60E1      		ldi r22,lo8(16)
+ 172 0024 00C0      		rjmp .L7
+ 173               	.L5:
+ 109:./lib/motor.c ****   }
+GAS LISTING /tmp/ccn8I4EW.s 			page 6
+
+
+ 110:./lib/motor.c ****   else
+ 111:./lib/motor.c ****     right = FWD;
+ 112:./lib/motor.c ****   if (rightpwm == 0)
+ 174               		.stabn	68,0,112,.LM10-.LFBB1
+ 175               	.LM10:
+ 176 0026 CC23      		tst r28
+ 177 0028 01F0      		breq .L9
+ 111:./lib/motor.c ****   if (rightpwm == 0)
+ 178               		.stabn	68,0,111,.LM11-.LFBB1
+ 179               	.LM11:
+ 180 002a 60E2      		ldi r22,lo8(32)
+ 181 002c 00C0      		rjmp .L7
+ 182               	.L9:
+ 113:./lib/motor.c ****     right = BREAK;
+ 183               		.stabn	68,0,113,.LM12-.LFBB1
+ 184               	.LM12:
+ 185 002e 60E0      		ldi r22,0
+ 186               	.L7:
+ 114:./lib/motor.c **** 
+ 115:./lib/motor.c ****   MotorDir (left, right);                 // Drehrichtung setzen
+ 187               		.stabn	68,0,115,.LM13-.LFBB1
+ 188               	.LM13:
+ 189 0030 00D0      		rcall MotorDir
+ 116:./lib/motor.c **** 
+ 117:./lib/motor.c ****   /*
+ 118:./lib/motor.c ****     Die Geschwindigkeitsparameter mit 2 multiplizieren, da der Absolutwert
+ 119:./lib/motor.c ****     der Parameter dieser Funktion nur genau die Haelfte von der MotorSpeed()-
+ 120:./lib/motor.c ****     Funktion betraegt.
+ 121:./lib/motor.c ****   */
+ 122:./lib/motor.c ****   MotorSpeed (leftpwm * 2, rightpwm * 2);
+ 190               		.stabn	68,0,122,.LM14-.LFBB1
+ 191               	.LM14:
+ 192 0032 6C2F      		mov r22,r28
+ 193 0034 660F      		lsl r22
+ 194 0036 8D2F      		mov r24,r29
+ 195 0038 880F      		lsl r24
+ 196               	/* epilogue start */
+ 123:./lib/motor.c **** }
+ 197               		.stabn	68,0,123,.LM15-.LFBB1
+ 198               	.LM15:
+ 199 003a DF91      		pop r29
+ 200 003c CF91      		pop r28
+ 122:./lib/motor.c **** }
+ 201               		.stabn	68,0,122,.LM16-.LFBB1
+ 202               	.LM16:
+ 203 003e 00C0      		rjmp MotorSpeed
+ 204               		.size	SetMotorPower, .-SetMotorPower
+ 205               		.stabs	"left:r(0,11)",64,0,93,24
+ 206               		.stabs	"right:r(0,11)",64,0,93,22
+ 207               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 208               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 209               	.Lscope1:
+ 210               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 211               		.stabd	78,0,0
+ 212               		.text
+ 213               		.stabs	"",100,0,0,.Letext0
+ 214               	.Letext0:
+GAS LISTING /tmp/ccn8I4EW.s 			page 7
+
+
+ 215               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccn8I4EW.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 motor.c
+     /tmp/ccn8I4EW.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccn8I4EW.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccn8I4EW.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccn8I4EW.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccn8I4EW.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccn8I4EW.s:124    .text.SetMotorPower:0000000000000000 SetMotorPower
+
+UNDEFINED SYMBOLS
+MotorDir
+MotorSpeed

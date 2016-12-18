@@ -1,0 +1,689 @@
+GAS LISTING /tmp/ccHCnHlM.s 			page 1
+
+
+   1               		.file	"encoder.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/encoder.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccHCnHlM.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccHCnHlM.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.GoTurn,"ax",@progbits
+ 119               		.stabs	"GoTurn:F(0,47)",36,0,128,GoTurn
+ 120               		.stabs	"distance:P(0,1)",64,0,129,12
+ 121               		.stabs	"degree:P(0,1)",64,0,130,16
+ 122               		.stabs	"speed:P(0,1)",64,0,131,14
+ 123               	.global	GoTurn
+ 124               		.type	GoTurn, @function
+ 125               	GoTurn:
+ 126               		.stabd	46,0,0
+   1:./lib/encoder.c **** /****************************************************************************/
+   2:./lib/encoder.c **** /*!
+   3:./lib/encoder.c ****   \file     encoder.c
+   4:./lib/encoder.c **** 
+   5:./lib/encoder.c ****   \brief    Funktionen zur Vorgabe von Fahrstrecken und Drehungen.
+   6:./lib/encoder.c **** 
+   7:./lib/encoder.c ****   \see      Defines zum setzen von Port's und Konfigurationen in asuro.h\n
+   8:./lib/encoder.c ****             TRUE, FALSE, LEFT, RIGHT
+   9:./lib/encoder.c **** 
+  10:./lib/encoder.c ****   \version  V--- -
+  11:./lib/encoder.c ****             KEINE original Version von der ASURO CD vom DLR\n
+  12:./lib/encoder.c ****   \version  V--- - bis zum 07.01.2007 - \n
+  13:./lib/encoder.c ****             Bitte in Datei CHANGELOG nachsehen.\n
+  14:./lib/encoder.c ****             Das Grundgeruest dieser Funktionen wurde von stochri erstellt.\n
+  15:./lib/encoder.c ****   \version  V001 - 13.01.2007 - m.a.r.v.i.n\n
+  16:./lib/encoder.c ****             +++ Alle Funktionen\n
+  17:./lib/encoder.c ****             Zerlegte Sourcen in einzelne Dateien fuer eine echte Library.
+  18:./lib/encoder.c ****   \version  V002 - 27.01.2007 - Sternthaler\n
+  19:./lib/encoder.c ****             +++ Alle Funktionen\n
+  20:./lib/encoder.c ****             Kommentierte Version (KEINE Funktionsaenderung)
+  21:./lib/encoder.c ****   \version  V003 - 20.02.2007 - m.a.r.v.i.n\n
+  22:./lib/encoder.c ****             +++ GO()\n
+  23:./lib/encoder.c ****             +++ Turn()\n
+  24:./lib/encoder.c ****             Korrekturfakturen aus myasuro.h verwenden
+  25:./lib/encoder.c ****   \version  V004 - 07.06.2007 - Sternthaler\n
+  26:./lib/encoder.c ****             +++ Go()      Entfaellt\n
+  27:./lib/encoder.c ****             +++ Turn()    Entfaellt\n
+  28:./lib/encoder.c ****             +++ GoTurn()  NEU\n
+  29:./lib/encoder.c ****             Die Funktion GoTurn() ersetzt die Funktionen Go() und Turn()
+  30:./lib/encoder.c ****             ersatzlos. Um allerdings bestehende Programme nicht umbauen zu
+  31:./lib/encoder.c ****             muessen, gibt es Macros, die dann GoTurn() aufrufen in asuro.h
+  32:./lib/encoder.c ****   \version  V005 - 27.06.2007 - Sternthaler\n
+  33:./lib/encoder.c ****             +++ GoTurn()\n
+  34:./lib/encoder.c ****             Im Beispiel zur Funktion die Variablendefinition in der
+  35:./lib/encoder.c ****             for()-Schleife fuer i entfernt, da sie nicht immer uebersetzbar
+  36:./lib/encoder.c ****             ist.
+  37:./lib/encoder.c **** *****************************************************************************/
+  38:./lib/encoder.c **** /*****************************************************************************
+  39:./lib/encoder.c **** *                                                                            *
+  40:./lib/encoder.c **** *   This program is free software; you can redistribute it and/or modify     *
+  41:./lib/encoder.c **** *   it under the terms of the GNU General Public License as published by     *
+  42:./lib/encoder.c **** *   the Free Software Foundation; either version 2 of the License, or        *
+  43:./lib/encoder.c **** *   any later version.                                                       *
+  44:./lib/encoder.c **** *                                                                            *
+  45:./lib/encoder.c **** *****************************************************************************/
+GAS LISTING /tmp/ccHCnHlM.s 			page 4
+
+
+  46:./lib/encoder.c **** #include "asuro.h"
+  47:./lib/encoder.c **** #include "myasuro.h"
+  48:./lib/encoder.c **** 
+  49:./lib/encoder.c **** 
+  50:./lib/encoder.c **** /***************************************************************************
+  51:./lib/encoder.c **** * void GoTurn(int distance, int degree, int speed)
+  52:./lib/encoder.c **** *
+  53:./lib/encoder.c **** *   Go's a distance in mm  OR
+  54:./lib/encoder.c **** *   Turn's given angle.
+  55:./lib/encoder.c **** * Attention: EncoderInit() has to be called first.
+  56:./lib/encoder.c **** *
+  57:./lib/encoder.c **** * the driven distance depends a little bit from the floor friction
+  58:./lib/encoder.c **** * limitations: maximum distance +-32m
+  59:./lib/encoder.c **** * possible problems: in full sunlight the encoder sensors may be disturbed
+  60:./lib/encoder.c **** *
+  61:./lib/encoder.c **** *   input
+  62:./lib/encoder.c **** * distance: postiv->go forward; negativ->go backward; ZERO->use degree for TURN
+  63:./lib/encoder.c **** * degree:   postiv->turn right; negativ->turn left
+  64:./lib/encoder.c **** * speed:    sets motorspeed
+  65:./lib/encoder.c **** *
+  66:./lib/encoder.c **** * last modification:
+  67:./lib/encoder.c **** *   Ver.     Date         Author           Comments
+  68:./lib/encoder.c **** *   -------  ----------   --------------   ---------------------------------
+  69:./lib/encoder.c **** *   sto1     29.07.2005   stochri          motorfunction
+  70:./lib/encoder.c **** *   And1     31.07.2005   Andun            added speed and Odometrie
+  71:./lib/encoder.c **** *   And2     07.08.2005   Andun            Added Odometrie function
+  72:./lib/encoder.c **** *   sto2     31.10.2006   stochri          distance in mm
+  73:./lib/encoder.c **** *   sto2     31.10.2006   stochri          added comments, corrected enc_count initialisation
+  74:./lib/encoder.c **** *   stth     07.06.2007   Sternthaler      combine Go() and Turn() into this
+  75:./lib/encoder.c **** *   -------  ----------   --------------   ---------------------------------
+  76:./lib/encoder.c **** *
+  77:./lib/encoder.c **** ***************************************************************************/
+  78:./lib/encoder.c **** /****************************************************************************/
+  79:./lib/encoder.c **** /*!
+  80:./lib/encoder.c ****   \brief
+  81:./lib/encoder.c ****   Faehrt eine bestimmte Strecke mit einer bestimmten Geschwindigkeit.
+  82:./lib/encoder.c ****   (Autor: stochri)\n
+  83:./lib/encoder.c ****   ODER\n
+  84:./lib/encoder.c ****   Dreht um einen bestimmten Winkel mit einer bestimmten Geschwindigkeit.
+  85:./lib/encoder.c ****   (Autor: stochri)\n
+  86:./lib/encoder.c ****   Benutzt die Odometrie Sensoren im Interrupt Betrieb.\n
+  87:./lib/encoder.c ****   Vor dem ersten Aufruf muss deshalb EncoderInit() aufgerufen werden.
+  88:./lib/encoder.c **** 
+  89:./lib/encoder.c ****   \param[in]
+  90:./lib/encoder.c ****   distance Distanz in mm (- rueckwaerts, + = vorwaerts)\n
+  91:./lib/encoder.c ****            Bei 0 wird degree fuer einen Turn benutzt.
+  92:./lib/encoder.c ****   \param[in]
+  93:./lib/encoder.c ****   degree Winkel (- rechts, + links)
+  94:./lib/encoder.c ****   \param[in]
+  95:./lib/encoder.c ****   speed Geschwindigkeit (Wertebereich 0...255)
+  96:./lib/encoder.c **** 
+  97:./lib/encoder.c ****   \return
+  98:./lib/encoder.c ****   nichts
+  99:./lib/encoder.c **** 
+ 100:./lib/encoder.c ****   \see
+ 101:./lib/encoder.c ****   MACRO Go() und MACRO Turn() koennen weiterhin aufgerufen werden um bestehenden
+ 102:./lib/encoder.c ****   Programmcode nicht umschreiben zu muessen.
+GAS LISTING /tmp/ccHCnHlM.s 			page 5
+
+
+ 103:./lib/encoder.c **** 
+ 104:./lib/encoder.c ****   \see
+ 105:./lib/encoder.c ****   In der globale Variable encoder, werden die Hell-/Dunkelwechsel der\n
+ 106:./lib/encoder.c ****   Encoderscheiben im Interruptbetrieb gezaehlt.
+ 107:./lib/encoder.c **** 
+ 108:./lib/encoder.c ****   \par  Hinweis:
+ 109:./lib/encoder.c ****   Die Berechnung der zu fahrenden Ticks beruht auf der Annahme, dass die\n
+ 110:./lib/encoder.c ****   Anzahl der schwarzen Teilstuecke und die Raddurchmesser wie bei stochri sind.\n
+ 111:./lib/encoder.c ****   (Sternthaler) Vermutung, dass der Hersteller unterschiedlich grosse Raeder\n
+ 112:./lib/encoder.c ****   ausgeliefert hat, da die Berechnung in dieser Form bei Sternthaler nicht\n
+ 113:./lib/encoder.c ****   funktioniert.
+ 114:./lib/encoder.c **** 
+ 115:./lib/encoder.c ****   \par Beispiel:
+ 116:./lib/encoder.c ****   (Nur zur Demonstration der Parameter/Returnwerte)
+ 117:./lib/encoder.c ****   \code
+ 118:./lib/encoder.c ****   // Laesst den Asuro ein Quadrat von 200 mm fahren,
+ 119:./lib/encoder.c ****   // bei einer Geschwindigkeit von 150.
+ 120:./lib/encoder.c ****   EncoderInit ();
+ 121:./lib/encoder.c ****   for (i = 0; i < 4; i++)
+ 122:./lib/encoder.c ****   {
+ 123:./lib/encoder.c ****     GoTurn (200,  0, 150);  // entspricht Go (200, 150)
+ 124:./lib/encoder.c ****     GoTurn (  0, 90, 150);  // entspricht Turn (90, 150)
+ 125:./lib/encoder.c ****   }
+ 126:./lib/encoder.c ****   \endcode
+ 127:./lib/encoder.c **** *****************************************************************************/
+ 128:./lib/encoder.c **** void GoTurn (
+ 129:./lib/encoder.c ****   int distance,
+ 130:./lib/encoder.c ****   int degree,
+ 131:./lib/encoder.c ****   int speed)
+ 132:./lib/encoder.c **** {
+ 127               		.stabn	68,0,132,.LM0-.LFBB1
+ 128               	.LM0:
+ 129               	.LFBB1:
+ 130 0000 AF92      		push r10
+ 131 0002 BF92      		push r11
+ 132 0004 CF92      		push r12
+ 133 0006 DF92      		push r13
+ 134 0008 EF92      		push r14
+ 135 000a FF92      		push r15
+ 136 000c 0F93      		push r16
+ 137 000e 1F93      		push r17
+ 138 0010 CF93      		push r28
+ 139 0012 DF93      		push r29
+ 140 0014 00D0      		rcall .
+ 141 0016 00D0      		rcall .
+ 142 0018 CDB7      		in r28,__SP_L__
+ 143 001a DEB7      		in r29,__SP_H__
+ 144               	/* prologue: function */
+ 145               	/* frame size = 4 */
+ 146               	/* stack size = 14 */
+ 147               	.L__stack_usage = 14
+ 148 001c 6C01      		movw r12,r24
+ 149 001e 8B01      		movw r16,r22
+ 150 0020 7A01      		movw r14,r20
+ 133:./lib/encoder.c ****   unsigned  long  enc_count;
+ 134:./lib/encoder.c ****             int   tot_count = 0;
+ 135:./lib/encoder.c ****             int   diff = 0;
+GAS LISTING /tmp/ccHCnHlM.s 			page 6
+
+
+ 136:./lib/encoder.c ****             int   l_speed = speed, r_speed = speed;
+ 137:./lib/encoder.c **** 
+ 138:./lib/encoder.c ****   /* stop the motors until the direction is set */
+ 139:./lib/encoder.c ****   MotorSpeed (0, 0);
+ 151               		.stabn	68,0,139,.LM1-.LFBB1
+ 152               	.LM1:
+ 153 0022 60E0      		ldi r22,0
+ 154 0024 80E0      		ldi r24,0
+ 155 0026 00D0      		rcall MotorSpeed
+ 140:./lib/encoder.c **** 
+ 141:./lib/encoder.c ****   /* if distance is NOT zero, then take this value to go ... */
+ 142:./lib/encoder.c ****   if (distance != 0)
+ 156               		.stabn	68,0,142,.LM2-.LFBB1
+ 157               	.LM2:
+ 158 0028 C114      		cp r12,__zero_reg__
+ 159 002a D104      		cpc r13,__zero_reg__
+ 160 002c 01F0      		breq .L2
+ 143:./lib/encoder.c ****   {
+ 144:./lib/encoder.c ****     /* calculate tics from mm */
+ 145:./lib/encoder.c ****     enc_count  = abs (distance) * 10000L;
+ 161               		.stabn	68,0,145,.LM3-.LFBB1
+ 162               	.LM3:
+ 163 002e D601      		movw r26,r12
+ 164 0030 D7FE      		sbrs r13,7
+ 165 0032 00C0      		rjmp .L3
+ 166 0034 AA27      		clr r26
+ 167 0036 BB27      		clr r27
+ 168 0038 AC19      		sub r26,r12
+ 169 003a BD09      		sbc r27,r13
+ 170               	.L3:
+ 171 003c 20E1      		ldi r18,lo8(16)
+ 172 003e 37E2      		ldi r19,lo8(39)
+ 173 0040 00D0      		rcall __usmulhisi3
+ 146:./lib/encoder.c ****     enc_count /= MY_GO_ENC_COUNT_VALUE;
+ 174               		.stabn	68,0,146,.LM4-.LFBB1
+ 175               	.LM4:
+ 176 0042 23EA      		ldi r18,lo8(-93)
+ 177 0044 3BE4      		ldi r19,lo8(75)
+ 178 0046 40E0      		ldi r20,0
+ 179 0048 50E0      		ldi r21,0
+ 180 004a 00D0      		rcall __udivmodsi4
+ 147:./lib/encoder.c **** 
+ 148:./lib/encoder.c ****     if (distance < 0)
+ 181               		.stabn	68,0,148,.LM5-.LFBB1
+ 182               	.LM5:
+ 183 004c D7FE      		sbrs r13,7
+ 184 004e 00C0      		rjmp .L4
+ 149:./lib/encoder.c ****       MotorDir (RWD, RWD);
+ 185               		.stabn	68,0,149,.LM6-.LFBB1
+ 186               	.LM6:
+ 187 0050 60E1      		ldi r22,lo8(16)
+ 188 0052 00C0      		rjmp .L21
+ 189               	.L4:
+ 150:./lib/encoder.c ****     else
+ 151:./lib/encoder.c ****       MotorDir (FWD, FWD);
+ 190               		.stabn	68,0,151,.LM7-.LFBB1
+ 191               	.LM7:
+GAS LISTING /tmp/ccHCnHlM.s 			page 7
+
+
+ 192 0054 60E2      		ldi r22,lo8(32)
+ 193 0056 80E2      		ldi r24,lo8(32)
+ 194               	.L20:
+ 195 0058 2983      		std Y+1,r18
+ 196 005a 3A83      		std Y+2,r19
+ 197 005c 4B83      		std Y+3,r20
+ 198 005e 5C83      		std Y+4,r21
+ 199 0060 00D0      		rcall MotorDir
+ 200 0062 2981      		ldd r18,Y+1
+ 201 0064 3A81      		ldd r19,Y+2
+ 202 0066 4B81      		ldd r20,Y+3
+ 203 0068 5C81      		ldd r21,Y+4
+ 204 006a 00C0      		rjmp .L5
+ 205               	.L2:
+ 152:./lib/encoder.c ****   }
+ 153:./lib/encoder.c ****   /* ... else take the value degree for a turn */
+ 154:./lib/encoder.c ****   else
+ 155:./lib/encoder.c ****   {
+ 156:./lib/encoder.c ****     /*  calculate tics from degree */
+ 157:./lib/encoder.c ****     enc_count  = abs (degree) * MY_TURN_ENC_COUNT_VALUE;
+ 206               		.stabn	68,0,157,.LM8-.LFBB1
+ 207               	.LM8:
+ 208 006c D801      		movw r26,r16
+ 209 006e 17FF      		sbrs r17,7
+ 210 0070 00C0      		rjmp .L6
+ 211 0072 AA27      		clr r26
+ 212 0074 BB27      		clr r27
+ 213 0076 A01B      		sub r26,r16
+ 214 0078 B10B      		sbc r27,r17
+ 215               	.L6:
+ 216 007a 21EB      		ldi r18,lo8(-79)
+ 217 007c 30E0      		ldi r19,0
+ 218 007e 00D0      		rcall __usmulhisi3
+ 158:./lib/encoder.c ****     enc_count /= 360L;
+ 219               		.stabn	68,0,158,.LM9-.LFBB1
+ 220               	.LM9:
+ 221 0080 28E6      		ldi r18,lo8(104)
+ 222 0082 31E0      		ldi r19,lo8(1)
+ 223 0084 40E0      		ldi r20,0
+ 224 0086 50E0      		ldi r21,0
+ 225 0088 00D0      		rcall __udivmodsi4
+ 159:./lib/encoder.c **** 
+ 160:./lib/encoder.c ****     if (degree < 0)
+ 226               		.stabn	68,0,160,.LM10-.LFBB1
+ 227               	.LM10:
+ 228 008a 17FF      		sbrs r17,7
+ 229 008c 00C0      		rjmp .L7
+ 161:./lib/encoder.c ****       MotorDir (RWD, FWD);
+ 230               		.stabn	68,0,161,.LM11-.LFBB1
+ 231               	.LM11:
+ 232 008e 60E2      		ldi r22,lo8(32)
+ 233               	.L21:
+ 234 0090 80E1      		ldi r24,lo8(16)
+ 235 0092 00C0      		rjmp .L20
+ 236               	.L7:
+ 162:./lib/encoder.c ****     else
+ 163:./lib/encoder.c ****       MotorDir (FWD, RWD);
+GAS LISTING /tmp/ccHCnHlM.s 			page 8
+
+
+ 237               		.stabn	68,0,163,.LM12-.LFBB1
+ 238               	.LM12:
+ 239 0094 60E1      		ldi r22,lo8(16)
+ 240 0096 80E2      		ldi r24,lo8(32)
+ 241 0098 2983      		std Y+1,r18
+ 242 009a 3A83      		std Y+2,r19
+ 243 009c 4B83      		std Y+3,r20
+ 244 009e 5C83      		std Y+4,r21
+ 245 00a0 00D0      		rcall MotorDir
+ 246 00a2 5C81      		ldd r21,Y+4
+ 247 00a4 4B81      		ldd r20,Y+3
+ 248 00a6 3A81      		ldd r19,Y+2
+ 249 00a8 2981      		ldd r18,Y+1
+ 250               	.L5:
+ 164:./lib/encoder.c ****   }
+ 165:./lib/encoder.c **** 
+ 166:./lib/encoder.c ****   /* reset encoder */
+ 167:./lib/encoder.c ****   EncoderSet (0, 0);
+ 251               		.stabn	68,0,167,.LM13-.LFBB1
+ 252               	.LM13:
+ 253 00aa 60E0      		ldi r22,0
+ 254 00ac 70E0      		ldi r23,0
+ 255 00ae 80E0      		ldi r24,0
+ 256 00b0 90E0      		ldi r25,0
+ 257 00b2 2983      		std Y+1,r18
+ 258 00b4 3A83      		std Y+2,r19
+ 259 00b6 4B83      		std Y+3,r20
+ 260 00b8 5C83      		std Y+4,r21
+ 261 00ba 00D0      		rcall EncoderSet
+ 168:./lib/encoder.c **** 
+ 169:./lib/encoder.c ****   /* now start the machine */
+ 170:./lib/encoder.c ****   MotorSpeed (l_speed, r_speed);
+ 262               		.stabn	68,0,170,.LM14-.LFBB1
+ 263               	.LM14:
+ 264 00bc 6E2D      		mov r22,r14
+ 265 00be 8E2D      		mov r24,r14
+ 266 00c0 00D0      		rcall MotorSpeed
+ 171:./lib/encoder.c **** 
+ 172:./lib/encoder.c ****   while (tot_count < enc_count)
+ 267               		.stabn	68,0,172,.LM15-.LFBB1
+ 268               	.LM15:
+ 269 00c2 8701      		movw r16,r14
+ 270 00c4 5701      		movw r10,r14
+ 134:./lib/encoder.c ****             int   diff = 0;
+ 271               		.stabn	68,0,134,.LM16-.LFBB1
+ 272               	.LM16:
+ 273 00c6 C12C      		mov r12,__zero_reg__
+ 274 00c8 D12C      		mov r13,__zero_reg__
+ 275               		.stabn	68,0,172,.LM17-.LFBB1
+ 276               	.LM17:
+ 277 00ca 2981      		ldd r18,Y+1
+ 278 00cc 3A81      		ldd r19,Y+2
+ 279 00ce 4B81      		ldd r20,Y+3
+ 280 00d0 5C81      		ldd r21,Y+4
+ 281               	.L8:
+ 282 00d2 C601      		movw r24,r12
+ 283 00d4 0D2C      		mov __tmp_reg__,r13
+GAS LISTING /tmp/ccHCnHlM.s 			page 9
+
+
+ 284 00d6 000C      		lsl r0
+ 285 00d8 AA0B      		sbc r26,r26
+ 286 00da BB0B      		sbc r27,r27
+ 287 00dc 8217      		cp r24,r18
+ 288 00de 9307      		cpc r25,r19
+ 289 00e0 A407      		cpc r26,r20
+ 290 00e2 B507      		cpc r27,r21
+ 291 00e4 00F0      		brlo .+2
+ 292 00e6 00C0      		rjmp .L23
+ 173:./lib/encoder.c ****   {
+ 174:./lib/encoder.c ****     tot_count += encoder [LEFT];
+ 293               		.stabn	68,0,174,.LM18-.LFBB1
+ 294               	.LM18:
+ 295 00e8 8091 0000 		lds r24,encoder
+ 296 00ec 9091 0000 		lds r25,encoder+1
+ 297 00f0 C80E      		add r12,r24
+ 298 00f2 D91E      		adc r13,r25
+ 175:./lib/encoder.c ****     diff = encoder [LEFT] - encoder [RIGHT];
+ 299               		.stabn	68,0,175,.LM19-.LFBB1
+ 300               	.LM19:
+ 301 00f4 8091 0000 		lds r24,encoder
+ 302 00f8 9091 0000 		lds r25,encoder+1
+ 303 00fc 6091 0000 		lds r22,encoder+2
+ 304 0100 7091 0000 		lds r23,encoder+2+1
+ 305 0104 861B      		sub r24,r22
+ 306 0106 970B      		sbc r25,r23
+ 176:./lib/encoder.c **** 
+ 177:./lib/encoder.c ****     if (diff > 0)
+ 307               		.stabn	68,0,177,.LM20-.LFBB1
+ 308               	.LM20:
+ 309 0108 1816      		cp __zero_reg__,r24
+ 310 010a 1906      		cpc __zero_reg__,r25
+ 311 010c 04F4      		brge .L9
+ 178:./lib/encoder.c ****     { /* Left faster than right */
+ 179:./lib/encoder.c ****       if ((l_speed > speed) || (r_speed > 244))
+ 312               		.stabn	68,0,179,.LM21-.LFBB1
+ 313               	.LM21:
+ 314 010e EA14      		cp r14,r10
+ 315 0110 FB04      		cpc r15,r11
+ 316 0112 04F0      		brlt .L10
+ 317               		.stabn	68,0,179,.LM22-.LFBB1
+ 318               	.LM22:
+ 319 0114 053F      		cpi r16,-11
+ 320 0116 1105      		cpc r17,__zero_reg__
+ 321 0118 04F0      		brlt .L11
+ 322               	.L10:
+ 180:./lib/encoder.c ****         l_speed -= 10;
+ 323               		.stabn	68,0,180,.LM23-.LFBB1
+ 324               	.LM23:
+ 325 011a 8AE0      		ldi r24,10
+ 326 011c A81A      		sub r10,r24
+ 327 011e B108      		sbc r11,__zero_reg__
+ 328 0120 00C0      		rjmp .L13
+ 329               	.L11:
+ 181:./lib/encoder.c ****       else
+ 182:./lib/encoder.c ****         r_speed += 10;
+ 330               		.stabn	68,0,182,.LM24-.LFBB1
+GAS LISTING /tmp/ccHCnHlM.s 			page 10
+
+
+ 331               	.LM24:
+ 332 0122 065F      		subi r16,-10
+ 333 0124 1F4F      		sbci r17,-1
+ 334 0126 00C0      		rjmp .L13
+ 335               	.L9:
+ 183:./lib/encoder.c ****     }
+ 184:./lib/encoder.c **** 
+ 185:./lib/encoder.c ****     if (diff < 0)
+ 336               		.stabn	68,0,185,.LM25-.LFBB1
+ 337               	.LM25:
+ 338 0128 892B      		or r24,r25
+ 339 012a 01F0      		breq .L13
+ 186:./lib/encoder.c ****     { /* Right faster than left */
+ 187:./lib/encoder.c ****       if ((r_speed > speed) || (l_speed > 244))
+ 340               		.stabn	68,0,187,.LM26-.LFBB1
+ 341               	.LM26:
+ 342 012c E016      		cp r14,r16
+ 343 012e F106      		cpc r15,r17
+ 344 0130 04F0      		brlt .L14
+ 345               		.stabn	68,0,187,.LM27-.LFBB1
+ 346               	.LM27:
+ 347 0132 85EF      		ldi r24,-11
+ 348 0134 A816      		cp r10,r24
+ 349 0136 B104      		cpc r11,__zero_reg__
+ 350 0138 04F0      		brlt .L15
+ 351               	.L14:
+ 188:./lib/encoder.c ****         r_speed -= 10;
+ 352               		.stabn	68,0,188,.LM28-.LFBB1
+ 353               	.LM28:
+ 354 013a 0A50      		subi r16,10
+ 355 013c 1109      		sbc r17,__zero_reg__
+ 356 013e 00C0      		rjmp .L13
+ 357               	.L15:
+ 189:./lib/encoder.c ****       else
+ 190:./lib/encoder.c ****         l_speed += 10;
+ 358               		.stabn	68,0,190,.LM29-.LFBB1
+ 359               	.LM29:
+ 360 0140 8AE0      		ldi r24,10
+ 361 0142 A80E      		add r10,r24
+ 362 0144 B11C      		adc r11,__zero_reg__
+ 363               	.L13:
+ 191:./lib/encoder.c ****     }
+ 192:./lib/encoder.c ****     /* reset encoder */
+ 193:./lib/encoder.c ****     EncoderSet (0, 0);
+ 364               		.stabn	68,0,193,.LM30-.LFBB1
+ 365               	.LM30:
+ 366 0146 60E0      		ldi r22,0
+ 367 0148 70E0      		ldi r23,0
+ 368 014a 80E0      		ldi r24,0
+ 369 014c 90E0      		ldi r25,0
+ 370 014e 2983      		std Y+1,r18
+ 371 0150 3A83      		std Y+2,r19
+ 372 0152 4B83      		std Y+3,r20
+ 373 0154 5C83      		std Y+4,r21
+ 374 0156 00D0      		rcall EncoderSet
+ 194:./lib/encoder.c **** 
+ 195:./lib/encoder.c ****     MotorSpeed (l_speed, r_speed);
+GAS LISTING /tmp/ccHCnHlM.s 			page 11
+
+
+ 375               		.stabn	68,0,195,.LM31-.LFBB1
+ 376               	.LM31:
+ 377 0158 602F      		mov r22,r16
+ 378 015a 8A2D      		mov r24,r10
+ 379 015c 00D0      		rcall MotorSpeed
+ 196:./lib/encoder.c ****     Msleep (1);
+ 380               		.stabn	68,0,196,.LM32-.LFBB1
+ 381               	.LM32:
+ 382 015e 81E0      		ldi r24,lo8(1)
+ 383 0160 90E0      		ldi r25,0
+ 384 0162 00D0      		rcall Msleep
+ 385 0164 5C81      		ldd r21,Y+4
+ 386 0166 4B81      		ldd r20,Y+3
+ 387 0168 3A81      		ldd r19,Y+2
+ 388 016a 2981      		ldd r18,Y+1
+ 389 016c 00C0      		rjmp .L8
+ 390               	.L23:
+ 197:./lib/encoder.c ****   }
+ 198:./lib/encoder.c ****   MotorDir (BREAK, BREAK);
+ 391               		.stabn	68,0,198,.LM33-.LFBB1
+ 392               	.LM33:
+ 393 016e 60E0      		ldi r22,0
+ 394 0170 80E0      		ldi r24,0
+ 395 0172 00D0      		rcall MotorDir
+ 199:./lib/encoder.c ****   Msleep (200);
+ 396               		.stabn	68,0,199,.LM34-.LFBB1
+ 397               	.LM34:
+ 398 0174 88EC      		ldi r24,lo8(-56)
+ 399 0176 90E0      		ldi r25,0
+ 400               	/* epilogue start */
+ 200:./lib/encoder.c **** }
+ 401               		.stabn	68,0,200,.LM35-.LFBB1
+ 402               	.LM35:
+ 403 0178 0F90      		pop __tmp_reg__
+ 404 017a 0F90      		pop __tmp_reg__
+ 405 017c 0F90      		pop __tmp_reg__
+ 406 017e 0F90      		pop __tmp_reg__
+ 407 0180 DF91      		pop r29
+ 408 0182 CF91      		pop r28
+ 409 0184 1F91      		pop r17
+ 410 0186 0F91      		pop r16
+ 411 0188 FF90      		pop r15
+ 412 018a EF90      		pop r14
+ 413 018c DF90      		pop r13
+ 414 018e CF90      		pop r12
+ 415 0190 BF90      		pop r11
+ 416 0192 AF90      		pop r10
+ 199:./lib/encoder.c ****   Msleep (200);
+ 417               		.stabn	68,0,199,.LM36-.LFBB1
+ 418               	.LM36:
+ 419 0194 00C0      		rjmp Msleep
+ 420               		.size	GoTurn, .-GoTurn
+ 421               		.stabs	"tot_count:r(0,1)",64,0,134,12
+ 422               		.stabs	"diff:r(0,1)",64,0,135,24
+ 423               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 424               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 425               	.Lscope1:
+GAS LISTING /tmp/ccHCnHlM.s 			page 12
+
+
+ 426               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 427               		.stabd	78,0,0
+ 428               		.text
+ 429               		.stabs	"",100,0,0,.Letext0
+ 430               	.Letext0:
+ 431               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccHCnHlM.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 encoder.c
+     /tmp/ccHCnHlM.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccHCnHlM.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccHCnHlM.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccHCnHlM.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccHCnHlM.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccHCnHlM.s:125    .text.GoTurn:0000000000000000 GoTurn
+
+UNDEFINED SYMBOLS
+MotorSpeed
+__usmulhisi3
+__udivmodsi4
+MotorDir
+EncoderSet
+encoder
+Msleep

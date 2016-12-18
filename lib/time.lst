@@ -1,0 +1,436 @@
+GAS LISTING /tmp/ccRLVL28.s 			page 1
+
+
+   1               		.file	"time.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/time.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccRLVL28.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccRLVL28.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.Gettime,"ax",@progbits
+ 119               		.stabs	"Gettime:F(0,5)",36,0,78,Gettime
+ 120               	.global	Gettime
+ 121               		.type	Gettime, @function
+ 122               	Gettime:
+ 123               		.stabd	46,0,0
+   1:./lib/time.c  **** /****************************************************************************/
+   2:./lib/time.c  **** /*!
+   3:./lib/time.c  ****   \file     time.c
+   4:./lib/time.c  **** 
+   5:./lib/time.c  ****   \brief    Zeit- und Delay Funktionen.
+   6:./lib/time.c  **** 
+   7:./lib/time.c  ****             Erzeugt Zeiteinheiten anhand des laufenden Timer 2-Interrupts.\n
+   8:./lib/time.c  ****             Dieser ist auf 36 kHz eingestellt um die Hardware der serielle\n
+   9:./lib/time.c  ****             Schnittstelle zu bedienen (siehe in asuro.c unter
+  10:./lib/time.c  ****             SIGNAL (SIG_OVERFLOW2)).\n
+  11:./lib/time.c  ****             Die globalen Variablen \b count36kHz und \b timebase werden dort
+  12:./lib/time.c  ****             bearbeitet.\n
+  13:./lib/time.c  ****             In den hier vorhandenen Funktionen werden diese Variablen genutzt\n
+  14:./lib/time.c  ****             um Zeiten und Verzoegerungen zu erzeugen.
+  15:./lib/time.c  **** 
+  16:./lib/time.c  ****   \see      Defines fuer unseren Asuro immer in asuro.h\n
+  17:./lib/time.c  ****             Hier werden aktuell keine Defines benutzt.
+  18:./lib/time.c  **** 
+  19:./lib/time.c  ****   \version  V--- - 10.11.2003 - Jan Grewe - DLR\n
+  20:./lib/time.c  ****             Original Version von der ASURO CD\n
+  21:./lib/time.c  ****   \version  V--- - bis zum 07.01.2007 - \n
+  22:./lib/time.c  ****             Bitte in Datei CHANGELOG nachsehen.\n
+  23:./lib/time.c  ****   \version  V001 - 13.01.2007 - m.a.r.v.i.n\n
+  24:./lib/time.c  ****             +++ Alle Funktionen\n
+  25:./lib/time.c  ****             Zerlegte Sourcen in einzelne Dateien fuer eine echte Library.
+  26:./lib/time.c  ****   \version  V002 - 22.01.2007 - Sternthaler\n
+  27:./lib/time.c  ****             +++ Alle Funktionen\n
+  28:./lib/time.c  ****             Kommentierte Version (KEINE Funktionsaenderung)
+  29:./lib/time.c  ****   \version  V003 - 26.03.2010 - Sternthaler\n
+  30:./lib/time.c  ****             +++ Msleep()\n
+  31:./lib/time.c  ****             Parameter von "int" auf "unsigned int" umgestellt. (Tip von Valen)
+  32:./lib/time.c  **** *****************************************************************************/
+  33:./lib/time.c  **** /*****************************************************************************
+  34:./lib/time.c  **** *                                                                            *
+  35:./lib/time.c  **** *   This program is free software; you can redistribute it and/or modify     *
+  36:./lib/time.c  **** *   it under the terms of the GNU General Public License as published by     *
+  37:./lib/time.c  **** *   the Free Software Foundation; either version 2 of the License, or        *
+  38:./lib/time.c  **** *   any later version.                                                       *
+  39:./lib/time.c  **** *                                                                            *
+  40:./lib/time.c  **** *****************************************************************************/
+  41:./lib/time.c  **** #include "asuro.h"
+  42:./lib/time.c  **** 
+  43:./lib/time.c  **** 
+  44:./lib/time.c  **** 
+  45:./lib/time.c  **** /****************************************************************************/
+  46:./lib/time.c  **** /*!
+  47:./lib/time.c  ****   \brief
+  48:./lib/time.c  ****   Gibt die aktuelle Zeit in ms zurueck.
+GAS LISTING /tmp/ccRLVL28.s 			page 4
+
+
+  49:./lib/time.c  **** 
+  50:./lib/time.c  ****   Da der Asuro keine Atomuhr hat, ist es die vergangene Zeit seitdem er
+  51:./lib/time.c  ****   eingeschaltet wurde.\n
+  52:./lib/time.c  ****   Genauer: nachdem der Interrupt Timer2 aktiviert wurde.
+  53:./lib/time.c  **** 
+  54:./lib/time.c  ****   \return
+  55:./lib/time.c  ****   Einschaltzeit in Millisekunden (Bereich: unsigned long 0..286331153)\n
+  56:./lib/time.c  ****   Das sind ca. 79.5 Stunden. Fuer die, die ihren Asuro also ohne Solarzellen\n
+  57:./lib/time.c  ****   betreiben, reicht diese Zeitangabe bevor der Accu leer ist.
+  58:./lib/time.c  **** 
+  59:./lib/time.c  ****   \par  Beispiel:
+  60:./lib/time.c  ****   (Nur zur Demonstration der Parameter/Returnwerte)
+  61:./lib/time.c  ****   \code
+  62:./lib/time.c  ****   // Alle 500 ms die Front-LED umschalten.
+  63:./lib/time.c  ****   unsigned long zeit;
+  64:./lib/time.c  ****   unsigned char on_off = TRUE;
+  65:./lib/time.c  **** 
+  66:./lib/time.c  ****   zeit = Gettime ();
+  67:./lib/time.c  ****   while (1)
+  68:./lib/time.c  ****   {
+  69:./lib/time.c  ****     if (Gettime () > zeit + 500)
+  70:./lib/time.c  ****     {
+  71:./lib/time.c  ****       zeit = Gettime ();
+  72:./lib/time.c  ****       FrontLED (on_off);
+  73:./lib/time.c  ****       on_off ^= 1;
+  74:./lib/time.c  ****     }
+  75:./lib/time.c  ****   }
+  76:./lib/time.c  ****   \endcode
+  77:./lib/time.c  **** *****************************************************************************/
+  78:./lib/time.c  **** unsigned long Gettime (void)
+  79:./lib/time.c  **** {
+ 124               		.stabn	68,0,79,.LM0-.LFBB1
+ 125               	.LM0:
+ 126               	.LFBB1:
+ 127               	/* prologue: function */
+ 128               	/* frame size = 0 */
+ 129               	/* stack size = 0 */
+ 130               	.L__stack_usage = 0
+  80:./lib/time.c  ****   return ((timebase * 256) + count36kHz) / 36;
+ 131               		.stabn	68,0,80,.LM1-.LFBB1
+ 132               	.LM1:
+ 133 0000 8091 0000 		lds r24,timebase
+ 134 0004 9091 0000 		lds r25,timebase+1
+ 135 0008 A091 0000 		lds r26,timebase+2
+ 136 000c B091 0000 		lds r27,timebase+3
+ 137 0010 2091 0000 		lds r18,count36kHz
+ 138 0014 BA2F      		mov r27,r26
+ 139 0016 A92F      		mov r26,r25
+ 140 0018 982F      		mov r25,r24
+ 141 001a 8827      		clr r24
+ 142 001c BC01      		movw r22,r24
+ 143 001e CD01      		movw r24,r26
+ 144 0020 620F      		add r22,r18
+ 145 0022 711D      		adc r23,__zero_reg__
+ 146 0024 811D      		adc r24,__zero_reg__
+ 147 0026 911D      		adc r25,__zero_reg__
+ 148 0028 24E2      		ldi r18,lo8(36)
+GAS LISTING /tmp/ccRLVL28.s 			page 5
+
+
+ 149 002a 30E0      		ldi r19,0
+ 150 002c 40E0      		ldi r20,0
+ 151 002e 50E0      		ldi r21,0
+ 152 0030 00D0      		rcall __udivmodsi4
+  81:./lib/time.c  **** }
+ 153               		.stabn	68,0,81,.LM2-.LFBB1
+ 154               	.LM2:
+ 155 0032 CA01      		movw r24,r20
+ 156 0034 B901      		movw r22,r18
+ 157 0036 0895      		ret
+ 158               		.size	Gettime, .-Gettime
+ 159               	.Lscope1:
+ 160               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 161               		.stabd	78,0,0
+ 162               		.section	.text.Sleep,"ax",@progbits
+ 163               		.stabs	"Sleep:F(0,47)",36,0,108,Sleep
+ 164               		.stabs	"time36kHz:P(0,11)",64,0,109,24
+ 165               	.global	Sleep
+ 166               		.type	Sleep, @function
+ 167               	Sleep:
+ 168               		.stabd	46,0,0
+  82:./lib/time.c  **** 
+  83:./lib/time.c  **** 
+  84:./lib/time.c  **** 
+  85:./lib/time.c  **** /****************************************************************************/
+  86:./lib/time.c  **** /*!
+  87:./lib/time.c  ****   \brief
+  88:./lib/time.c  ****   Wartefunktion.
+  89:./lib/time.c  **** 
+  90:./lib/time.c  ****   Die maximale Wartezeit betraegt 7ms. Fuer laengere Wartezeiten siehe Msleep().\n
+  91:./lib/time.c  ****   Diese Funktion nutzt den Timer 2-Interrupt um ein 'zeitgefuehl' zu erhalten.\n
+  92:./lib/time.c  ****   Der Interrupt wird mit 36 kHz, durch die Init()-Funktion initialisiert,\n
+  93:./lib/time.c  ****   aufgerufen und zaehlt dort die globale Variablen \b count36kHz weiter.\n
+  94:./lib/time.c  ****   Diese Funktion nutzt diesen Zaehler und berechnet daraus mit dem uebergeben\n
+  95:./lib/time.c  ****   Parameter den Zeitpunkt wann die Pausenzeit erreicht ist, Danach bricht sie\n
+  96:./lib/time.c  ****   ab, und im Hauptprogramm ist eben eine Wartezeit eingelegt worden.
+  97:./lib/time.c  **** 
+  98:./lib/time.c  ****   \param[in]
+  99:./lib/time.c  ****   time36kHz Wartezeit x/36kHz (sec)
+ 100:./lib/time.c  **** 
+ 101:./lib/time.c  ****   \par  Beispiel:
+ 102:./lib/time.c  ****   (Nur zur Demonstration der Parameter/Returnwerte)
+ 103:./lib/time.c  ****   \code
+ 104:./lib/time.c  ****   // 1 Millisekunde warten
+ 105:./lib/time.c  ****   Sleep (36);
+ 106:./lib/time.c  ****   \endcode
+ 107:./lib/time.c  **** *****************************************************************************/
+ 108:./lib/time.c  **** void Sleep (
+ 109:./lib/time.c  ****   unsigned char time36kHz)
+ 110:./lib/time.c  **** {
+ 169               		.stabn	68,0,110,.LM3-.LFBB2
+ 170               	.LM3:
+ 171               	.LFBB2:
+ 172               	/* prologue: function */
+ 173               	/* frame size = 0 */
+ 174               	/* stack size = 0 */
+ 175               	.L__stack_usage = 0
+GAS LISTING /tmp/ccRLVL28.s 			page 6
+
+
+ 111:./lib/time.c  ****   unsigned char ziel = (time36kHz + count36kHz) & 0x00FF;
+ 176               		.stabn	68,0,111,.LM4-.LFBB2
+ 177               	.LM4:
+ 178 0000 9091 0000 		lds r25,count36kHz
+ 179 0004 890F      		add r24,r25
+ 180               	.L3:
+ 112:./lib/time.c  **** 
+ 113:./lib/time.c  ****   while (count36kHz != ziel)
+ 181               		.stabn	68,0,113,.LM5-.LFBB2
+ 182               	.LM5:
+ 183 0006 9091 0000 		lds r25,count36kHz
+ 184 000a 9813      		cpse r25,r24
+ 185 000c 00C0      		rjmp .L3
+ 186               	/* epilogue start */
+ 114:./lib/time.c  ****     ;
+ 115:./lib/time.c  **** }
+ 187               		.stabn	68,0,115,.LM6-.LFBB2
+ 188               	.LM6:
+ 189 000e 0895      		ret
+ 190               		.size	Sleep, .-Sleep
+ 191               		.stabs	"ziel:r(0,11)",64,0,111,24
+ 192               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 193               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 194               	.Lscope2:
+ 195               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 196               		.stabd	78,0,0
+ 197               		.section	.text.Msleep,"ax",@progbits
+ 198               		.stabs	"Msleep:F(0,47)",36,0,137,Msleep
+ 199               		.stabs	"ms:P(0,4)",64,0,138,16
+ 200               	.global	Msleep
+ 201               		.type	Msleep, @function
+ 202               	Msleep:
+ 203               		.stabd	46,0,0
+ 116:./lib/time.c  **** 
+ 117:./lib/time.c  **** 
+ 118:./lib/time.c  **** 
+ 119:./lib/time.c  **** /****************************************************************************/
+ 120:./lib/time.c  **** /*!
+ 121:./lib/time.c  ****   \brief
+ 122:./lib/time.c  ****   Wartefunktion in ms.
+ 123:./lib/time.c  **** 
+ 124:./lib/time.c  ****   Diese Funktion nutzt die Sleep()-Funktion um mit dem uebergeben Parameter\n
+ 125:./lib/time.c  ****   Pausen in ms-Einheiten zu erhalten.
+ 126:./lib/time.c  **** 
+ 127:./lib/time.c  ****   \param[in]
+ 128:./lib/time.c  ****   dauer Wartezeit in Millisekunden.
+ 129:./lib/time.c  **** 
+ 130:./lib/time.c  ****   \par  Beispiel:
+ 131:./lib/time.c  ****   (Nur zur Demonstration der Parameter/Returnwerte)
+ 132:./lib/time.c  ****   \code
+ 133:./lib/time.c  ****   // 1.5 Sekunde warten
+ 134:./lib/time.c  ****   Msleep (1500);
+ 135:./lib/time.c  ****   \endcode
+ 136:./lib/time.c  **** *****************************************************************************/
+ 137:./lib/time.c  **** void Msleep (
+ 138:./lib/time.c  ****   unsigned int ms)
+ 139:./lib/time.c  **** {
+GAS LISTING /tmp/ccRLVL28.s 			page 7
+
+
+ 204               		.stabn	68,0,139,.LM7-.LFBB3
+ 205               	.LM7:
+ 206               	.LFBB3:
+ 207 0000 0F93      		push r16
+ 208 0002 1F93      		push r17
+ 209 0004 CF93      		push r28
+ 210 0006 DF93      		push r29
+ 211               	/* prologue: function */
+ 212               	/* frame size = 0 */
+ 213               	/* stack size = 4 */
+ 214               	.L__stack_usage = 4
+ 215 0008 8C01      		movw r16,r24
+ 140:./lib/time.c  ****   unsigned int z;
+ 141:./lib/time.c  ****   for (z = 0; z < ms; z++)
+ 216               		.stabn	68,0,141,.LM8-.LFBB3
+ 217               	.LM8:
+ 218 000a C0E0      		ldi r28,0
+ 219 000c D0E0      		ldi r29,0
+ 220               	.L7:
+ 221               		.stabn	68,0,141,.LM9-.LFBB3
+ 222               	.LM9:
+ 223 000e C017      		cp r28,r16
+ 224 0010 D107      		cpc r29,r17
+ 225 0012 01F0      		breq .L9
+ 142:./lib/time.c  ****     Sleep (36);
+ 226               		.stabn	68,0,142,.LM10-.LFBB3
+ 227               	.LM10:
+ 228 0014 84E2      		ldi r24,lo8(36)
+ 229 0016 00D0      		rcall Sleep
+ 141:./lib/time.c  ****     Sleep (36);
+ 230               		.stabn	68,0,141,.LM11-.LFBB3
+ 231               	.LM11:
+ 232 0018 2196      		adiw r28,1
+ 233 001a 00C0      		rjmp .L7
+ 234               	.L9:
+ 235               	/* epilogue start */
+ 143:./lib/time.c  **** }
+ 236               		.stabn	68,0,143,.LM12-.LFBB3
+ 237               	.LM12:
+ 238 001c DF91      		pop r29
+ 239 001e CF91      		pop r28
+ 240 0020 1F91      		pop r17
+ 241 0022 0F91      		pop r16
+ 242 0024 0895      		ret
+ 243               		.size	Msleep, .-Msleep
+ 244               		.stabs	"z:r(0,4)",64,0,140,28
+ 245               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 246               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 247               	.Lscope3:
+ 248               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 249               		.stabd	78,0,0
+ 250               		.text
+ 251               		.stabs	"",100,0,0,.Letext0
+ 252               	.Letext0:
+ 253               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccRLVL28.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 time.c
+     /tmp/ccRLVL28.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccRLVL28.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccRLVL28.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccRLVL28.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccRLVL28.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccRLVL28.s:122    .text.Gettime:0000000000000000 Gettime
+     /tmp/ccRLVL28.s:167    .text.Sleep:0000000000000000 Sleep
+     /tmp/ccRLVL28.s:202    .text.Msleep:0000000000000000 Msleep
+
+UNDEFINED SYMBOLS
+timebase
+count36kHz
+__udivmodsi4

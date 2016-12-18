@@ -1,0 +1,2120 @@
+GAS LISTING /tmp/cccT2lzT.s 			page 1
+
+
+   1               		.file	"lcd.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/lcd.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/cccT2lzT.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/cccT2lzT.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.SetIOLCD,"ax",@progbits
+ 119               		.stabs	"SetIOLCD:F(0,47)",36,0,151,SetIOLCD
+ 120               		.stabs	"setCommand:P(0,11)",64,0,151,24
+ 121               		.stabs	"bits:P(0,11)",64,0,151,22
+ 122               	.global	SetIOLCD
+ 123               		.type	SetIOLCD, @function
+ 124               	SetIOLCD:
+ 125               		.stabd	46,0,0
+   1:./lib/lcd.c   **** /*!
+   2:./lib/lcd.c   ****   \file     lcd.c
+   3:./lib/lcd.c   ****    
+   4:./lib/lcd.c   ****   \brief    Funktionen zur Ansteurung eines LCD Moduls ueber die I2C Schnittstelle.
+   5:./lib/lcd.c   ****             Diese Bibliothek unterstützt HD44870 kompatible LCD Module mit einem
+   6:./lib/lcd.c   ****             I2C Port Expander Chip PCF8574P\n
+   7:./lib/lcd.c   ****             Die Pinbelegung des I2C Portexpanders ist folgende:\n 
+   8:./lib/lcd.c   ****             P0-P3  - BD4-DB7\n
+   9:./lib/lcd.c   ****             P4     - RS\n
+  10:./lib/lcd.c   ****             P4     - R/W\n
+  11:./lib/lcd.c   ****             P6     - Backlight (optional)\n
+  12:./lib/lcd.c   ****             P7     - EN\n
+  13:./lib/lcd.c   ****             Es wird zudem die I2C Emulations Bibliothek benötigt.\n
+  14:./lib/lcd.c   **** 
+  15:./lib/lcd.c   ****   
+  16:./lib/lcd.c   ****   \author   Rizqi Ahmad (raid_ox)
+  17:./lib/lcd.c   ****   
+  18:./lib/lcd.c   ****   \version  V001 - 17-02-2007 - Rizqi Ahmad (raid_ox)
+  19:./lib/lcd.c   ****             Erste Version
+  20:./lib/lcd.c   ****   \version  V002 - 08.04.2007 - m.a.r.v.i.n\n  
+  21:./lib/lcd.c   ****             +++ Alle Funktionen\n
+  22:./lib/lcd.c   ****             Kommentierte Version (KEINE Funktionsaenderung)
+  23:./lib/lcd.c   ****   \version  V003 - 21.01.2008 - m.a.r.v.i.n\n 
+  24:./lib/lcd.c   ****             Anpassung an ATmega168 
+  25:./lib/lcd.c   ****             neue Funktion PrintLCD_p zur Ausgabe von Strings aus dem Programmspeicher\n
+  26:./lib/lcd.c   ****             neue Funktion SetCharLCD zum Setzen von Sonderzeichen\n
+  27:./lib/lcd.c   ****             neue Funktion PollSwitchLCD zur Abfrage der Tasten des Arexx LCD Moduls
+  28:./lib/lcd.c   **** 
+  29:./lib/lcd.c   ****  */
+  30:./lib/lcd.c   **** 
+  31:./lib/lcd.c   **** /**************************************************************************************************
+  32:./lib/lcd.c   ****  * Library to control LCD over I²c
+  33:./lib/lcd.c   ****  *
+  34:./lib/lcd.c   ****  * LCD Library
+  35:./lib/lcd.c   ****  *
+  36:./lib/lcd.c   ****  * This Library is designed for HD44870 based LCDs with I2C expander PCF8574p. It requires I²C Mast
+  37:./lib/lcd.c   ****  * PIN-Assignment: P0-P3 -> DB4-DB7, P4 -> RS, P5 -> R/w, P7 -> Enable.
+  38:./lib/lcd.c   ****  * For Use with ASURO Robot
+  39:./lib/lcd.c   ****  *
+  40:./lib/lcd.c   ****  * Inspiration from I²C-LCD library by "Nico Eichelmann, Thomas Eichelmann"
+  41:./lib/lcd.c   ****  *
+  42:./lib/lcd.c   ****  * ------------------------------------------------------------------------------------------------
+  43:./lib/lcd.c   ****  *
+  44:./lib/lcd.c   ****  * Copyright (c) 2006 Rizqi Ahmad (raid_ox)
+  45:./lib/lcd.c   ****  *
+  46:./lib/lcd.c   ****  * This software is a free software; you can redistribute it and/or modify it under the terms of th
+GAS LISTING /tmp/cccT2lzT.s 			page 4
+
+
+  47:./lib/lcd.c   ****  * Free Software Foundation; either version 2 of the License, or (at your option) any later version
+  48:./lib/lcd.c   ****  * General Public License along with asurolib; if not, write to the Free Software Foundation, Inc.,
+  49:./lib/lcd.c   ****  * 02110-1301  USA
+  50:./lib/lcd.c   ****  *
+  51:./lib/lcd.c   ****  * The above copyright notice and this permission notice shall be included in all copies or substan
+  52:./lib/lcd.c   ****  *
+  53:./lib/lcd.c   ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BU
+  54:./lib/lcd.c   ****  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+  55:./lib/lcd.c   ****  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNE
+  56:./lib/lcd.c   ****  * DEALINGS IN THE SOFTWARE.
+  57:./lib/lcd.c   ****  **************************************************************************************************
+  58:./lib/lcd.c   **** 
+  59:./lib/lcd.c   **** #include "asuro.h"
+  60:./lib/lcd.c   **** #include "lcd.h"
+  61:./lib/lcd.c   **** #include "i2c.h"
+  62:./lib/lcd.c   **** 
+  63:./lib/lcd.c   **** /*!
+  64:./lib/lcd.c   ****   \brief
+  65:./lib/lcd.c   ****   LCD Initialisierung
+  66:./lib/lcd.c   **** */
+  67:./lib/lcd.c   **** void InitLCD(void)
+  68:./lib/lcd.c   **** {
+  69:./lib/lcd.c   ****   unsigned char init[] = LCD_INIT;
+  70:./lib/lcd.c   ****   unsigned char i = 0;
+  71:./lib/lcd.c   **** 
+  72:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_EN);              // Start LCD Control, EN=0
+  73:./lib/lcd.c   ****   Msleep(1);                          // Wait LCD Ready
+  74:./lib/lcd.c   **** 
+  75:./lib/lcd.c   ****   // Initialize LCD
+  76:./lib/lcd.c   ****   CommandLCD( LCD_8BIT | (LCD_8BIT >> 4) );
+  77:./lib/lcd.c   ****   CommandLCD( LCD_8BIT | (LCD_4BIT >> 4) );
+  78:./lib/lcd.c   **** 
+  79:./lib/lcd.c   ****   while (init[i] != 0x00)
+  80:./lib/lcd.c   ****   {
+  81:./lib/lcd.c   ****     CommandLCD(init[i]);
+  82:./lib/lcd.c   ****     i++;
+  83:./lib/lcd.c   ****   }
+  84:./lib/lcd.c   **** 
+  85:./lib/lcd.c   ****   CommandLCD( LCD_DISPLAYON );        // Display on/off Control (Entry Display,Cursor off,Cursor no
+  86:./lib/lcd.c   ****   CommandLCD( LCD_INCREASE );         // Entry Mode Set (I/D=1 Increment,S=0 Cursor Shift)
+  87:./lib/lcd.c   ****   CommandLCD( LCD_CLEAR );            // Clear Display
+  88:./lib/lcd.c   ****   CommandLCD( LCD_HOME );             // Home Cursor
+  89:./lib/lcd.c   ****   Msleep(1);                          // Wait Initial Complete
+  90:./lib/lcd.c   **** }
+  91:./lib/lcd.c   **** 
+  92:./lib/lcd.c   **** /*!
+  93:./lib/lcd.c   ****   \brief
+  94:./lib/lcd.c   ****   LCD Backlight an oder ausschalten
+  95:./lib/lcd.c   **** 
+  96:./lib/lcd.c   ****   \param
+  97:./lib/lcd.c   ****   state Backlight an oder aus
+  98:./lib/lcd.c   **** 
+  99:./lib/lcd.c   **** */
+ 100:./lib/lcd.c   **** void BacklightLCD(unsigned char state)
+ 101:./lib/lcd.c   **** {
+ 102:./lib/lcd.c   ****   SetIOLCD(state, LCD_BL);
+ 103:./lib/lcd.c   **** }
+GAS LISTING /tmp/cccT2lzT.s 			page 5
+
+
+ 104:./lib/lcd.c   **** 
+ 105:./lib/lcd.c   **** /*!
+ 106:./lib/lcd.c   ****   \brief
+ 107:./lib/lcd.c   ****   LCD Daten schreiben
+ 108:./lib/lcd.c   **** 
+ 109:./lib/lcd.c   ****   \param  data auszugebende Date
+ 110:./lib/lcd.c   **** */
+ 111:./lib/lcd.c   **** void SetDataLCD(unsigned char data)
+ 112:./lib/lcd.c   **** {
+ 113:./lib/lcd.c   ****   unsigned char dataPins;             // Pin Compatibility
+ 114:./lib/lcd.c   **** 
+ 115:./lib/lcd.c   ****   // Set First Nibble Data to DataPins on PCF8574
+ 116:./lib/lcd.c   ****   dataPins &= 0x00;
+ 117:./lib/lcd.c   ****   dataPins |= ((data & 0x80) >> 7) << LD7;
+ 118:./lib/lcd.c   ****   dataPins |= ((data & 0x40) >> 6) << LD6;
+ 119:./lib/lcd.c   ****   dataPins |= ((data & 0x20) >> 5) << LD5;
+ 120:./lib/lcd.c   ****   dataPins |= ((data & 0x10) >> 4) << LD4;
+ 121:./lib/lcd.c   **** 
+ 122:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_D4 | LCD_D5 | LCD_D6 | LCD_D7);     // Clear old LCD Data (Bit[7..4])
+ 123:./lib/lcd.c   ****   SetIOLCD(ON, dataPins);             // Strobe High Nibble Command
+ 124:./lib/lcd.c   ****   SetIOLCD(ON, LCD_EN);               // Enable ON
+ 125:./lib/lcd.c   ****   Msleep(1);
+ 126:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_EN);              // Enable OFF
+ 127:./lib/lcd.c   **** 
+ 128:./lib/lcd.c   ****   // Set Second Nibble Data to DataPins on PCF8574
+ 129:./lib/lcd.c   ****   dataPins &= 0x00;
+ 130:./lib/lcd.c   ****   dataPins |= ((data & 0x08) >> 3) << LD7;
+ 131:./lib/lcd.c   ****   dataPins |= ((data & 0x04) >> 2) << LD6;
+ 132:./lib/lcd.c   ****   dataPins |= ((data & 0x02) >> 1) << LD5;
+ 133:./lib/lcd.c   ****   dataPins |= ((data & 0x01) >> 0) << LD4;
+ 134:./lib/lcd.c   **** 
+ 135:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_D4 | LCD_D5 | LCD_D6 | LCD_D7);     // Clear old LCD Data (Bit[7..4])
+ 136:./lib/lcd.c   ****   SetIOLCD(ON, dataPins);             // Strobe Low Nibble Command
+ 137:./lib/lcd.c   ****   SetIOLCD(ON, LCD_EN);               // Enable ON
+ 138:./lib/lcd.c   ****   Msleep(1);
+ 139:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_EN);              // Enable OFF
+ 140:./lib/lcd.c   **** 
+ 141:./lib/lcd.c   ****   Msleep(1);                          // Wait LCD Busy
+ 142:./lib/lcd.c   **** }
+ 143:./lib/lcd.c   **** 
+ 144:./lib/lcd.c   **** /*!
+ 145:./lib/lcd.c   ****   \brief
+ 146:./lib/lcd.c   ****   LCD IO Ports schreiben
+ 147:./lib/lcd.c   **** 
+ 148:./lib/lcd.c   ****   \param  setCommand an - oder auschalten
+ 149:./lib/lcd.c   ****   \param  bits  zu setzende bits
+ 150:./lib/lcd.c   **** */
+ 151:./lib/lcd.c   **** void SetIOLCD(unsigned char setCommand, unsigned char bits)
+ 152:./lib/lcd.c   **** {
+ 126               		.stabn	68,0,152,.LM0-.LFBB1
+ 127               	.LM0:
+ 128               	.LFBB1:
+ 129               	/* prologue: function */
+ 130               	/* frame size = 0 */
+ 131               	/* stack size = 0 */
+ 132               	.L__stack_usage = 0
+ 133 0000 9091 0000 		lds r25,portLCD
+GAS LISTING /tmp/cccT2lzT.s 			page 6
+
+
+ 153:./lib/lcd.c   ****   if (setCommand == ON)
+ 134               		.stabn	68,0,153,.LM1-.LFBB1
+ 135               	.LM1:
+ 136 0004 8130      		cpi r24,lo8(1)
+ 137 0006 01F4      		brne .L2
+ 154:./lib/lcd.c   ****     portLCD |= bits;
+ 138               		.stabn	68,0,154,.LM2-.LFBB1
+ 139               	.LM2:
+ 140 0008 692B      		or r22,r25
+ 141 000a 00C0      		rjmp .L4
+ 142               	.L2:
+ 155:./lib/lcd.c   ****   else
+ 156:./lib/lcd.c   ****     portLCD &= ~bits;
+ 143               		.stabn	68,0,156,.LM3-.LFBB1
+ 144               	.LM3:
+ 145 000c 6095      		com r22
+ 146 000e 6923      		and r22,r25
+ 147               	.L4:
+ 148 0010 6093 0000 		sts portLCD,r22
+ 157:./lib/lcd.c   ****   StartI2C(LCD_DEV);
+ 149               		.stabn	68,0,157,.LM4-.LFBB1
+ 150               	.LM4:
+ 151 0014 80E4      		ldi r24,lo8(64)
+ 152 0016 00D0      		rcall StartI2C
+ 158:./lib/lcd.c   ****   WriteI2C(portLCD);
+ 153               		.stabn	68,0,158,.LM5-.LFBB1
+ 154               	.LM5:
+ 155 0018 8091 0000 		lds r24,portLCD
+ 156 001c 00D0      		rcall WriteI2C
+ 159:./lib/lcd.c   ****   StopI2C();
+ 157               		.stabn	68,0,159,.LM6-.LFBB1
+ 158               	.LM6:
+ 159 001e 00C0      		rjmp StopI2C
+ 160               		.size	SetIOLCD, .-SetIOLCD
+ 161               	.Lscope1:
+ 162               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 163               		.stabd	78,0,0
+ 164               		.section	.text.BacklightLCD,"ax",@progbits
+ 165               		.stabs	"BacklightLCD:F(0,47)",36,0,100,BacklightLCD
+ 166               		.stabs	"state:P(0,11)",64,0,100,24
+ 167               	.global	BacklightLCD
+ 168               		.type	BacklightLCD, @function
+ 169               	BacklightLCD:
+ 170               		.stabd	46,0,0
+ 101:./lib/lcd.c   ****   SetIOLCD(state, LCD_BL);
+ 171               		.stabn	68,0,101,.LM7-.LFBB2
+ 172               	.LM7:
+ 173               	.LFBB2:
+ 174               	/* prologue: function */
+ 175               	/* frame size = 0 */
+ 176               	/* stack size = 0 */
+ 177               	.L__stack_usage = 0
+ 102:./lib/lcd.c   **** }
+ 178               		.stabn	68,0,102,.LM8-.LFBB2
+ 179               	.LM8:
+ 180 0000 68E0      		ldi r22,lo8(8)
+ 181 0002 00C0      		rjmp SetIOLCD
+GAS LISTING /tmp/cccT2lzT.s 			page 7
+
+
+ 182               		.size	BacklightLCD, .-BacklightLCD
+ 183               	.Lscope2:
+ 184               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 185               		.stabd	78,0,0
+ 186               		.section	.text.SetDataLCD,"ax",@progbits
+ 187               		.stabs	"SetDataLCD:F(0,47)",36,0,111,SetDataLCD
+ 188               		.stabs	"data:P(0,11)",64,0,111,13
+ 189               	.global	SetDataLCD
+ 190               		.type	SetDataLCD, @function
+ 191               	SetDataLCD:
+ 192               		.stabd	46,0,0
+ 112:./lib/lcd.c   ****   unsigned char dataPins;             // Pin Compatibility
+ 193               		.stabn	68,0,112,.LM9-.LFBB3
+ 194               	.LM9:
+ 195               	.LFBB3:
+ 196 0000 AF92      		push r10
+ 197 0002 BF92      		push r11
+ 198 0004 DF92      		push r13
+ 199 0006 EF92      		push r14
+ 200 0008 FF92      		push r15
+ 201 000a 0F93      		push r16
+ 202 000c 1F93      		push r17
+ 203 000e CF93      		push r28
+ 204 0010 DF93      		push r29
+ 205               	/* prologue: function */
+ 206               	/* frame size = 0 */
+ 207               	/* stack size = 9 */
+ 208               	.L__stack_usage = 9
+ 209 0012 D82E      		mov r13,r24
+ 122:./lib/lcd.c   ****   SetIOLCD(ON, dataPins);             // Strobe High Nibble Command
+ 210               		.stabn	68,0,122,.LM10-.LFBB3
+ 211               	.LM10:
+ 212 0014 60EF      		ldi r22,lo8(-16)
+ 213 0016 80E0      		ldi r24,0
+ 214 0018 00D0      		rcall SetIOLCD
+ 120:./lib/lcd.c   **** 
+ 215               		.stabn	68,0,120,.LM11-.LFBB3
+ 216               	.LM11:
+ 217 001a 6D2D      		mov r22,r13
+ 218 001c 607F      		andi r22,lo8(-16)
+ 123:./lib/lcd.c   ****   SetIOLCD(ON, LCD_EN);               // Enable ON
+ 219               		.stabn	68,0,123,.LM12-.LFBB3
+ 220               	.LM12:
+ 221 001e 81E0      		ldi r24,lo8(1)
+ 222 0020 00D0      		rcall SetIOLCD
+ 124:./lib/lcd.c   ****   Msleep(1);
+ 223               		.stabn	68,0,124,.LM13-.LFBB3
+ 224               	.LM13:
+ 225 0022 64E0      		ldi r22,lo8(4)
+ 226 0024 81E0      		ldi r24,lo8(1)
+ 227 0026 00D0      		rcall SetIOLCD
+ 125:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_EN);              // Enable OFF
+ 228               		.stabn	68,0,125,.LM14-.LFBB3
+ 229               	.LM14:
+ 230 0028 81E0      		ldi r24,lo8(1)
+ 231 002a 90E0      		ldi r25,0
+ 232 002c 00D0      		rcall Msleep
+GAS LISTING /tmp/cccT2lzT.s 			page 8
+
+
+ 126:./lib/lcd.c   **** 
+ 233               		.stabn	68,0,126,.LM15-.LFBB3
+ 234               	.LM15:
+ 235 002e 64E0      		ldi r22,lo8(4)
+ 236 0030 80E0      		ldi r24,0
+ 237 0032 00D0      		rcall SetIOLCD
+ 135:./lib/lcd.c   ****   SetIOLCD(ON, dataPins);             // Strobe Low Nibble Command
+ 238               		.stabn	68,0,135,.LM16-.LFBB3
+ 239               	.LM16:
+ 240 0034 60EF      		ldi r22,lo8(-16)
+ 241 0036 80E0      		ldi r24,0
+ 242 0038 00D0      		rcall SetIOLCD
+ 130:./lib/lcd.c   ****   dataPins |= ((data & 0x04) >> 2) << LD6;
+ 243               		.stabn	68,0,130,.LM17-.LFBB3
+ 244               	.LM17:
+ 245 003a D3FA      		bst r13,3
+ 246 003c AA24      		clr r10
+ 247 003e A0F8      		bld r10,0
+ 248 0040 B12C      		mov r11,__zero_reg__
+ 249 0042 B694      		lsr r11
+ 250 0044 BA2C      		mov r11,r10
+ 251 0046 AA24      		clr r10
+ 252 0048 B794      		ror r11
+ 253 004a A794      		ror r10
+ 131:./lib/lcd.c   ****   dataPins |= ((data & 0x02) >> 1) << LD5;
+ 254               		.stabn	68,0,131,.LM18-.LFBB3
+ 255               	.LM18:
+ 256 004c D2FA      		bst r13,2
+ 257 004e EE24      		clr r14
+ 258 0050 E0F8      		bld r14,0
+ 259 0052 F12C      		mov r15,__zero_reg__
+ 260 0054 96E0      		ldi r25,6
+ 261               		1:
+ 262 0056 EE0C      		lsl r14
+ 263 0058 FF1C      		rol r15
+ 264 005a 9A95      		dec r25
+ 265 005c 01F4      		brne 1b
+ 266 005e EA28      		or r14,r10
+ 133:./lib/lcd.c   **** 
+ 267               		.stabn	68,0,133,.LM19-.LFBB3
+ 268               	.LM19:
+ 269 0060 0D2D      		mov r16,r13
+ 270 0062 0170      		andi r16,1
+ 271 0064 10E0      		ldi r17,0
+ 272 0066 24E0      		ldi r18,4
+ 273               		1:
+ 274 0068 000F      		lsl r16
+ 275 006a 111F      		rol r17
+ 276 006c 2A95      		dec r18
+ 277 006e 01F4      		brne 1b
+ 278 0070 0E29      		or r16,r14
+ 132:./lib/lcd.c   ****   dataPins |= ((data & 0x01) >> 0) << LD4;
+ 279               		.stabn	68,0,132,.LM20-.LFBB3
+ 280               	.LM20:
+ 281 0072 D1FA      		bst r13,1
+ 282 0074 DD24      		clr r13
+ 283 0076 D0F8      		bld r13,0
+GAS LISTING /tmp/cccT2lzT.s 			page 9
+
+
+ 284 0078 CD2D      		mov r28,r13
+ 285 007a 80E0      		ldi r24,0
+ 286 007c D82F      		mov r29,r24
+ 287 007e 35E0      		ldi r19,5
+ 288               		1:
+ 289 0080 CC0F      		lsl r28
+ 290 0082 DD1F      		rol r29
+ 291 0084 3A95      		dec r19
+ 292 0086 01F4      		brne 1b
+ 133:./lib/lcd.c   **** 
+ 293               		.stabn	68,0,133,.LM21-.LFBB3
+ 294               	.LM21:
+ 295 0088 6C2F      		mov r22,r28
+ 296 008a 602B      		or r22,r16
+ 136:./lib/lcd.c   ****   SetIOLCD(ON, LCD_EN);               // Enable ON
+ 297               		.stabn	68,0,136,.LM22-.LFBB3
+ 298               	.LM22:
+ 299 008c 81E0      		ldi r24,lo8(1)
+ 300 008e 00D0      		rcall SetIOLCD
+ 137:./lib/lcd.c   ****   Msleep(1);
+ 301               		.stabn	68,0,137,.LM23-.LFBB3
+ 302               	.LM23:
+ 303 0090 64E0      		ldi r22,lo8(4)
+ 304 0092 81E0      		ldi r24,lo8(1)
+ 305 0094 00D0      		rcall SetIOLCD
+ 138:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_EN);              // Enable OFF
+ 306               		.stabn	68,0,138,.LM24-.LFBB3
+ 307               	.LM24:
+ 308 0096 81E0      		ldi r24,lo8(1)
+ 309 0098 90E0      		ldi r25,0
+ 310 009a 00D0      		rcall Msleep
+ 139:./lib/lcd.c   **** 
+ 311               		.stabn	68,0,139,.LM25-.LFBB3
+ 312               	.LM25:
+ 313 009c 64E0      		ldi r22,lo8(4)
+ 314 009e 80E0      		ldi r24,0
+ 315 00a0 00D0      		rcall SetIOLCD
+ 141:./lib/lcd.c   **** }
+ 316               		.stabn	68,0,141,.LM26-.LFBB3
+ 317               	.LM26:
+ 318 00a2 81E0      		ldi r24,lo8(1)
+ 319 00a4 90E0      		ldi r25,0
+ 320               	/* epilogue start */
+ 142:./lib/lcd.c   **** 
+ 321               		.stabn	68,0,142,.LM27-.LFBB3
+ 322               	.LM27:
+ 323 00a6 DF91      		pop r29
+ 324 00a8 CF91      		pop r28
+ 325 00aa 1F91      		pop r17
+ 326 00ac 0F91      		pop r16
+ 327 00ae FF90      		pop r15
+ 328 00b0 EF90      		pop r14
+ 329 00b2 DF90      		pop r13
+ 330 00b4 BF90      		pop r11
+ 331 00b6 AF90      		pop r10
+ 141:./lib/lcd.c   **** }
+ 332               		.stabn	68,0,141,.LM28-.LFBB3
+GAS LISTING /tmp/cccT2lzT.s 			page 10
+
+
+ 333               	.LM28:
+ 334 00b8 00C0      		rjmp Msleep
+ 335               		.size	SetDataLCD, .-SetDataLCD
+ 336               	.Lscope3:
+ 337               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 338               		.stabd	78,0,0
+ 339               		.section	.text.GetIOLCD,"ax",@progbits
+ 340               		.stabs	"GetIOLCD:F(0,11)",36,0,168,GetIOLCD
+ 341               	.global	GetIOLCD
+ 342               		.type	GetIOLCD, @function
+ 343               	GetIOLCD:
+ 344               		.stabd	46,0,0
+ 160:./lib/lcd.c   **** }
+ 161:./lib/lcd.c   **** 
+ 162:./lib/lcd.c   **** /*!
+ 163:./lib/lcd.c   ****   \brief
+ 164:./lib/lcd.c   ****   LCD IO Ports lesen
+ 165:./lib/lcd.c   **** 
+ 166:./lib/lcd.c   ****   \return  LCD IO Port
+ 167:./lib/lcd.c   **** */
+ 168:./lib/lcd.c   **** unsigned char GetIOLCD(void)
+ 169:./lib/lcd.c   **** {
+ 345               		.stabn	68,0,169,.LM29-.LFBB4
+ 346               	.LM29:
+ 347               	.LFBB4:
+ 348 0000 CF93      		push r28
+ 349 0002 DF93      		push r29
+ 350 0004 1F92      		push __zero_reg__
+ 351 0006 CDB7      		in r28,__SP_L__
+ 352 0008 DEB7      		in r29,__SP_H__
+ 353               	/* prologue: function */
+ 354               	/* frame size = 1 */
+ 355               	/* stack size = 3 */
+ 356               	.L__stack_usage = 3
+ 170:./lib/lcd.c   ****   unsigned char data = 0x00;
+ 171:./lib/lcd.c   ****   StartI2C(LCD_DEV+1);
+ 357               		.stabn	68,0,171,.LM30-.LFBB4
+ 358               	.LM30:
+ 359 000a 81E4      		ldi r24,lo8(65)
+ 360 000c 00D0      		rcall StartI2C
+ 172:./lib/lcd.c   ****   data = ReadI2C(0);
+ 361               		.stabn	68,0,172,.LM31-.LFBB4
+ 362               	.LM31:
+ 363 000e 80E0      		ldi r24,0
+ 364 0010 00D0      		rcall ReadI2C
+ 173:./lib/lcd.c   ****   StopI2C();
+ 365               		.stabn	68,0,173,.LM32-.LFBB4
+ 366               	.LM32:
+ 367 0012 8983      		std Y+1,r24
+ 368 0014 00D0      		rcall StopI2C
+ 174:./lib/lcd.c   ****   return data;
+ 175:./lib/lcd.c   **** }
+ 369               		.stabn	68,0,175,.LM33-.LFBB4
+ 370               	.LM33:
+ 371 0016 8981      		ldd r24,Y+1
+ 372               	/* epilogue start */
+ 373 0018 0F90      		pop __tmp_reg__
+GAS LISTING /tmp/cccT2lzT.s 			page 11
+
+
+ 374 001a DF91      		pop r29
+ 375 001c CF91      		pop r28
+ 376 001e 0895      		ret
+ 377               		.size	GetIOLCD, .-GetIOLCD
+ 378               		.stabs	"data:r(0,11)",64,0,170,24
+ 379               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 380               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 381               	.Lscope4:
+ 382               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 383               		.stabd	78,0,0
+ 384               		.section	.text.CommandLCD,"ax",@progbits
+ 385               		.stabs	"CommandLCD:F(0,47)",36,0,215,CommandLCD
+ 386               		.stabs	"command:P(0,11)",64,0,215,28
+ 387               	.global	CommandLCD
+ 388               		.type	CommandLCD, @function
+ 389               	CommandLCD:
+ 390               		.stabd	46,0,0
+ 176:./lib/lcd.c   **** 
+ 177:./lib/lcd.c   **** /*!
+ 178:./lib/lcd.c   ****   \brief
+ 179:./lib/lcd.c   ****   LCD Cursor setzen
+ 180:./lib/lcd.c   **** 
+ 181:./lib/lcd.c   ****   \param  cursor Cursor Position
+ 182:./lib/lcd.c   ****   \param  line Zeilen Nummer
+ 183:./lib/lcd.c   **** */
+ 184:./lib/lcd.c   **** void SetCursorLCD(unsigned char cursor, unsigned char line)
+ 185:./lib/lcd.c   **** {
+ 186:./lib/lcd.c   ****   cursorLCD   = cursor;
+ 187:./lib/lcd.c   ****   lineLCD   = line;
+ 188:./lib/lcd.c   **** 
+ 189:./lib/lcd.c   ****   if (line == 0)
+ 190:./lib/lcd.c   ****     line = LCD_LINE1;
+ 191:./lib/lcd.c   **** #if LCD_LINES>=2
+ 192:./lib/lcd.c   ****   else if (line == 1)
+ 193:./lib/lcd.c   ****     line = LCD_LINE2;
+ 194:./lib/lcd.c   **** #endif
+ 195:./lib/lcd.c   **** #if LCD_LINES>=3
+ 196:./lib/lcd.c   ****   else if (line == 2)
+ 197:./lib/lcd.c   ****     line = LCD_LINE3;
+ 198:./lib/lcd.c   **** #endif
+ 199:./lib/lcd.c   **** #if LCD_LINES>=4
+ 200:./lib/lcd.c   ****   else if (line == 3)
+ 201:./lib/lcd.c   ****     line = LCD_LINE4;
+ 202:./lib/lcd.c   **** #endif
+ 203:./lib/lcd.c   ****   else
+ 204:./lib/lcd.c   ****     line = LCD_LINE1;
+ 205:./lib/lcd.c   **** 
+ 206:./lib/lcd.c   ****   CommandLCD(LCD_DDRAM | (line+cursor));
+ 207:./lib/lcd.c   **** }
+ 208:./lib/lcd.c   **** 
+ 209:./lib/lcd.c   **** /*!
+ 210:./lib/lcd.c   ****   \brief
+ 211:./lib/lcd.c   ****   LCD Kommando ausgeben
+ 212:./lib/lcd.c   **** 
+ 213:./lib/lcd.c   ****   \param  command auszugebendes Kommando
+ 214:./lib/lcd.c   **** */
+ 215:./lib/lcd.c   **** void CommandLCD(unsigned char command)
+GAS LISTING /tmp/cccT2lzT.s 			page 12
+
+
+ 216:./lib/lcd.c   **** {
+ 391               		.stabn	68,0,216,.LM34-.LFBB5
+ 392               	.LM34:
+ 393               	.LFBB5:
+ 394 0000 CF93      		push r28
+ 395               	/* prologue: function */
+ 396               	/* frame size = 0 */
+ 397               	/* stack size = 1 */
+ 398               	.L__stack_usage = 1
+ 399 0002 C82F      		mov r28,r24
+ 217:./lib/lcd.c   ****   if (command == LCD_HOME)
+ 400               		.stabn	68,0,217,.LM35-.LFBB5
+ 401               	.LM35:
+ 402 0004 8230      		cpi r24,lo8(2)
+ 403 0006 01F4      		brne .L10
+ 218:./lib/lcd.c   ****     lineLCD = cursorLCD = 0x00;
+ 404               		.stabn	68,0,218,.LM36-.LFBB5
+ 405               	.LM36:
+ 406 0008 1092 0000 		sts cursorLCD,__zero_reg__
+ 407 000c 1092 0000 		sts lineLCD,__zero_reg__
+ 408               	.L10:
+ 219:./lib/lcd.c   ****   SetIOLCD(OFF, LCD_RS);
+ 409               		.stabn	68,0,219,.LM37-.LFBB5
+ 410               	.LM37:
+ 411 0010 61E0      		ldi r22,lo8(1)
+ 412 0012 80E0      		ldi r24,0
+ 413 0014 00D0      		rcall SetIOLCD
+ 220:./lib/lcd.c   ****   SetDataLCD(command);
+ 414               		.stabn	68,0,220,.LM38-.LFBB5
+ 415               	.LM38:
+ 416 0016 8C2F      		mov r24,r28
+ 417               	/* epilogue start */
+ 221:./lib/lcd.c   **** }
+ 418               		.stabn	68,0,221,.LM39-.LFBB5
+ 419               	.LM39:
+ 420 0018 CF91      		pop r28
+ 220:./lib/lcd.c   ****   SetDataLCD(command);
+ 421               		.stabn	68,0,220,.LM40-.LFBB5
+ 422               	.LM40:
+ 423 001a 00C0      		rjmp SetDataLCD
+ 424               		.size	CommandLCD, .-CommandLCD
+ 425               	.Lscope5:
+ 426               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 427               		.stabd	78,0,0
+ 428               		.section	.text.InitLCD,"ax",@progbits
+ 429               		.stabs	"InitLCD:F(0,47)",36,0,67,InitLCD
+ 430               	.global	InitLCD
+ 431               		.type	InitLCD, @function
+ 432               	InitLCD:
+ 433               		.stabd	46,0,0
+  68:./lib/lcd.c   ****   unsigned char init[] = LCD_INIT;
+ 434               		.stabn	68,0,68,.LM41-.LFBB6
+ 435               	.LM41:
+ 436               	.LFBB6:
+ 437 0000 1F93      		push r17
+ 438 0002 CF93      		push r28
+ 439 0004 DF93      		push r29
+GAS LISTING /tmp/cccT2lzT.s 			page 13
+
+
+ 440 0006 00D0      		rcall .
+ 441 0008 CDB7      		in r28,__SP_L__
+ 442 000a DEB7      		in r29,__SP_H__
+ 443               	/* prologue: function */
+ 444               	/* frame size = 2 */
+ 445               	/* stack size = 5 */
+ 446               	.L__stack_usage = 5
+  69:./lib/lcd.c   ****   unsigned char i = 0;
+ 447               		.stabn	68,0,69,.LM42-.LFBB6
+ 448               	.LM42:
+ 449 000c 88E2      		ldi r24,lo8(40)
+ 450 000e 8983      		std Y+1,r24
+ 451 0010 1A82      		std Y+2,__zero_reg__
+  72:./lib/lcd.c   ****   Msleep(1);                          // Wait LCD Ready
+ 452               		.stabn	68,0,72,.LM43-.LFBB6
+ 453               	.LM43:
+ 454 0012 64E0      		ldi r22,lo8(4)
+ 455 0014 80E0      		ldi r24,0
+ 456 0016 00D0      		rcall SetIOLCD
+  73:./lib/lcd.c   **** 
+ 457               		.stabn	68,0,73,.LM44-.LFBB6
+ 458               	.LM44:
+ 459 0018 81E0      		ldi r24,lo8(1)
+ 460 001a 90E0      		ldi r25,0
+ 461 001c 00D0      		rcall Msleep
+  76:./lib/lcd.c   ****   CommandLCD( LCD_8BIT | (LCD_4BIT >> 4) );
+ 462               		.stabn	68,0,76,.LM45-.LFBB6
+ 463               	.LM45:
+ 464 001e 83E3      		ldi r24,lo8(51)
+ 465 0020 00D0      		rcall CommandLCD
+  77:./lib/lcd.c   **** 
+ 466               		.stabn	68,0,77,.LM46-.LFBB6
+ 467               	.LM46:
+ 468 0022 82E3      		ldi r24,lo8(50)
+ 469 0024 00D0      		rcall CommandLCD
+  70:./lib/lcd.c   **** 
+ 470               		.stabn	68,0,70,.LM47-.LFBB6
+ 471               	.LM47:
+ 472 0026 10E0      		ldi r17,0
+ 473               	.L12:
+  79:./lib/lcd.c   ****   {
+ 474               		.stabn	68,0,79,.LM48-.LFBB6
+ 475               	.LM48:
+ 476 0028 E1E0      		ldi r30,lo8(1)
+ 477 002a F0E0      		ldi r31,0
+ 478 002c EC0F      		add r30,r28
+ 479 002e FD1F      		adc r31,r29
+ 480 0030 E10F      		add r30,r17
+ 481 0032 F11D      		adc r31,__zero_reg__
+ 482 0034 8081      		ld r24,Z
+ 483 0036 8823      		tst r24
+ 484 0038 01F0      		breq .L14
+  81:./lib/lcd.c   ****     i++;
+ 485               		.stabn	68,0,81,.LM49-.LFBB6
+ 486               	.LM49:
+ 487 003a 00D0      		rcall CommandLCD
+  82:./lib/lcd.c   ****   }
+GAS LISTING /tmp/cccT2lzT.s 			page 14
+
+
+ 488               		.stabn	68,0,82,.LM50-.LFBB6
+ 489               	.LM50:
+ 490 003c 1F5F      		subi r17,lo8(-(1))
+ 491 003e 00C0      		rjmp .L12
+ 492               	.L14:
+  85:./lib/lcd.c   ****   CommandLCD( LCD_INCREASE );         // Entry Mode Set (I/D=1 Increment,S=0 Cursor Shift)
+ 493               		.stabn	68,0,85,.LM51-.LFBB6
+ 494               	.LM51:
+ 495 0040 8CE0      		ldi r24,lo8(12)
+ 496 0042 00D0      		rcall CommandLCD
+  86:./lib/lcd.c   ****   CommandLCD( LCD_CLEAR );            // Clear Display
+ 497               		.stabn	68,0,86,.LM52-.LFBB6
+ 498               	.LM52:
+ 499 0044 86E0      		ldi r24,lo8(6)
+ 500 0046 00D0      		rcall CommandLCD
+  87:./lib/lcd.c   ****   CommandLCD( LCD_HOME );             // Home Cursor
+ 501               		.stabn	68,0,87,.LM53-.LFBB6
+ 502               	.LM53:
+ 503 0048 81E0      		ldi r24,lo8(1)
+ 504 004a 00D0      		rcall CommandLCD
+  88:./lib/lcd.c   ****   Msleep(1);                          // Wait Initial Complete
+ 505               		.stabn	68,0,88,.LM54-.LFBB6
+ 506               	.LM54:
+ 507 004c 82E0      		ldi r24,lo8(2)
+ 508 004e 00D0      		rcall CommandLCD
+  89:./lib/lcd.c   **** }
+ 509               		.stabn	68,0,89,.LM55-.LFBB6
+ 510               	.LM55:
+ 511 0050 81E0      		ldi r24,lo8(1)
+ 512 0052 90E0      		ldi r25,0
+ 513               	/* epilogue start */
+  90:./lib/lcd.c   **** 
+ 514               		.stabn	68,0,90,.LM56-.LFBB6
+ 515               	.LM56:
+ 516 0054 0F90      		pop __tmp_reg__
+ 517 0056 0F90      		pop __tmp_reg__
+ 518 0058 DF91      		pop r29
+ 519 005a CF91      		pop r28
+ 520 005c 1F91      		pop r17
+  89:./lib/lcd.c   **** }
+ 521               		.stabn	68,0,89,.LM57-.LFBB6
+ 522               	.LM57:
+ 523 005e 00C0      		rjmp Msleep
+ 524               		.size	InitLCD, .-InitLCD
+ 525               		.stabs	"init:(0,48)=ar(0,49)=r(0,49);0;0177777;;0;1;(0,11)",128,0,69,1
+ 526               		.stabs	"i:r(0,11)",64,0,70,17
+ 527               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 528               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 529               	.Lscope6:
+ 530               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 531               		.stabd	78,0,0
+ 532               		.section	.text.SetCursorLCD,"ax",@progbits
+ 533               		.stabs	"SetCursorLCD:F(0,47)",36,0,184,SetCursorLCD
+ 534               		.stabs	"cursor:P(0,11)",64,0,184,24
+ 535               		.stabs	"line:P(0,11)",64,0,184,22
+ 536               	.global	SetCursorLCD
+ 537               		.type	SetCursorLCD, @function
+GAS LISTING /tmp/cccT2lzT.s 			page 15
+
+
+ 538               	SetCursorLCD:
+ 539               		.stabd	46,0,0
+ 185:./lib/lcd.c   ****   cursorLCD   = cursor;
+ 540               		.stabn	68,0,185,.LM58-.LFBB7
+ 541               	.LM58:
+ 542               	.LFBB7:
+ 543               	/* prologue: function */
+ 544               	/* frame size = 0 */
+ 545               	/* stack size = 0 */
+ 546               	.L__stack_usage = 0
+ 186:./lib/lcd.c   ****   lineLCD   = line;
+ 547               		.stabn	68,0,186,.LM59-.LFBB7
+ 548               	.LM59:
+ 549 0000 8093 0000 		sts cursorLCD,r24
+ 187:./lib/lcd.c   **** 
+ 550               		.stabn	68,0,187,.LM60-.LFBB7
+ 551               	.LM60:
+ 552 0004 6093 0000 		sts lineLCD,r22
+ 192:./lib/lcd.c   ****     line = LCD_LINE2;
+ 553               		.stabn	68,0,192,.LM61-.LFBB7
+ 554               	.LM61:
+ 555 0008 6130      		cpi r22,lo8(1)
+ 556 000a 01F0      		breq .L17
+ 204:./lib/lcd.c   **** 
+ 557               		.stabn	68,0,204,.LM62-.LFBB7
+ 558               	.LM62:
+ 559 000c 90E0      		ldi r25,0
+ 560 000e 00C0      		rjmp .L16
+ 561               	.L17:
+ 193:./lib/lcd.c   **** #endif
+ 562               		.stabn	68,0,193,.LM63-.LFBB7
+ 563               	.LM63:
+ 564 0010 90E4      		ldi r25,lo8(64)
+ 565               	.L16:
+ 206:./lib/lcd.c   **** }
+ 566               		.stabn	68,0,206,.LM64-.LFBB7
+ 567               	.LM64:
+ 568 0012 890F      		add r24,r25
+ 569 0014 8068      		ori r24,lo8(-128)
+ 570 0016 00C0      		rjmp CommandLCD
+ 571               		.size	SetCursorLCD, .-SetCursorLCD
+ 572               	.Lscope7:
+ 573               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 574               		.stabd	78,0,0
+ 575               		.section	.text.ClearLCD,"ax",@progbits
+ 576               		.stabs	"ClearLCD:F(0,47)",36,0,228,ClearLCD
+ 577               	.global	ClearLCD
+ 578               		.type	ClearLCD, @function
+ 579               	ClearLCD:
+ 580               		.stabd	46,0,0
+ 222:./lib/lcd.c   **** 
+ 223:./lib/lcd.c   **** /*!
+ 224:./lib/lcd.c   ****   \brief
+ 225:./lib/lcd.c   ****   LCD loeschen und Cursor auf 1 Postion der ersten Zeile
+ 226:./lib/lcd.c   **** 
+ 227:./lib/lcd.c   **** */
+ 228:./lib/lcd.c   **** void ClearLCD(void)
+GAS LISTING /tmp/cccT2lzT.s 			page 16
+
+
+ 229:./lib/lcd.c   **** {
+ 581               		.stabn	68,0,229,.LM65-.LFBB8
+ 582               	.LM65:
+ 583               	.LFBB8:
+ 584               	/* prologue: function */
+ 585               	/* frame size = 0 */
+ 586               	/* stack size = 0 */
+ 587               	.L__stack_usage = 0
+ 230:./lib/lcd.c   ****   CommandLCD(LCD_CLEAR);
+ 588               		.stabn	68,0,230,.LM66-.LFBB8
+ 589               	.LM66:
+ 590 0000 81E0      		ldi r24,lo8(1)
+ 591 0002 00D0      		rcall CommandLCD
+ 231:./lib/lcd.c   ****   CommandLCD(LCD_HOME);
+ 592               		.stabn	68,0,231,.LM67-.LFBB8
+ 593               	.LM67:
+ 594 0004 82E0      		ldi r24,lo8(2)
+ 595 0006 00C0      		rjmp CommandLCD
+ 596               		.size	ClearLCD, .-ClearLCD
+ 597               	.Lscope8:
+ 598               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 599               		.stabd	78,0,0
+ 600               		.section	.text.WriteLCD,"ax",@progbits
+ 601               		.stabs	"WriteLCD:F(0,47)",36,0,241,WriteLCD
+ 602               		.stabs	"data:P(0,11)",64,0,241,28
+ 603               	.global	WriteLCD
+ 604               		.type	WriteLCD, @function
+ 605               	WriteLCD:
+ 606               		.stabd	46,0,0
+ 232:./lib/lcd.c   **** }
+ 233:./lib/lcd.c   **** 
+ 234:./lib/lcd.c   **** /*!
+ 235:./lib/lcd.c   ****   \brief
+ 236:./lib/lcd.c   ****   LCD Daten schreiben
+ 237:./lib/lcd.c   **** 
+ 238:./lib/lcd.c   ****   \param  data auszugebende Date
+ 239:./lib/lcd.c   **** 
+ 240:./lib/lcd.c   **** */
+ 241:./lib/lcd.c   **** void WriteLCD(unsigned char data)
+ 242:./lib/lcd.c   **** {
+ 607               		.stabn	68,0,242,.LM68-.LFBB9
+ 608               	.LM68:
+ 609               	.LFBB9:
+ 610 0000 CF93      		push r28
+ 611               	/* prologue: function */
+ 612               	/* frame size = 0 */
+ 613               	/* stack size = 1 */
+ 614               	.L__stack_usage = 1
+ 615 0002 C82F      		mov r28,r24
+ 243:./lib/lcd.c   ****   SetIOLCD(ON, LCD_RS);
+ 616               		.stabn	68,0,243,.LM69-.LFBB9
+ 617               	.LM69:
+ 618 0004 61E0      		ldi r22,lo8(1)
+ 619 0006 81E0      		ldi r24,lo8(1)
+ 620 0008 00D0      		rcall SetIOLCD
+ 244:./lib/lcd.c   ****   SetDataLCD(data);
+ 621               		.stabn	68,0,244,.LM70-.LFBB9
+GAS LISTING /tmp/cccT2lzT.s 			page 17
+
+
+ 622               	.LM70:
+ 623 000a 8C2F      		mov r24,r28
+ 624 000c 00D0      		rcall SetDataLCD
+ 245:./lib/lcd.c   ****   cursorLCD++;
+ 625               		.stabn	68,0,245,.LM71-.LFBB9
+ 626               	.LM71:
+ 627 000e 8091 0000 		lds r24,cursorLCD
+ 628 0012 8F5F      		subi r24,lo8(-(1))
+ 629 0014 8093 0000 		sts cursorLCD,r24
+ 630               	/* epilogue start */
+ 246:./lib/lcd.c   **** }
+ 631               		.stabn	68,0,246,.LM72-.LFBB9
+ 632               	.LM72:
+ 633 0018 CF91      		pop r28
+ 634 001a 0895      		ret
+ 635               		.size	WriteLCD, .-WriteLCD
+ 636               	.Lscope9:
+ 637               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 638               		.stabd	78,0,0
+ 639               		.section	.text.PrintLCD,"ax",@progbits
+ 640               		.stabs	"PrintLCD:F(0,47)",36,0,255,PrintLCD
+ 641               		.stabs	"string:P(0,50)=*(0,2)",64,0,255,14
+ 642               		.stabs	"wrap:P(0,11)",64,0,255,29
+ 643               	.global	PrintLCD
+ 644               		.type	PrintLCD, @function
+ 645               	PrintLCD:
+ 646               		.stabd	46,0,0
+ 247:./lib/lcd.c   **** 
+ 248:./lib/lcd.c   **** /*!
+ 249:./lib/lcd.c   ****   \brief
+ 250:./lib/lcd.c   ****   LCD String ausgeben optional mit Zeilenumbruch
+ 251:./lib/lcd.c   **** 
+ 252:./lib/lcd.c   ****   \param  string auszugebender String
+ 253:./lib/lcd.c   ****   \param  wrap Zeilenumbruch ja oder nein
+ 254:./lib/lcd.c   **** */
+ 255:./lib/lcd.c   **** void PrintLCD(char *string, unsigned char wrap)
+ 256:./lib/lcd.c   **** {
+ 647               		.stabn	68,0,256,.LM73-.LFBB10
+ 648               	.LM73:
+ 649               	.LFBB10:
+ 650 0000 EF92      		push r14
+ 651 0002 FF92      		push r15
+ 652 0004 0F93      		push r16
+ 653 0006 1F93      		push r17
+ 654 0008 CF93      		push r28
+ 655 000a DF93      		push r29
+ 656               	/* prologue: function */
+ 657               	/* frame size = 0 */
+ 658               	/* stack size = 6 */
+ 659               	.L__stack_usage = 6
+ 660 000c 7C01      		movw r14,r24
+ 661 000e D62F      		mov r29,r22
+ 257:./lib/lcd.c   ****   unsigned char i = 0;
+ 662               		.stabn	68,0,257,.LM74-.LFBB10
+ 663               	.LM74:
+ 664 0010 C0E0      		ldi r28,0
+ 665               	.L21:
+GAS LISTING /tmp/cccT2lzT.s 			page 18
+
+
+ 258:./lib/lcd.c   ****   while (string[i] != 0x00)
+ 666               		.stabn	68,0,258,.LM75-.LFBB10
+ 667               	.LM75:
+ 668 0012 8701      		movw r16,r14
+ 669 0014 0C0F      		add r16,r28
+ 670 0016 111D      		adc r17,__zero_reg__
+ 671 0018 F801      		movw r30,r16
+ 672 001a 9081      		ld r25,Z
+ 673 001c 9923      		tst r25
+ 674 001e 01F0      		breq .L20
+ 259:./lib/lcd.c   ****   {
+ 260:./lib/lcd.c   ****     if (cursorLCD >= LCD_CHARS)
+ 675               		.stabn	68,0,260,.LM76-.LFBB10
+ 676               	.LM76:
+ 677 0020 8091 0000 		lds r24,cursorLCD
+ 678 0024 8830      		cpi r24,lo8(8)
+ 679 0026 00F0      		brlo .L22
+ 261:./lib/lcd.c   ****     {
+ 262:./lib/lcd.c   ****       if (wrap)
+ 680               		.stabn	68,0,262,.LM77-.LFBB10
+ 681               	.LM77:
+ 682 0028 DD23      		tst r29
+ 683 002a 01F0      		breq .L20
+ 263:./lib/lcd.c   ****         SetCursorLCD(0, lineLCD+1);
+ 684               		.stabn	68,0,263,.LM78-.LFBB10
+ 685               	.LM78:
+ 686 002c 9091 0000 		lds r25,lineLCD
+ 687 0030 61E0      		ldi r22,lo8(1)
+ 688 0032 690F      		add r22,r25
+ 689 0034 80E0      		ldi r24,0
+ 690 0036 00D0      		rcall SetCursorLCD
+ 691               	.L22:
+ 264:./lib/lcd.c   ****       else
+ 265:./lib/lcd.c   ****         break;
+ 266:./lib/lcd.c   ****     }
+ 267:./lib/lcd.c   ****     WriteLCD(string[i]);
+ 692               		.stabn	68,0,267,.LM79-.LFBB10
+ 693               	.LM79:
+ 694 0038 F801      		movw r30,r16
+ 695 003a 8081      		ld r24,Z
+ 696 003c 00D0      		rcall WriteLCD
+ 268:./lib/lcd.c   ****     i++;
+ 697               		.stabn	68,0,268,.LM80-.LFBB10
+ 698               	.LM80:
+ 699 003e CF5F      		subi r28,lo8(-(1))
+ 700 0040 00C0      		rjmp .L21
+ 701               	.L20:
+ 702               	/* epilogue start */
+ 269:./lib/lcd.c   ****   }
+ 270:./lib/lcd.c   **** }
+ 703               		.stabn	68,0,270,.LM81-.LFBB10
+ 704               	.LM81:
+ 705 0042 DF91      		pop r29
+ 706 0044 CF91      		pop r28
+ 707 0046 1F91      		pop r17
+ 708 0048 0F91      		pop r16
+ 709 004a FF90      		pop r15
+GAS LISTING /tmp/cccT2lzT.s 			page 19
+
+
+ 710 004c EF90      		pop r14
+ 711 004e 0895      		ret
+ 712               		.size	PrintLCD, .-PrintLCD
+ 713               		.stabs	"i:r(0,11)",64,0,257,28
+ 714               		.stabn	192,0,0,.LFBB10-.LFBB10
+ 715               		.stabn	224,0,0,.Lscope10-.LFBB10
+ 716               	.Lscope10:
+ 717               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 718               		.stabd	78,0,0
+ 719               		.section	.text.PrintSetLCD,"ax",@progbits
+ 720               		.stabs	"PrintSetLCD:F(0,47)",36,0,280,PrintSetLCD
+ 721               		.stabs	"cursor:P(0,11)",64,0,280,24
+ 722               		.stabs	"line:P(0,11)",64,0,280,22
+ 723               		.stabs	"string:P(0,50)",64,0,280,28
+ 724               	.global	PrintSetLCD
+ 725               		.type	PrintSetLCD, @function
+ 726               	PrintSetLCD:
+ 727               		.stabd	46,0,0
+ 271:./lib/lcd.c   **** 
+ 272:./lib/lcd.c   **** /*!
+ 273:./lib/lcd.c   ****   \brief
+ 274:./lib/lcd.c   ****   LCD String ausgeben an bestimmter Position
+ 275:./lib/lcd.c   **** 
+ 276:./lib/lcd.c   ****   \param  cursor Cursor Position
+ 277:./lib/lcd.c   ****   \param  line Zeilen Nummer
+ 278:./lib/lcd.c   ****   \param  string auszugebender String
+ 279:./lib/lcd.c   **** */
+ 280:./lib/lcd.c   **** void PrintSetLCD(unsigned char cursor, unsigned char line, char *string)
+ 281:./lib/lcd.c   **** {
+ 728               		.stabn	68,0,281,.LM82-.LFBB11
+ 729               	.LM82:
+ 730               	.LFBB11:
+ 731 0000 CF93      		push r28
+ 732 0002 DF93      		push r29
+ 733               	/* prologue: function */
+ 734               	/* frame size = 0 */
+ 735               	/* stack size = 2 */
+ 736               	.L__stack_usage = 2
+ 737 0004 EA01      		movw r28,r20
+ 282:./lib/lcd.c   ****   SetCursorLCD(cursor, line);
+ 738               		.stabn	68,0,282,.LM83-.LFBB11
+ 739               	.LM83:
+ 740 0006 00D0      		rcall SetCursorLCD
+ 283:./lib/lcd.c   ****   PrintLCD(string, OFF);
+ 741               		.stabn	68,0,283,.LM84-.LFBB11
+ 742               	.LM84:
+ 743 0008 60E0      		ldi r22,0
+ 744 000a CE01      		movw r24,r28
+ 745               	/* epilogue start */
+ 284:./lib/lcd.c   **** }
+ 746               		.stabn	68,0,284,.LM85-.LFBB11
+ 747               	.LM85:
+ 748 000c DF91      		pop r29
+ 749 000e CF91      		pop r28
+ 283:./lib/lcd.c   ****   PrintLCD(string, OFF);
+ 750               		.stabn	68,0,283,.LM86-.LFBB11
+ 751               	.LM86:
+GAS LISTING /tmp/cccT2lzT.s 			page 20
+
+
+ 752 0010 00C0      		rjmp PrintLCD
+ 753               		.size	PrintSetLCD, .-PrintSetLCD
+ 754               	.Lscope11:
+ 755               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 756               		.stabd	78,0,0
+ 757               		.section	.text.PrintIntLCD,"ax",@progbits
+ 758               		.stabs	"PrintIntLCD:F(0,47)",36,0,292,PrintIntLCD
+ 759               		.stabs	"value:P(0,1)",64,0,292,24
+ 760               	.global	PrintIntLCD
+ 761               		.type	PrintIntLCD, @function
+ 762               	PrintIntLCD:
+ 763               		.stabd	46,0,0
+ 285:./lib/lcd.c   **** 
+ 286:./lib/lcd.c   **** /*!
+ 287:./lib/lcd.c   ****   \brief
+ 288:./lib/lcd.c   ****   LCD Integer Wert ausgeben
+ 289:./lib/lcd.c   **** 
+ 290:./lib/lcd.c   ****   \param  value auszugebender Integer Wert
+ 291:./lib/lcd.c   **** */
+ 292:./lib/lcd.c   **** void PrintIntLCD(int value)
+ 293:./lib/lcd.c   **** {
+ 764               		.stabn	68,0,293,.LM87-.LFBB12
+ 765               	.LM87:
+ 766               	.LFBB12:
+ 767 0000 CF93      		push r28
+ 768 0002 DF93      		push r29
+ 769 0004 00D0      		rcall .
+ 770 0006 00D0      		rcall .
+ 771 0008 00D0      		rcall .
+ 772 000a CDB7      		in r28,__SP_L__
+ 773 000c DEB7      		in r29,__SP_H__
+ 774               	/* prologue: function */
+ 775               	/* frame size = 6 */
+ 776               	/* stack size = 8 */
+ 777               	.L__stack_usage = 8
+ 778               	.LBB6:
+ 779               	.LBB7:
+ 780               		.stabs	"/usr/lib/avr/include/stdlib.h",132,0,0,.Ltext1
+ 781               	.Ltext1:
+   1:/usr/lib/avr/include/stdlib.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/stdlib.h ****    Copyright (c) 2004,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/stdlib.h **** 
+   4:/usr/lib/avr/include/stdlib.h ****    Portions of documentation Copyright (c) 1990, 1991, 1993, 1994
+   5:/usr/lib/avr/include/stdlib.h ****    The Regents of the University of California.
+   6:/usr/lib/avr/include/stdlib.h **** 
+   7:/usr/lib/avr/include/stdlib.h ****    All rights reserved.
+   8:/usr/lib/avr/include/stdlib.h **** 
+   9:/usr/lib/avr/include/stdlib.h ****    Redistribution and use in source and binary forms, with or without
+  10:/usr/lib/avr/include/stdlib.h ****    modification, are permitted provided that the following conditions are met:
+  11:/usr/lib/avr/include/stdlib.h **** 
+  12:/usr/lib/avr/include/stdlib.h ****    * Redistributions of source code must retain the above copyright
+  13:/usr/lib/avr/include/stdlib.h ****      notice, this list of conditions and the following disclaimer.
+  14:/usr/lib/avr/include/stdlib.h **** 
+  15:/usr/lib/avr/include/stdlib.h ****    * Redistributions in binary form must reproduce the above copyright
+  16:/usr/lib/avr/include/stdlib.h ****      notice, this list of conditions and the following disclaimer in
+  17:/usr/lib/avr/include/stdlib.h ****      the documentation and/or other materials provided with the
+  18:/usr/lib/avr/include/stdlib.h ****      distribution.
+GAS LISTING /tmp/cccT2lzT.s 			page 21
+
+
+  19:/usr/lib/avr/include/stdlib.h **** 
+  20:/usr/lib/avr/include/stdlib.h ****    * Neither the name of the copyright holders nor the names of
+  21:/usr/lib/avr/include/stdlib.h ****      contributors may be used to endorse or promote products derived
+  22:/usr/lib/avr/include/stdlib.h ****      from this software without specific prior written permission.
+  23:/usr/lib/avr/include/stdlib.h **** 
+  24:/usr/lib/avr/include/stdlib.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:/usr/lib/avr/include/stdlib.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:/usr/lib/avr/include/stdlib.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:/usr/lib/avr/include/stdlib.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  28:/usr/lib/avr/include/stdlib.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:/usr/lib/avr/include/stdlib.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:/usr/lib/avr/include/stdlib.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:/usr/lib/avr/include/stdlib.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:/usr/lib/avr/include/stdlib.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:/usr/lib/avr/include/stdlib.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  34:/usr/lib/avr/include/stdlib.h ****   POSSIBILITY OF SUCH DAMAGE.
+  35:/usr/lib/avr/include/stdlib.h **** 
+  36:/usr/lib/avr/include/stdlib.h ****   $Id$
+  37:/usr/lib/avr/include/stdlib.h **** */
+  38:/usr/lib/avr/include/stdlib.h **** 
+  39:/usr/lib/avr/include/stdlib.h **** #ifndef _STDLIB_H_
+  40:/usr/lib/avr/include/stdlib.h **** #define	_STDLIB_H_ 1
+  41:/usr/lib/avr/include/stdlib.h **** 
+  42:/usr/lib/avr/include/stdlib.h **** #ifndef __ASSEMBLER__
+  43:/usr/lib/avr/include/stdlib.h **** 
+  44:/usr/lib/avr/include/stdlib.h **** #define __need_NULL
+  45:/usr/lib/avr/include/stdlib.h **** #define __need_size_t
+  46:/usr/lib/avr/include/stdlib.h **** #define __need_wchar_t
+  47:/usr/lib/avr/include/stdlib.h **** #include <stddef.h>
+  48:/usr/lib/avr/include/stdlib.h **** 
+  49:/usr/lib/avr/include/stdlib.h **** #ifndef __ptr_t
+  50:/usr/lib/avr/include/stdlib.h **** #define __ptr_t void *
+  51:/usr/lib/avr/include/stdlib.h **** #endif
+  52:/usr/lib/avr/include/stdlib.h **** 
+  53:/usr/lib/avr/include/stdlib.h **** #ifdef __cplusplus
+  54:/usr/lib/avr/include/stdlib.h **** extern "C" {
+  55:/usr/lib/avr/include/stdlib.h **** #endif
+  56:/usr/lib/avr/include/stdlib.h **** 
+  57:/usr/lib/avr/include/stdlib.h **** /** \file */
+  58:/usr/lib/avr/include/stdlib.h **** 
+  59:/usr/lib/avr/include/stdlib.h **** /** \defgroup avr_stdlib <stdlib.h>: General utilities
+  60:/usr/lib/avr/include/stdlib.h ****     \code #include <stdlib.h> \endcode
+  61:/usr/lib/avr/include/stdlib.h **** 
+  62:/usr/lib/avr/include/stdlib.h ****     This file declares some basic C macros and functions as
+  63:/usr/lib/avr/include/stdlib.h ****     defined by the ISO standard, plus some AVR-specific extensions.
+  64:/usr/lib/avr/include/stdlib.h **** */
+  65:/usr/lib/avr/include/stdlib.h **** 
+  66:/usr/lib/avr/include/stdlib.h **** /*@{*/
+  67:/usr/lib/avr/include/stdlib.h **** /** Result type for function div(). */
+  68:/usr/lib/avr/include/stdlib.h **** typedef struct {
+  69:/usr/lib/avr/include/stdlib.h **** 	int quot;                   /**< The Quotient. */
+  70:/usr/lib/avr/include/stdlib.h **** 	int rem;                    /**< The Remainder. */
+  71:/usr/lib/avr/include/stdlib.h **** } div_t;
+  72:/usr/lib/avr/include/stdlib.h **** 
+  73:/usr/lib/avr/include/stdlib.h **** /** Result type for function ldiv(). */
+  74:/usr/lib/avr/include/stdlib.h **** typedef struct {
+  75:/usr/lib/avr/include/stdlib.h **** 	long quot;                  /**< The Quotient. */
+GAS LISTING /tmp/cccT2lzT.s 			page 22
+
+
+  76:/usr/lib/avr/include/stdlib.h **** 	long rem;                   /**< The Remainder. */
+  77:/usr/lib/avr/include/stdlib.h **** } ldiv_t;
+  78:/usr/lib/avr/include/stdlib.h **** 
+  79:/usr/lib/avr/include/stdlib.h **** /** Comparision function type for qsort(), just for convenience. */
+  80:/usr/lib/avr/include/stdlib.h **** typedef int (*__compar_fn_t)(const void *, const void *);
+  81:/usr/lib/avr/include/stdlib.h **** 
+  82:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+  83:/usr/lib/avr/include/stdlib.h **** 
+  84:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_CONST__
+  85:/usr/lib/avr/include/stdlib.h **** # define __ATTR_CONST__ __attribute__((__const__))
+  86:/usr/lib/avr/include/stdlib.h **** #endif
+  87:/usr/lib/avr/include/stdlib.h **** 
+  88:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_MALLOC__
+  89:/usr/lib/avr/include/stdlib.h **** # define __ATTR_MALLOC__ __attribute__((__malloc__))
+  90:/usr/lib/avr/include/stdlib.h **** #endif
+  91:/usr/lib/avr/include/stdlib.h **** 
+  92:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_NORETURN__
+  93:/usr/lib/avr/include/stdlib.h **** # define __ATTR_NORETURN__ __attribute__((__noreturn__))
+  94:/usr/lib/avr/include/stdlib.h **** #endif
+  95:/usr/lib/avr/include/stdlib.h **** 
+  96:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_PURE__
+  97:/usr/lib/avr/include/stdlib.h **** # define __ATTR_PURE__ __attribute__((__pure__))
+  98:/usr/lib/avr/include/stdlib.h **** #endif
+  99:/usr/lib/avr/include/stdlib.h **** 
+ 100:/usr/lib/avr/include/stdlib.h **** #ifndef	__ATTR_GNU_INLINE__
+ 101:/usr/lib/avr/include/stdlib.h **** # ifdef  __GNUC_STDC_INLINE__
+ 102:/usr/lib/avr/include/stdlib.h **** #  define __ATTR_GNU_INLINE__   __attribute__((__gnu_inline__))
+ 103:/usr/lib/avr/include/stdlib.h **** # else
+ 104:/usr/lib/avr/include/stdlib.h **** #  define __ATTR_GNU_INLINE__
+ 105:/usr/lib/avr/include/stdlib.h **** # endif
+ 106:/usr/lib/avr/include/stdlib.h **** #endif
+ 107:/usr/lib/avr/include/stdlib.h **** 
+ 108:/usr/lib/avr/include/stdlib.h **** #endif
+ 109:/usr/lib/avr/include/stdlib.h **** 
+ 110:/usr/lib/avr/include/stdlib.h **** /** The abort() function causes abnormal program termination to occur.
+ 111:/usr/lib/avr/include/stdlib.h ****     This realization disables interrupts and jumps to _exit() function
+ 112:/usr/lib/avr/include/stdlib.h ****     with argument equal to 1. In the limited AVR environment, execution is
+ 113:/usr/lib/avr/include/stdlib.h ****     effectively halted by entering an infinite loop. */
+ 114:/usr/lib/avr/include/stdlib.h **** extern void abort(void) __ATTR_NORETURN__;
+ 115:/usr/lib/avr/include/stdlib.h **** 
+ 116:/usr/lib/avr/include/stdlib.h **** /** The abs() function computes the absolute value of the integer \c i.
+ 117:/usr/lib/avr/include/stdlib.h ****    \note The abs() and labs() functions are builtins of gcc.
+ 118:/usr/lib/avr/include/stdlib.h **** */
+ 119:/usr/lib/avr/include/stdlib.h **** extern int abs(int __i) __ATTR_CONST__;
+ 120:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+ 121:/usr/lib/avr/include/stdlib.h **** #define	abs(__i) __builtin_abs(__i)
+ 122:/usr/lib/avr/include/stdlib.h **** #endif
+ 123:/usr/lib/avr/include/stdlib.h **** 
+ 124:/usr/lib/avr/include/stdlib.h **** /** The labs() function computes the absolute value of the long integer
+ 125:/usr/lib/avr/include/stdlib.h ****     \c i.
+ 126:/usr/lib/avr/include/stdlib.h ****    \note The abs() and labs() functions are builtins of gcc.
+ 127:/usr/lib/avr/include/stdlib.h **** */
+ 128:/usr/lib/avr/include/stdlib.h **** extern long labs(long __i) __ATTR_CONST__;
+ 129:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+ 130:/usr/lib/avr/include/stdlib.h **** #define labs(__i) __builtin_labs(__i)
+ 131:/usr/lib/avr/include/stdlib.h **** #endif
+ 132:/usr/lib/avr/include/stdlib.h **** 
+GAS LISTING /tmp/cccT2lzT.s 			page 23
+
+
+ 133:/usr/lib/avr/include/stdlib.h **** /**
+ 134:/usr/lib/avr/include/stdlib.h ****      The bsearch() function searches an array of \c nmemb objects, the
+ 135:/usr/lib/avr/include/stdlib.h ****      initial member of which is pointed to by \c base, for a member
+ 136:/usr/lib/avr/include/stdlib.h ****      that matches the object pointed to by \c key.  The size of each
+ 137:/usr/lib/avr/include/stdlib.h ****      member of the array is specified by \c size.
+ 138:/usr/lib/avr/include/stdlib.h **** 
+ 139:/usr/lib/avr/include/stdlib.h ****      The contents of the array should be in ascending sorted order
+ 140:/usr/lib/avr/include/stdlib.h ****      according to the comparison function referenced by \c compar.
+ 141:/usr/lib/avr/include/stdlib.h ****      The \c compar routine is expected to have two arguments which
+ 142:/usr/lib/avr/include/stdlib.h ****      point to the key object and to an array member, in that order,
+ 143:/usr/lib/avr/include/stdlib.h ****      and should return an integer less than, equal to, or greater than
+ 144:/usr/lib/avr/include/stdlib.h ****      zero if the key object is found, respectively, to be less than,
+ 145:/usr/lib/avr/include/stdlib.h ****      to match, or be greater than the array member.
+ 146:/usr/lib/avr/include/stdlib.h **** 
+ 147:/usr/lib/avr/include/stdlib.h ****      The bsearch() function returns a pointer to a matching member of
+ 148:/usr/lib/avr/include/stdlib.h ****      the array, or a null pointer if no match is found.  If two
+ 149:/usr/lib/avr/include/stdlib.h ****      members compare as equal, which member is matched is unspecified.
+ 150:/usr/lib/avr/include/stdlib.h **** */
+ 151:/usr/lib/avr/include/stdlib.h **** extern void *bsearch(const void *__key, const void *__base, size_t __nmemb,
+ 152:/usr/lib/avr/include/stdlib.h **** 		     size_t __size, int (*__compar)(const void *, const void *));
+ 153:/usr/lib/avr/include/stdlib.h **** 
+ 154:/usr/lib/avr/include/stdlib.h **** /* __divmodhi4 and __divmodsi4 from libgcc.a */
+ 155:/usr/lib/avr/include/stdlib.h **** /**
+ 156:/usr/lib/avr/include/stdlib.h ****      The div() function computes the value \c num/denom and returns
+ 157:/usr/lib/avr/include/stdlib.h ****      the quotient and remainder in a structure named \c div_t that
+ 158:/usr/lib/avr/include/stdlib.h ****      contains two int members named \c quot and \c rem.
+ 159:/usr/lib/avr/include/stdlib.h **** */
+ 160:/usr/lib/avr/include/stdlib.h **** extern div_t div(int __num, int __denom) __asm__("__divmodhi4") __ATTR_CONST__;
+ 161:/usr/lib/avr/include/stdlib.h **** /**
+ 162:/usr/lib/avr/include/stdlib.h ****      The ldiv() function computes the value \c num/denom and returns
+ 163:/usr/lib/avr/include/stdlib.h ****      the quotient and remainder in a structure named \c ldiv_t that
+ 164:/usr/lib/avr/include/stdlib.h ****      contains two long integer members named \c quot and \c rem.
+ 165:/usr/lib/avr/include/stdlib.h **** */
+ 166:/usr/lib/avr/include/stdlib.h **** extern ldiv_t ldiv(long __num, long __denom) __asm__("__divmodsi4") __ATTR_CONST__;
+ 167:/usr/lib/avr/include/stdlib.h **** 
+ 168:/usr/lib/avr/include/stdlib.h **** /**
+ 169:/usr/lib/avr/include/stdlib.h ****      The qsort() function is a modified partition-exchange sort, or
+ 170:/usr/lib/avr/include/stdlib.h ****      quicksort.
+ 171:/usr/lib/avr/include/stdlib.h **** 
+ 172:/usr/lib/avr/include/stdlib.h ****      The qsort() function sorts an array of \c nmemb objects, the
+ 173:/usr/lib/avr/include/stdlib.h ****      initial member of which is pointed to by \c base.  The size of
+ 174:/usr/lib/avr/include/stdlib.h ****      each object is specified by \c size.  The contents of the array
+ 175:/usr/lib/avr/include/stdlib.h ****      base are sorted in ascending order according to a comparison
+ 176:/usr/lib/avr/include/stdlib.h ****      function pointed to by \c compar, which requires two arguments
+ 177:/usr/lib/avr/include/stdlib.h ****      pointing to the objects being compared.
+ 178:/usr/lib/avr/include/stdlib.h **** 
+ 179:/usr/lib/avr/include/stdlib.h ****      The comparison function must return an integer less than, equal
+ 180:/usr/lib/avr/include/stdlib.h ****      to, or greater than zero if the first argument is considered to
+ 181:/usr/lib/avr/include/stdlib.h ****      be respectively less than, equal to, or greater than the second.
+ 182:/usr/lib/avr/include/stdlib.h **** */
+ 183:/usr/lib/avr/include/stdlib.h **** extern void qsort(void *__base, size_t __nmemb, size_t __size,
+ 184:/usr/lib/avr/include/stdlib.h **** 		  __compar_fn_t __compar);
+ 185:/usr/lib/avr/include/stdlib.h **** 
+ 186:/usr/lib/avr/include/stdlib.h **** /**
+ 187:/usr/lib/avr/include/stdlib.h ****     The strtol() function converts the string in \c nptr to a long
+ 188:/usr/lib/avr/include/stdlib.h ****     value.  The conversion is done according to the given base, which
+ 189:/usr/lib/avr/include/stdlib.h ****     must be between 2 and 36 inclusive, or be the special value 0.
+GAS LISTING /tmp/cccT2lzT.s 			page 24
+
+
+ 190:/usr/lib/avr/include/stdlib.h **** 
+ 191:/usr/lib/avr/include/stdlib.h ****     The string may begin with an arbitrary amount of white space (as
+ 192:/usr/lib/avr/include/stdlib.h ****     determined by isspace()) followed by a single optional \c '+' or \c '-'
+ 193:/usr/lib/avr/include/stdlib.h ****     sign.  If \c base is zero or 16, the string may then include a
+ 194:/usr/lib/avr/include/stdlib.h ****     \c "0x" prefix, and the number will be read in base 16; otherwise,
+ 195:/usr/lib/avr/include/stdlib.h ****     a zero base is taken as 10 (decimal) unless the next character is
+ 196:/usr/lib/avr/include/stdlib.h ****     \c '0', in which case it is taken as 8 (octal).
+ 197:/usr/lib/avr/include/stdlib.h **** 
+ 198:/usr/lib/avr/include/stdlib.h ****     The remainder of the string is converted to a long value in the
+ 199:/usr/lib/avr/include/stdlib.h ****     obvious manner, stopping at the first character which is not a
+ 200:/usr/lib/avr/include/stdlib.h ****     valid digit in the given base.  (In bases above 10, the letter \c 'A'
+ 201:/usr/lib/avr/include/stdlib.h ****     in either upper or lower case represents 10, \c 'B' represents 11,
+ 202:/usr/lib/avr/include/stdlib.h ****     and so forth, with \c 'Z' representing 35.)
+ 203:/usr/lib/avr/include/stdlib.h **** 
+ 204:/usr/lib/avr/include/stdlib.h ****     If \c endptr is not NULL, strtol() stores the address of the first
+ 205:/usr/lib/avr/include/stdlib.h ****     invalid character in \c *endptr.  If there were no digits at all,
+ 206:/usr/lib/avr/include/stdlib.h ****     however, strtol() stores the original value of \c nptr in \c
+ 207:/usr/lib/avr/include/stdlib.h ****     *endptr.  (Thus, if \c *nptr is not \c '\\0' but \c **endptr is \c '\\0'
+ 208:/usr/lib/avr/include/stdlib.h ****     on return, the entire string was valid.)
+ 209:/usr/lib/avr/include/stdlib.h **** 
+ 210:/usr/lib/avr/include/stdlib.h ****     The strtol() function returns the result of the conversion, unless
+ 211:/usr/lib/avr/include/stdlib.h ****     the value would underflow or overflow.  If no conversion could be
+ 212:/usr/lib/avr/include/stdlib.h ****     performed, 0 is returned.  If an overflow or underflow occurs, \c
+ 213:/usr/lib/avr/include/stdlib.h ****     errno is set to \ref avr_errno "ERANGE" and the function return value
+ 214:/usr/lib/avr/include/stdlib.h ****     is clamped to \c LONG_MIN or \c LONG_MAX, respectively.
+ 215:/usr/lib/avr/include/stdlib.h **** */
+ 216:/usr/lib/avr/include/stdlib.h **** extern long strtol(const char *__nptr, char **__endptr, int __base);
+ 217:/usr/lib/avr/include/stdlib.h **** 
+ 218:/usr/lib/avr/include/stdlib.h **** /**
+ 219:/usr/lib/avr/include/stdlib.h ****     The strtoul() function converts the string in \c nptr to an
+ 220:/usr/lib/avr/include/stdlib.h ****     unsigned long value.  The conversion is done according to the
+ 221:/usr/lib/avr/include/stdlib.h ****     given base, which must be between 2 and 36 inclusive, or be the
+ 222:/usr/lib/avr/include/stdlib.h ****     special value 0.
+ 223:/usr/lib/avr/include/stdlib.h **** 
+ 224:/usr/lib/avr/include/stdlib.h ****     The string may begin with an arbitrary amount of white space (as
+ 225:/usr/lib/avr/include/stdlib.h ****     determined by isspace()) followed by a single optional \c '+' or \c '-'
+ 226:/usr/lib/avr/include/stdlib.h ****     sign.  If \c base is zero or 16, the string may then include a
+ 227:/usr/lib/avr/include/stdlib.h ****     \c "0x" prefix, and the number will be read in base 16; otherwise,
+ 228:/usr/lib/avr/include/stdlib.h ****     a zero base is taken as 10 (decimal) unless the next character is
+ 229:/usr/lib/avr/include/stdlib.h ****     \c '0', in which case it is taken as 8 (octal).
+ 230:/usr/lib/avr/include/stdlib.h **** 
+ 231:/usr/lib/avr/include/stdlib.h ****     The remainder of the string is converted to an unsigned long value
+ 232:/usr/lib/avr/include/stdlib.h ****     in the obvious manner, stopping at the first character which is
+ 233:/usr/lib/avr/include/stdlib.h ****     not a valid digit in the given base.  (In bases above 10, the
+ 234:/usr/lib/avr/include/stdlib.h ****     letter \c 'A' in either upper or lower case represents 10, \c 'B'
+ 235:/usr/lib/avr/include/stdlib.h ****     represents 11, and so forth, with \c 'Z' representing 35.)
+ 236:/usr/lib/avr/include/stdlib.h **** 
+ 237:/usr/lib/avr/include/stdlib.h ****     If \c endptr is not NULL, strtoul() stores the address of the first
+ 238:/usr/lib/avr/include/stdlib.h ****     invalid character in \c *endptr.  If there were no digits at all,
+ 239:/usr/lib/avr/include/stdlib.h ****     however, strtoul() stores the original value of \c nptr in \c
+ 240:/usr/lib/avr/include/stdlib.h ****     *endptr.  (Thus, if \c *nptr is not \c '\\0' but \c **endptr is \c '\\0'
+ 241:/usr/lib/avr/include/stdlib.h ****     on return, the entire string was valid.)
+ 242:/usr/lib/avr/include/stdlib.h **** 
+ 243:/usr/lib/avr/include/stdlib.h ****     The strtoul() function return either the result of the conversion
+ 244:/usr/lib/avr/include/stdlib.h ****     or, if there was a leading minus sign, the negation of the result
+ 245:/usr/lib/avr/include/stdlib.h ****     of the conversion, unless the original (non-negated) value would
+ 246:/usr/lib/avr/include/stdlib.h ****     overflow; in the latter case, strtoul() returns ULONG_MAX, and \c
+GAS LISTING /tmp/cccT2lzT.s 			page 25
+
+
+ 247:/usr/lib/avr/include/stdlib.h ****     errno is set to \ref avr_errno "ERANGE".  If no conversion could 
+ 248:/usr/lib/avr/include/stdlib.h ****     be performed, 0 is returned.
+ 249:/usr/lib/avr/include/stdlib.h **** */
+ 250:/usr/lib/avr/include/stdlib.h **** extern unsigned long strtoul(const char *__nptr, char **__endptr, int __base);
+ 251:/usr/lib/avr/include/stdlib.h **** 
+ 252:/usr/lib/avr/include/stdlib.h **** /**
+ 253:/usr/lib/avr/include/stdlib.h ****     The atol() function converts the initial portion of the string
+ 254:/usr/lib/avr/include/stdlib.h ****     pointed to by \p s to long integer representation. In contrast to
+ 255:/usr/lib/avr/include/stdlib.h **** 
+ 256:/usr/lib/avr/include/stdlib.h ****         \code strtol(s, (char **)NULL, 10); \endcode
+ 257:/usr/lib/avr/include/stdlib.h **** 
+ 258:/usr/lib/avr/include/stdlib.h ****     this function does not detect overflow (\c errno is not changed and
+ 259:/usr/lib/avr/include/stdlib.h ****     the result value is not predictable), uses smaller memory (flash and
+ 260:/usr/lib/avr/include/stdlib.h ****     stack) and works more quickly.
+ 261:/usr/lib/avr/include/stdlib.h **** */
+ 262:/usr/lib/avr/include/stdlib.h **** extern long atol(const char *__s) __ATTR_PURE__;
+ 263:/usr/lib/avr/include/stdlib.h **** 
+ 264:/usr/lib/avr/include/stdlib.h **** /**
+ 265:/usr/lib/avr/include/stdlib.h ****     The atoi() function converts the initial portion of the string
+ 266:/usr/lib/avr/include/stdlib.h ****     pointed to by \p s to integer representation. In contrast to
+ 267:/usr/lib/avr/include/stdlib.h **** 
+ 268:/usr/lib/avr/include/stdlib.h ****         \code (int)strtol(s, (char **)NULL, 10); \endcode
+ 269:/usr/lib/avr/include/stdlib.h **** 
+ 270:/usr/lib/avr/include/stdlib.h ****     this function does not detect overflow (\c errno is not changed and
+ 271:/usr/lib/avr/include/stdlib.h ****     the result value is not predictable), uses smaller memory (flash and
+ 272:/usr/lib/avr/include/stdlib.h ****     stack) and works more quickly.
+ 273:/usr/lib/avr/include/stdlib.h **** */
+ 274:/usr/lib/avr/include/stdlib.h **** extern int atoi(const char *__s) __ATTR_PURE__;
+ 275:/usr/lib/avr/include/stdlib.h **** 
+ 276:/usr/lib/avr/include/stdlib.h **** /**
+ 277:/usr/lib/avr/include/stdlib.h ****    The exit() function terminates the application.  Since there is no
+ 278:/usr/lib/avr/include/stdlib.h ****    environment to return to, \c status is ignored, and code execution
+ 279:/usr/lib/avr/include/stdlib.h ****    will eventually reach an infinite loop, thereby effectively halting
+ 280:/usr/lib/avr/include/stdlib.h ****    all code processing.  Before entering the infinite loop, interrupts
+ 281:/usr/lib/avr/include/stdlib.h ****    are globally disabled.
+ 282:/usr/lib/avr/include/stdlib.h **** 
+ 283:/usr/lib/avr/include/stdlib.h ****    In a C++ context, global destructors will be called before halting
+ 284:/usr/lib/avr/include/stdlib.h ****    execution.
+ 285:/usr/lib/avr/include/stdlib.h **** */
+ 286:/usr/lib/avr/include/stdlib.h **** extern void exit(int __status) __ATTR_NORETURN__;
+ 287:/usr/lib/avr/include/stdlib.h **** 
+ 288:/usr/lib/avr/include/stdlib.h **** /**
+ 289:/usr/lib/avr/include/stdlib.h ****    The malloc() function allocates \c size bytes of memory.
+ 290:/usr/lib/avr/include/stdlib.h ****    If malloc() fails, a NULL pointer is returned.
+ 291:/usr/lib/avr/include/stdlib.h **** 
+ 292:/usr/lib/avr/include/stdlib.h ****    Note that malloc() does \e not initialize the returned memory to
+ 293:/usr/lib/avr/include/stdlib.h ****    zero bytes.
+ 294:/usr/lib/avr/include/stdlib.h **** 
+ 295:/usr/lib/avr/include/stdlib.h ****    See the chapter about \ref malloc "malloc() usage" for implementation
+ 296:/usr/lib/avr/include/stdlib.h ****    details.
+ 297:/usr/lib/avr/include/stdlib.h **** */
+ 298:/usr/lib/avr/include/stdlib.h **** extern void *malloc(size_t __size) __ATTR_MALLOC__;
+ 299:/usr/lib/avr/include/stdlib.h **** 
+ 300:/usr/lib/avr/include/stdlib.h **** /**
+ 301:/usr/lib/avr/include/stdlib.h ****    The free() function causes the allocated memory referenced by \c
+ 302:/usr/lib/avr/include/stdlib.h ****    ptr to be made available for future allocations.  If \c ptr is
+ 303:/usr/lib/avr/include/stdlib.h ****    NULL, no action occurs.
+GAS LISTING /tmp/cccT2lzT.s 			page 26
+
+
+ 304:/usr/lib/avr/include/stdlib.h **** */
+ 305:/usr/lib/avr/include/stdlib.h **** extern void free(void *__ptr);
+ 306:/usr/lib/avr/include/stdlib.h **** 
+ 307:/usr/lib/avr/include/stdlib.h **** /**
+ 308:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 309:/usr/lib/avr/include/stdlib.h **** */
+ 310:/usr/lib/avr/include/stdlib.h **** extern size_t __malloc_margin;
+ 311:/usr/lib/avr/include/stdlib.h **** 
+ 312:/usr/lib/avr/include/stdlib.h **** /**
+ 313:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 314:/usr/lib/avr/include/stdlib.h **** */
+ 315:/usr/lib/avr/include/stdlib.h **** extern char *__malloc_heap_start;
+ 316:/usr/lib/avr/include/stdlib.h **** 
+ 317:/usr/lib/avr/include/stdlib.h **** /**
+ 318:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 319:/usr/lib/avr/include/stdlib.h **** */
+ 320:/usr/lib/avr/include/stdlib.h **** extern char *__malloc_heap_end;
+ 321:/usr/lib/avr/include/stdlib.h **** 
+ 322:/usr/lib/avr/include/stdlib.h **** /**
+ 323:/usr/lib/avr/include/stdlib.h ****    Allocate \c nele elements of \c size each.  Identical to calling
+ 324:/usr/lib/avr/include/stdlib.h ****    \c malloc() using <tt>nele * size</tt> as argument, except the
+ 325:/usr/lib/avr/include/stdlib.h ****    allocated memory will be cleared to zero.
+ 326:/usr/lib/avr/include/stdlib.h **** */
+ 327:/usr/lib/avr/include/stdlib.h **** extern void *calloc(size_t __nele, size_t __size) __ATTR_MALLOC__;
+ 328:/usr/lib/avr/include/stdlib.h **** 
+ 329:/usr/lib/avr/include/stdlib.h **** /**
+ 330:/usr/lib/avr/include/stdlib.h ****    The realloc() function tries to change the size of the region
+ 331:/usr/lib/avr/include/stdlib.h ****    allocated at \c ptr to the new \c size value.  It returns a
+ 332:/usr/lib/avr/include/stdlib.h ****    pointer to the new region.  The returned pointer might be the
+ 333:/usr/lib/avr/include/stdlib.h ****    same as the old pointer, or a pointer to a completely different
+ 334:/usr/lib/avr/include/stdlib.h ****    region.
+ 335:/usr/lib/avr/include/stdlib.h **** 
+ 336:/usr/lib/avr/include/stdlib.h ****    The contents of the returned region up to either the old or the new
+ 337:/usr/lib/avr/include/stdlib.h ****    size value (whatever is less) will be identical to the contents of
+ 338:/usr/lib/avr/include/stdlib.h ****    the old region, even in case a new region had to be allocated.
+ 339:/usr/lib/avr/include/stdlib.h **** 
+ 340:/usr/lib/avr/include/stdlib.h ****    It is acceptable to pass \c ptr as NULL, in which case realloc()
+ 341:/usr/lib/avr/include/stdlib.h ****    will behave identical to malloc().
+ 342:/usr/lib/avr/include/stdlib.h **** 
+ 343:/usr/lib/avr/include/stdlib.h ****    If the new memory cannot be allocated, realloc() returns NULL, and
+ 344:/usr/lib/avr/include/stdlib.h ****    the region at \c ptr will not be changed.
+ 345:/usr/lib/avr/include/stdlib.h **** */
+ 346:/usr/lib/avr/include/stdlib.h **** extern void *realloc(void *__ptr, size_t __size) __ATTR_MALLOC__;
+ 347:/usr/lib/avr/include/stdlib.h **** 
+ 348:/usr/lib/avr/include/stdlib.h **** extern double strtod(const char *__nptr, char **__endptr);
+ 349:/usr/lib/avr/include/stdlib.h **** 
+ 350:/usr/lib/avr/include/stdlib.h **** extern double atof(const char *__nptr);
+ 351:/usr/lib/avr/include/stdlib.h **** 
+ 352:/usr/lib/avr/include/stdlib.h **** /** Highest number that can be generated by rand(). */
+ 353:/usr/lib/avr/include/stdlib.h **** #define	RAND_MAX 0x7FFF
+ 354:/usr/lib/avr/include/stdlib.h **** 
+ 355:/usr/lib/avr/include/stdlib.h **** /**
+ 356:/usr/lib/avr/include/stdlib.h ****      The rand() function computes a sequence of pseudo-random integers in the
+ 357:/usr/lib/avr/include/stdlib.h ****      range of 0 to \c RAND_MAX (as defined by the header file <stdlib.h>).
+ 358:/usr/lib/avr/include/stdlib.h **** 
+ 359:/usr/lib/avr/include/stdlib.h ****      The srand() function sets its argument \c seed as the seed for a new
+ 360:/usr/lib/avr/include/stdlib.h ****      sequence of pseudo-random numbers to be returned by rand().  These
+GAS LISTING /tmp/cccT2lzT.s 			page 27
+
+
+ 361:/usr/lib/avr/include/stdlib.h ****      sequences are repeatable by calling srand() with the same seed value.
+ 362:/usr/lib/avr/include/stdlib.h **** 
+ 363:/usr/lib/avr/include/stdlib.h ****      If no seed value is provided, the functions are automatically seeded with
+ 364:/usr/lib/avr/include/stdlib.h ****      a value of 1.
+ 365:/usr/lib/avr/include/stdlib.h **** 
+ 366:/usr/lib/avr/include/stdlib.h ****      In compliance with the C standard, these functions operate on
+ 367:/usr/lib/avr/include/stdlib.h ****      \c int arguments.  Since the underlying algorithm already uses
+ 368:/usr/lib/avr/include/stdlib.h ****      32-bit calculations, this causes a loss of precision.  See
+ 369:/usr/lib/avr/include/stdlib.h ****      \c random() for an alternate set of functions that retains full
+ 370:/usr/lib/avr/include/stdlib.h ****      32-bit precision.
+ 371:/usr/lib/avr/include/stdlib.h **** */
+ 372:/usr/lib/avr/include/stdlib.h **** extern int rand(void);
+ 373:/usr/lib/avr/include/stdlib.h **** /**
+ 374:/usr/lib/avr/include/stdlib.h ****    Pseudo-random number generator seeding; see rand().
+ 375:/usr/lib/avr/include/stdlib.h **** */
+ 376:/usr/lib/avr/include/stdlib.h **** extern void srand(unsigned int __seed);
+ 377:/usr/lib/avr/include/stdlib.h **** 
+ 378:/usr/lib/avr/include/stdlib.h **** /**
+ 379:/usr/lib/avr/include/stdlib.h ****    Variant of rand() that stores the context in the user-supplied
+ 380:/usr/lib/avr/include/stdlib.h ****    variable located at \c ctx instead of a static library variable
+ 381:/usr/lib/avr/include/stdlib.h ****    so the function becomes re-entrant.
+ 382:/usr/lib/avr/include/stdlib.h **** */
+ 383:/usr/lib/avr/include/stdlib.h **** extern int rand_r(unsigned long *__ctx);
+ 384:/usr/lib/avr/include/stdlib.h **** /*@}*/
+ 385:/usr/lib/avr/include/stdlib.h **** 
+ 386:/usr/lib/avr/include/stdlib.h **** /*@{*/
+ 387:/usr/lib/avr/include/stdlib.h **** /** \name Non-standard (i.e. non-ISO C) functions.
+ 388:/usr/lib/avr/include/stdlib.h ****  \ingroup avr_stdlib
+ 389:/usr/lib/avr/include/stdlib.h **** */
+ 390:/usr/lib/avr/include/stdlib.h **** /**
+ 391:/usr/lib/avr/include/stdlib.h ****    \brief Convert an integer to a string.
+ 392:/usr/lib/avr/include/stdlib.h **** 
+ 393:/usr/lib/avr/include/stdlib.h ****    The function itoa() converts the integer value from \c val into an
+ 394:/usr/lib/avr/include/stdlib.h ****    ASCII representation that will be stored under \c s.  The caller
+ 395:/usr/lib/avr/include/stdlib.h ****    is responsible for providing sufficient storage in \c s.
+ 396:/usr/lib/avr/include/stdlib.h **** 
+ 397:/usr/lib/avr/include/stdlib.h ****    \note The minimal size of the buffer \c s depends on the choice of
+ 398:/usr/lib/avr/include/stdlib.h ****    radix. For example, if the radix is 2 (binary), you need to supply a buffer
+ 399:/usr/lib/avr/include/stdlib.h ****    with a minimal length of 8 * sizeof (int) + 1 characters, i.e. one
+ 400:/usr/lib/avr/include/stdlib.h ****    character for each bit plus one for the string terminator. Using a larger
+ 401:/usr/lib/avr/include/stdlib.h ****    radix will require a smaller minimal buffer size.
+ 402:/usr/lib/avr/include/stdlib.h **** 
+ 403:/usr/lib/avr/include/stdlib.h ****    \warning If the buffer is too small, you risk a buffer overflow.
+ 404:/usr/lib/avr/include/stdlib.h **** 
+ 405:/usr/lib/avr/include/stdlib.h ****    Conversion is done using the \c radix as base, which may be a
+ 406:/usr/lib/avr/include/stdlib.h ****    number between 2 (binary conversion) and up to 36.  If \c radix
+ 407:/usr/lib/avr/include/stdlib.h ****    is greater than 10, the next digit after \c '9' will be the letter
+ 408:/usr/lib/avr/include/stdlib.h ****    \c 'a'.
+ 409:/usr/lib/avr/include/stdlib.h ****     
+ 410:/usr/lib/avr/include/stdlib.h ****     If radix is 10 and val is negative, a minus sign will be prepended.
+ 411:/usr/lib/avr/include/stdlib.h **** 
+ 412:/usr/lib/avr/include/stdlib.h ****    The itoa() function returns the pointer passed as \c s.
+ 413:/usr/lib/avr/include/stdlib.h **** */
+ 414:/usr/lib/avr/include/stdlib.h **** #ifdef  __DOXYGEN__
+ 415:/usr/lib/avr/include/stdlib.h **** extern char *itoa(int val, char *s, int radix);
+ 416:/usr/lib/avr/include/stdlib.h **** #else
+ 417:/usr/lib/avr/include/stdlib.h **** extern __inline__ __ATTR_GNU_INLINE__
+GAS LISTING /tmp/cccT2lzT.s 			page 28
+
+
+ 418:/usr/lib/avr/include/stdlib.h **** char *itoa (int __val, char *__s, int __radix)
+ 419:/usr/lib/avr/include/stdlib.h **** {
+ 420:/usr/lib/avr/include/stdlib.h ****     if (!__builtin_constant_p (__radix)) {
+ 421:/usr/lib/avr/include/stdlib.h **** 	extern char *__itoa (int, char *, int);
+ 422:/usr/lib/avr/include/stdlib.h **** 	return __itoa (__val, __s, __radix);
+ 423:/usr/lib/avr/include/stdlib.h ****     } else if (__radix < 2 || __radix > 36) {
+ 424:/usr/lib/avr/include/stdlib.h **** 	*__s = 0;
+ 425:/usr/lib/avr/include/stdlib.h **** 	return __s;
+ 426:/usr/lib/avr/include/stdlib.h ****     } else {
+ 427:/usr/lib/avr/include/stdlib.h **** 	extern char *__itoa_ncheck (int, char *, unsigned char);
+ 428:/usr/lib/avr/include/stdlib.h **** 	return __itoa_ncheck (__val, __s, __radix);
+ 782               		.stabn	68,0,428,.LM88-.LFBB12
+ 783               	.LM88:
+ 784 000e 4AE0      		ldi r20,lo8(10)
+ 785 0010 BE01      		movw r22,r28
+ 786 0012 6F5F      		subi r22,-1
+ 787 0014 7F4F      		sbci r23,-1
+ 788 0016 00D0      		rcall __itoa_ncheck
+ 789               	.LBE7:
+ 790               	.LBE6:
+ 791               		.stabs	"./lib/lcd.c",132,0,0,.Ltext2
+ 792               	.Ltext2:
+ 294:./lib/lcd.c   ****   char text[6];
+ 295:./lib/lcd.c   ****   itoa(value,text,10);
+ 296:./lib/lcd.c   ****   PrintLCD(text, OFF);
+ 793               		.stabn	68,0,296,.LM89-.LFBB12
+ 794               	.LM89:
+ 795 0018 60E0      		ldi r22,0
+ 796 001a CE01      		movw r24,r28
+ 797 001c 0196      		adiw r24,1
+ 798 001e 00D0      		rcall PrintLCD
+ 799               	/* epilogue start */
+ 297:./lib/lcd.c   **** }
+ 800               		.stabn	68,0,297,.LM90-.LFBB12
+ 801               	.LM90:
+ 802 0020 2696      		adiw r28,6
+ 803 0022 0FB6      		in __tmp_reg__,__SREG__
+ 804 0024 F894      		cli
+ 805 0026 DEBF      		out __SP_H__,r29
+ 806 0028 0FBE      		out __SREG__,__tmp_reg__
+ 807 002a CDBF      		out __SP_L__,r28
+ 808 002c DF91      		pop r29
+ 809 002e CF91      		pop r28
+ 810 0030 0895      		ret
+ 811               		.size	PrintIntLCD, .-PrintIntLCD
+ 812               		.stabs	"text:(0,51)=ar(0,49);0;5;(0,2)",128,0,294,1
+ 813               		.stabn	192,0,0,.LFBB12-.LFBB12
+ 814               		.stabn	224,0,0,.Lscope12-.LFBB12
+ 815               	.Lscope12:
+ 816               		.stabs	"",36,0,0,.Lscope12-.LFBB12
+ 817               		.stabd	78,0,0
+ 818               		.section	.text.PrintAlignLCD,"ax",@progbits
+ 819               		.stabs	"PrintAlignLCD:F(0,47)",36,0,308,PrintAlignLCD
+ 820               		.stabs	"alignment:P(0,11)",64,0,308,24
+ 821               		.stabs	"line:P(0,11)",64,0,308,22
+ 822               		.stabs	"string:P(0,50)",64,0,308,20
+ 823               	.global	PrintAlignLCD
+GAS LISTING /tmp/cccT2lzT.s 			page 29
+
+
+ 824               		.type	PrintAlignLCD, @function
+ 825               	PrintAlignLCD:
+ 826               		.stabd	46,0,0
+ 298:./lib/lcd.c   **** 
+ 299:./lib/lcd.c   **** /*!
+ 300:./lib/lcd.c   ****   \brief
+ 301:./lib/lcd.c   ****   LCD Stringausgabe mit Ausrichtung (links, mitte, rechts)
+ 302:./lib/lcd.c   **** 
+ 303:./lib/lcd.c   ****   \param  alignment Ausrichtung (links, mitte, rechts)
+ 304:./lib/lcd.c   ****   \param  line Zeilennummer
+ 305:./lib/lcd.c   ****   \param  string auszugebender String
+ 306:./lib/lcd.c   **** 
+ 307:./lib/lcd.c   **** */
+ 308:./lib/lcd.c   **** void PrintAlignLCD(unsigned char alignment, unsigned char line, char *string)
+ 309:./lib/lcd.c   **** {
+ 827               		.stabn	68,0,309,.LM91-.LFBB13
+ 828               	.LM91:
+ 829               	.LFBB13:
+ 830               	/* prologue: function */
+ 831               	/* frame size = 0 */
+ 832               	/* stack size = 0 */
+ 833               	.L__stack_usage = 0
+ 310:./lib/lcd.c   ****   unsigned char i = 0;
+ 834               		.stabn	68,0,310,.LM92-.LFBB13
+ 835               	.LM92:
+ 836 0000 90E0      		ldi r25,0
+ 837               	.L31:
+ 311:./lib/lcd.c   ****   while (string[i] != 0x00)
+ 838               		.stabn	68,0,311,.LM93-.LFBB13
+ 839               	.LM93:
+ 840 0002 292F      		mov r18,r25
+ 841 0004 30E0      		ldi r19,0
+ 842 0006 FA01      		movw r30,r20
+ 843 0008 E20F      		add r30,r18
+ 844 000a F31F      		adc r31,r19
+ 845 000c 7081      		ld r23,Z
+ 846 000e 7723      		tst r23
+ 847 0010 01F0      		breq .L37
+ 312:./lib/lcd.c   ****     i++;
+ 848               		.stabn	68,0,312,.LM94-.LFBB13
+ 849               	.LM94:
+ 850 0012 9F5F      		subi r25,lo8(-(1))
+ 851 0014 00C0      		rjmp .L31
+ 852               	.L37:
+ 313:./lib/lcd.c   ****   if (alignment == RIGHT)
+ 853               		.stabn	68,0,313,.LM95-.LFBB13
+ 854               	.LM95:
+ 855 0016 8130      		cpi r24,lo8(1)
+ 856 0018 01F4      		brne .L33
+ 314:./lib/lcd.c   ****     PrintSetLCD(LCD_CHARS-i, line, string);
+ 857               		.stabn	68,0,314,.LM96-.LFBB13
+ 858               	.LM96:
+ 859 001a 88E0      		ldi r24,lo8(8)
+ 860 001c 891B      		sub r24,r25
+ 861 001e 00C0      		rjmp .L36
+ 862               	.L33:
+ 315:./lib/lcd.c   ****   else if (alignment == CENTER)
+GAS LISTING /tmp/cccT2lzT.s 			page 30
+
+
+ 863               		.stabn	68,0,315,.LM97-.LFBB13
+ 864               	.LM97:
+ 865 0020 8230      		cpi r24,lo8(2)
+ 866 0022 01F4      		brne .L34
+ 316:./lib/lcd.c   ****     PrintSetLCD((LCD_CHARS-i)/2, line, string);
+ 867               		.stabn	68,0,316,.LM98-.LFBB13
+ 868               	.LM98:
+ 869 0024 88E0      		ldi r24,lo8(8)
+ 870 0026 90E0      		ldi r25,0
+ 871 0028 821B      		sub r24,r18
+ 872 002a 930B      		sbc r25,r19
+ 873 002c 97FD      		sbrc r25,7
+ 874 002e 0196      		adiw r24,1
+ 875               	.L35:
+ 876 0030 9595      		asr r25
+ 877 0032 8795      		ror r24
+ 878 0034 00C0      		rjmp .L36
+ 879               	.L34:
+ 317:./lib/lcd.c   ****   else
+ 318:./lib/lcd.c   ****     PrintSetLCD(0, line, string);
+ 880               		.stabn	68,0,318,.LM99-.LFBB13
+ 881               	.LM99:
+ 882 0036 80E0      		ldi r24,0
+ 883               	.L36:
+ 884 0038 00C0      		rjmp PrintSetLCD
+ 885               		.size	PrintAlignLCD, .-PrintAlignLCD
+ 886               		.stabs	"i:r(0,11)",64,0,310,25
+ 887               		.stabn	192,0,0,.LFBB13-.LFBB13
+ 888               		.stabn	224,0,0,.Lscope13-.LFBB13
+ 889               	.Lscope13:
+ 890               		.stabs	"",36,0,0,.Lscope13-.LFBB13
+ 891               		.stabd	78,0,0
+ 892               		.section	.text.PrintLCD_p,"ax",@progbits
+ 893               		.stabs	"PrintLCD_p:F(0,47)",36,0,330,PrintLCD_p
+ 894               		.stabs	"progmem_s:P(0,52)=*(0,53)=k(0,2)",64,0,330,24
+ 895               	.global	PrintLCD_p
+ 896               		.type	PrintLCD_p, @function
+ 897               	PrintLCD_p:
+ 898               		.stabd	46,0,0
+ 319:./lib/lcd.c   **** }
+ 320:./lib/lcd.c   **** 
+ 321:./lib/lcd.c   **** 
+ 322:./lib/lcd.c   **** /*!
+ 323:./lib/lcd.c   ****   \brief
+ 324:./lib/lcd.c   ****   LCD Stringausgabe aus dem Program Memory (Flash)
+ 325:./lib/lcd.c   **** 
+ 326:./lib/lcd.c   ****   \param  progmem_s auszugebender String
+ 327:./lib/lcd.c   **** 
+ 328:./lib/lcd.c   **** */
+ 329:./lib/lcd.c   **** 
+ 330:./lib/lcd.c   **** void PrintLCD_p(const char *progmem_s)
+ 331:./lib/lcd.c   **** {
+ 899               		.stabn	68,0,331,.LM100-.LFBB14
+ 900               	.LM100:
+ 901               	.LFBB14:
+ 902 0000 CF93      		push r28
+ 903 0002 DF93      		push r29
+GAS LISTING /tmp/cccT2lzT.s 			page 31
+
+
+ 904               	/* prologue: function */
+ 905               	/* frame size = 0 */
+ 906               	/* stack size = 2 */
+ 907               	.L__stack_usage = 2
+ 908 0004 FC01      		movw r30,r24
+ 909               	.L39:
+ 910               	.LBB8:
+ 332:./lib/lcd.c   ****   register char c;
+ 333:./lib/lcd.c   **** 
+ 334:./lib/lcd.c   ****   while ( (c = pgm_read_byte(progmem_s++)) ) 
+ 911               		.stabn	68,0,334,.LM101-.LFBB14
+ 912               	.LM101:
+ 913               	/* #APP */
+ 914               	 ;  334 "./lib/lcd.c" 1
+ 915 0006 8491      		lpm r24, Z
+ 916               		
+ 917               	 ;  0 "" 2
+ 918               	/* #NOAPP */
+ 919 0008 EF01      		movw r28,r30
+ 920 000a 2196      		adiw r28,1
+ 921               	.LBE8:
+ 922 000c 8823      		tst r24
+ 923 000e 01F0      		breq .L41
+ 335:./lib/lcd.c   ****   {
+ 336:./lib/lcd.c   ****     WriteLCD(c);
+ 924               		.stabn	68,0,336,.LM102-.LFBB14
+ 925               	.LM102:
+ 926 0010 00D0      		rcall WriteLCD
+ 927 0012 FE01      		movw r30,r28
+ 928 0014 00C0      		rjmp .L39
+ 929               	.L41:
+ 930               	/* epilogue start */
+ 337:./lib/lcd.c   ****   }
+ 338:./lib/lcd.c   **** }
+ 931               		.stabn	68,0,338,.LM103-.LFBB14
+ 932               	.LM103:
+ 933 0016 DF91      		pop r29
+ 934 0018 CF91      		pop r28
+ 935 001a 0895      		ret
+ 936               		.size	PrintLCD_p, .-PrintLCD_p
+ 937               		.stabs	"__addr16:r(6,4)",64,0,334,30
+ 938               		.stabn	192,0,0,.LBB8-.LFBB14
+ 939               		.stabn	224,0,0,.LBE8-.LFBB14
+ 940               	.Lscope14:
+ 941               		.stabs	"",36,0,0,.Lscope14-.LFBB14
+ 942               		.stabd	78,0,0
+ 943               		.section	.text.SetCharLCD_p,"ax",@progbits
+ 944               		.stabs	"SetCharLCD_p:F(0,47)",36,0,353,SetCharLCD_p
+ 945               		.stabs	"AsciiCode:P(0,11)",64,0,353,24
+ 946               		.stabs	"progmem_s:P(0,52)",64,0,353,28
+ 947               	.global	SetCharLCD_p
+ 948               		.type	SetCharLCD_p, @function
+ 949               	SetCharLCD_p:
+ 950               		.stabd	46,0,0
+ 339:./lib/lcd.c   **** 
+ 340:./lib/lcd.c   **** 
+ 341:./lib/lcd.c   **** /*!
+GAS LISTING /tmp/cccT2lzT.s 			page 32
+
+
+ 342:./lib/lcd.c   ****   \brief
+ 343:./lib/lcd.c   ****   Sonderzeichen an das Display senden
+ 344:./lib/lcd.c   **** 
+ 345:./lib/lcd.c   ****   \param  
+ 346:./lib/lcd.c   ****   progmem_s auszugebender String
+ 347:./lib/lcd.c   **** 
+ 348:./lib/lcd.c   ****   \param  
+ 349:./lib/lcd.c   ****   AsciiCode Ascii Code des zu erzeugenden Sonderzeichens
+ 350:./lib/lcd.c   **** 
+ 351:./lib/lcd.c   **** */
+ 352:./lib/lcd.c   **** 
+ 353:./lib/lcd.c   **** void SetCharLCD_p(unsigned char AsciiCode, const char *progmem_s)
+ 354:./lib/lcd.c   **** {
+ 951               		.stabn	68,0,354,.LM104-.LFBB15
+ 952               	.LM104:
+ 953               	.LFBB15:
+ 954 0000 0F93      		push r16
+ 955 0002 1F93      		push r17
+ 956 0004 CF93      		push r28
+ 957 0006 DF93      		push r29
+ 958               	/* prologue: function */
+ 959               	/* frame size = 0 */
+ 960               	/* stack size = 4 */
+ 961               	.L__stack_usage = 4
+ 962 0008 EB01      		movw r28,r22
+ 355:./lib/lcd.c   **** 	unsigned char i;
+ 356:./lib/lcd.c   **** 	
+ 357:./lib/lcd.c   **** 	CommandLCD( 0x40|(AsciiCode<<3));
+ 963               		.stabn	68,0,357,.LM105-.LFBB15
+ 964               	.LM105:
+ 965 000a 28E0      		ldi r18,lo8(8)
+ 966 000c 829F      		mul r24,r18
+ 967 000e C001      		movw r24,r0
+ 968 0010 1124      		clr __zero_reg__
+ 969 0012 8064      		ori r24,lo8(64)
+ 970 0014 00D0      		rcall CommandLCD
+ 971 0016 8E01      		movw r16,r28
+ 972 0018 085F      		subi r16,-8
+ 973 001a 1F4F      		sbci r17,-1
+ 974               	.L43:
+ 975               	.LBB9:
+ 358:./lib/lcd.c   **** 	for(i=0;i<=7;i++)
+ 359:./lib/lcd.c   **** 	{
+ 360:./lib/lcd.c   **** 		WriteLCD(pgm_read_byte(progmem_s++));
+ 976               		.stabn	68,0,360,.LM106-.LFBB15
+ 977               	.LM106:
+ 978 001c FE01      		movw r30,r28
+ 979               	/* #APP */
+ 980               	 ;  360 "./lib/lcd.c" 1
+ 981 001e 8491      		lpm r24, Z
+ 982               		
+ 983               	 ;  0 "" 2
+ 984               	/* #NOAPP */
+ 985               	.LBE9:
+ 986 0020 00D0      		rcall WriteLCD
+ 987 0022 2196      		adiw r28,1
+ 358:./lib/lcd.c   **** 	for(i=0;i<=7;i++)
+GAS LISTING /tmp/cccT2lzT.s 			page 33
+
+
+ 988               		.stabn	68,0,358,.LM107-.LFBB15
+ 989               	.LM107:
+ 990 0024 C017      		cp r28,r16
+ 991 0026 D107      		cpc r29,r17
+ 992 0028 01F4      		brne .L43
+ 993               	/* epilogue start */
+ 361:./lib/lcd.c   **** 	}
+ 362:./lib/lcd.c   **** }
+ 994               		.stabn	68,0,362,.LM108-.LFBB15
+ 995               	.LM108:
+ 996 002a DF91      		pop r29
+ 997 002c CF91      		pop r28
+ 998 002e 1F91      		pop r17
+ 999 0030 0F91      		pop r16
+ 1000 0032 0895      		ret
+ 1001               		.size	SetCharLCD_p, .-SetCharLCD_p
+ 1002               		.stabs	"__addr16:r(6,4)",64,0,360,28
+ 1003               		.stabn	192,0,0,.LBB9-.LFBB15
+ 1004               		.stabn	224,0,0,.LBE9-.LFBB15
+ 1005               	.Lscope15:
+ 1006               		.stabs	"",36,0,0,.Lscope15-.LFBB15
+ 1007               		.stabd	78,0,0
+ 1008               		.section	.text.PollSwitchLCD,"ax",@progbits
+ 1009               		.stabs	"PollSwitchLCD:F(0,1)",36,0,373,PollSwitchLCD
+ 1010               	.global	PollSwitchLCD
+ 1011               		.type	PollSwitchLCD, @function
+ 1012               	PollSwitchLCD:
+ 1013               		.stabd	46,0,0
+ 363:./lib/lcd.c   **** 
+ 364:./lib/lcd.c   **** /*!
+ 365:./lib/lcd.c   ****   \brief
+ 366:./lib/lcd.c   ****   Abfrage der Taserdes Arexx LCD Moduls
+ 367:./lib/lcd.c   **** 
+ 368:./lib/lcd.c   ****   \return
+ 369:./lib/lcd.c   ****   gibt den Wert aller gedrueckten Tasten zurueck\n
+ 370:./lib/lcd.c   ****   bit kodiert
+ 371:./lib/lcd.c   **** */
+ 372:./lib/lcd.c   **** 
+ 373:./lib/lcd.c   **** int PollSwitchLCD (void)
+ 374:./lib/lcd.c   **** {
+ 1014               		.stabn	68,0,374,.LM109-.LFBB16
+ 1015               	.LM109:
+ 1016               	.LFBB16:
+ 1017               	/* prologue: function */
+ 1018               	/* frame size = 0 */
+ 1019               	/* stack size = 0 */
+ 1020               	.L__stack_usage = 0
+ 375:./lib/lcd.c   ****   int key = 0;
+ 376:./lib/lcd.c   **** 
+ 377:./lib/lcd.c   ****   //taster pins auf input schalten
+ 378:./lib/lcd.c   ****   //  OC2 PIN deaktivieren, aber 36kHz Timer weiterlaufen lassen (z.B. für Sleep(void) )
+ 379:./lib/lcd.c   **** #if defined(__AVR_ATmega168__)
+ 380:./lib/lcd.c   ****   TCCR2A = _BV(WGM21);
+ 381:./lib/lcd.c   ****   TCCR2B = _BV(CS20);
+ 382:./lib/lcd.c   **** #else
+ 383:./lib/lcd.c   ****   TCCR2 = (1 << WGM21) | (1 << CS20); 
+ 1021               		.stabn	68,0,383,.LM110-.LFBB16
+GAS LISTING /tmp/cccT2lzT.s 			page 34
+
+
+ 1022               	.LM110:
+ 1023 0000 89E0      		ldi r24,lo8(9)
+ 1024 0002 85BD      		out 0x25,r24
+ 384:./lib/lcd.c   **** #endif
+ 385:./lib/lcd.c   ****   DDRD &= ~((1<<PD2)|(1<<PD6));      // roten und gelben Taster als Eingang definieren
+ 1025               		.stabn	68,0,385,.LM111-.LFBB16
+ 1026               	.LM111:
+ 1027 0004 81B3      		in r24,0x11
+ 1028 0006 8B7B      		andi r24,lo8(-69)
+ 1029 0008 81BB      		out 0x11,r24
+ 386:./lib/lcd.c   ****   DDRB &= ~(1<<PB3);                 // blauen Taster als Eingang definieren
+ 1030               		.stabn	68,0,386,.LM112-.LFBB16
+ 1031               	.LM112:
+ 1032 000a BB98      		cbi 0x17,3
+ 387:./lib/lcd.c   **** 
+ 388:./lib/lcd.c   ****   //taster abfragen
+ 389:./lib/lcd.c   **** 
+ 390:./lib/lcd.c   ****   key  |= (PIND&LCD_KEY_YELLOW);
+ 1033               		.stabn	68,0,390,.LM113-.LFBB16
+ 1034               	.LM113:
+ 1035 000c 20B3      		in r18,0x10
+ 391:./lib/lcd.c   ****   key  |= (PIND&LCD_KEY_RED);
+ 1036               		.stabn	68,0,391,.LM114-.LFBB16
+ 1037               	.LM114:
+ 1038 000e 80B3      		in r24,0x10
+ 392:./lib/lcd.c   ****   key  |= (PINB&LCD_KEY_BLUE);
+ 1039               		.stabn	68,0,392,.LM115-.LFBB16
+ 1040               	.LM115:
+ 1041 0010 96B3      		in r25,0x16
+ 393:./lib/lcd.c   **** 
+ 394:./lib/lcd.c   ****   //taster pins auf output schalten
+ 395:./lib/lcd.c   **** #if defined(__AVR_ATmega168__)
+ 396:./lib/lcd.c   ****   TCCR2A = _BV(WGM20) | _BV(WGM21) | _BV(COM2A0) | _BV(COM2A1);
+ 397:./lib/lcd.c   ****   TCCR2B = _BV(CS20);
+ 398:./lib/lcd.c   **** #else
+ 399:./lib/lcd.c   ****   TCCR2 = (1 << WGM20) | (1 << WGM21) | (1 << COM20) | (1 << COM21) | (1 << CS20);
+ 1042               		.stabn	68,0,399,.LM116-.LFBB16
+ 1043               	.LM116:
+ 1044 0012 39E7      		ldi r19,lo8(121)
+ 1045 0014 35BD      		out 0x25,r19
+ 400:./lib/lcd.c   **** #endif
+ 401:./lib/lcd.c   **** 
+ 402:./lib/lcd.c   ****   DDRD |= ((1<<PD2)|(1<<PD6));     // roten und gelben Taster als ausgang definieren
+ 1046               		.stabn	68,0,402,.LM117-.LFBB16
+ 1047               	.LM117:
+ 1048 0016 31B3      		in r19,0x11
+ 1049 0018 3464      		ori r19,lo8(68)
+ 1050 001a 31BB      		out 0x11,r19
+ 403:./lib/lcd.c   ****   DDRB |= (1<<PB3);                // blauen Taster als ausgang definieren
+ 1051               		.stabn	68,0,403,.LM118-.LFBB16
+ 1052               	.LM118:
+ 1053 001c BB9A      		sbi 0x17,3
+ 391:./lib/lcd.c   ****   key  |= (PINB&LCD_KEY_BLUE);
+ 1054               		.stabn	68,0,391,.LM119-.LFBB16
+ 1055               	.LM119:
+ 1056 001e 382F      		mov r19,r24
+ 1057 0020 3470      		andi r19,lo8(4)
+GAS LISTING /tmp/cccT2lzT.s 			page 35
+
+
+ 390:./lib/lcd.c   ****   key  |= (PIND&LCD_KEY_RED);
+ 1058               		.stabn	68,0,390,.LM120-.LFBB16
+ 1059               	.LM120:
+ 1060 0022 822F      		mov r24,r18
+ 1061 0024 8074      		andi r24,lo8(64)
+ 391:./lib/lcd.c   ****   key  |= (PINB&LCD_KEY_BLUE);
+ 1062               		.stabn	68,0,391,.LM121-.LFBB16
+ 1063               	.LM121:
+ 1064 0026 832B      		or r24,r19
+ 392:./lib/lcd.c   **** 
+ 1065               		.stabn	68,0,392,.LM122-.LFBB16
+ 1066               	.LM122:
+ 1067 0028 9870      		andi r25,lo8(8)
+ 1068 002a 892B      		or r24,r25
+ 404:./lib/lcd.c   **** 
+ 405:./lib/lcd.c   **** 
+ 406:./lib/lcd.c   ****   //tasterwert zurückgeben
+ 407:./lib/lcd.c   **** 
+ 408:./lib/lcd.c   ****   return key;
+ 409:./lib/lcd.c   **** }
+ 1069               		.stabn	68,0,409,.LM123-.LFBB16
+ 1070               	.LM123:
+ 1071 002c 90E0      		ldi r25,0
+ 1072 002e 0895      		ret
+ 1073               		.size	PollSwitchLCD, .-PollSwitchLCD
+ 1074               	.Lscope16:
+ 1075               		.stabs	"",36,0,0,.Lscope16-.LFBB16
+ 1076               		.stabd	78,0,0
+ 1077               		.comm	cursorLCD,1,1
+ 1078               		.comm	lineLCD,1,1
+ 1079               		.comm	portLCD,1,1
+ 1080               		.stabs	"portLCD:G(0,11)",32,0,148,0
+ 1081               		.stabs	"lineLCD:G(0,11)",32,0,149,0
+ 1082               		.stabs	"cursorLCD:G(0,11)",32,0,150,0
+ 1083               		.text
+ 1084               		.stabs	"",100,0,0,.Letext0
+ 1085               	.Letext0:
+ 1086               		.ident	"GCC: (GNU) 4.9.2"
+ 1087               	.global __do_clear_bss
+GAS LISTING /tmp/cccT2lzT.s 			page 36
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 lcd.c
+     /tmp/cccT2lzT.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cccT2lzT.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cccT2lzT.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cccT2lzT.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cccT2lzT.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cccT2lzT.s:124    .text.SetIOLCD:0000000000000000 SetIOLCD
+                            *COM*:0000000000000001 portLCD
+     /tmp/cccT2lzT.s:169    .text.BacklightLCD:0000000000000000 BacklightLCD
+     /tmp/cccT2lzT.s:191    .text.SetDataLCD:0000000000000000 SetDataLCD
+     /tmp/cccT2lzT.s:343    .text.GetIOLCD:0000000000000000 GetIOLCD
+     /tmp/cccT2lzT.s:389    .text.CommandLCD:0000000000000000 CommandLCD
+                            *COM*:0000000000000001 cursorLCD
+                            *COM*:0000000000000001 lineLCD
+     /tmp/cccT2lzT.s:432    .text.InitLCD:0000000000000000 InitLCD
+     /tmp/cccT2lzT.s:538    .text.SetCursorLCD:0000000000000000 SetCursorLCD
+     /tmp/cccT2lzT.s:579    .text.ClearLCD:0000000000000000 ClearLCD
+     /tmp/cccT2lzT.s:605    .text.WriteLCD:0000000000000000 WriteLCD
+     /tmp/cccT2lzT.s:645    .text.PrintLCD:0000000000000000 PrintLCD
+     /tmp/cccT2lzT.s:726    .text.PrintSetLCD:0000000000000000 PrintSetLCD
+     /tmp/cccT2lzT.s:762    .text.PrintIntLCD:0000000000000000 PrintIntLCD
+     /tmp/cccT2lzT.s:825    .text.PrintAlignLCD:0000000000000000 PrintAlignLCD
+     /tmp/cccT2lzT.s:897    .text.PrintLCD_p:0000000000000000 PrintLCD_p
+     /tmp/cccT2lzT.s:949    .text.SetCharLCD_p:0000000000000000 SetCharLCD_p
+     /tmp/cccT2lzT.s:1012   .text.PollSwitchLCD:0000000000000000 PollSwitchLCD
+
+UNDEFINED SYMBOLS
+StartI2C
+WriteI2C
+StopI2C
+Msleep
+ReadI2C
+__itoa_ncheck
+__do_clear_bss

@@ -1,0 +1,387 @@
+GAS LISTING /tmp/ccQE4uc8.s 			page 1
+
+
+   1               		.file	"sound.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/ghost/Project/LineFollower/",100,0,2,.Ltext0
+   8               		.stabs	"./lib/sound.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccQE4uc8.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"./lib/inc/asuro.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/pgmspace.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 105               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 109               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 110               		.stabs	"wchar_t:t(11,1)=(0,1)",128,0,324,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"div_t:t(10,1)=(10,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 113               		.stabs	"ldiv_t:t(10,3)=(10,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 114               		.stabs	"__compar_fn_t:t(10,5)=(10,6)=*(10,7)=f(0,1)",128,0,80,0
+GAS LISTING /tmp/ccQE4uc8.s 			page 3
+
+
+ 115               		.stabn	162,0,0,0
+ 116               		.stabs	"voidFuncPtr:t(1,1)=(1,2)=*(1,3)=f(0,47)",128,0,343,0
+ 117               		.stabn	162,0,0,0
+ 118               		.section	.text.Sound,"ax",@progbits
+ 119               		.stabs	"Sound:F(0,47)",36,0,65,Sound
+ 120               		.stabs	"freq:P(6,4)",64,0,66,12
+ 121               		.stabs	"duration_msec:P(6,4)",64,0,67,18
+ 122               		.stabs	"amplitude:P(6,2)",64,0,68,15
+ 123               	.global	Sound
+ 124               		.type	Sound, @function
+ 125               	Sound:
+ 126               		.stabd	46,0,0
+   1:./lib/sound.c **** /****************************************************************************/
+   2:./lib/sound.c **** /*!
+   3:./lib/sound.c ****   \file     sound.c
+   4:./lib/sound.c **** 
+   5:./lib/sound.c ****   \brief    Soundausgabe Funktionen
+   6:./lib/sound.c **** 
+   7:./lib/sound.c ****   Mit den Motoren des ASUROs lassen sich auch Töne erzeugen.\n
+   8:./lib/sound.c ****   Das Prinzip dahinter ist folgendes:\n
+   9:./lib/sound.c ****   Die Frequenz des Tons wird durch umschalten der Motor Drehrichtung bestimmt.\n
+  10:./lib/sound.c ****   Die Lautstärke wird über die Geschwindigkeit der Motoren bestimmt.\n
+  11:./lib/sound.c ****   Theoretisch liessen sich damit auch Stereo Signale erzeugen, da es ja zwei\n
+  12:./lib/sound.c ****   Motoren gibt, die sich auch getrennt ansteuern lassen. Dazu müsste die\n
+  13:./lib/sound.c ****   Sound Funktion allerdings umgeschrieben werden.
+  14:./lib/sound.c **** 
+  15:./lib/sound.c ****   \see      Define fuer die Steuerung der Motoren in asuro.h\n
+  16:./lib/sound.c ****             FWD, RWD
+  17:./lib/sound.c **** 
+  18:./lib/sound.c ****   \version  sto2 - 01.09.2006 - stochri\n
+  19:./lib/sound.c ****             first version
+  20:./lib/sound.c ****   \version  V001 - 09.02.2007 - m.a.r.v.i.n\n
+  21:./lib/sound.c ****             +++ Alle Funktionen\n
+  22:./lib/sound.c ****             Kommentierte Version (KEINE Funktionsaenderung)
+  23:./lib/sound.c ****   \version  V002 - 18.02.2007 - Sternthaler\n
+  24:./lib/sound.c ****             +++ Alle Funktionen\n
+  25:./lib/sound.c ****             Einheitliche Formatierung zu den anderen Sourcen.
+  26:./lib/sound.c ****   \version  V003 - 26.06.2007 - stochri\n
+  27:./lib/sound.c ****             Bugfix Fehler in der Soundlaenge (max. 250ms)  
+  28:./lib/sound.c ****             
+  29:./lib/sound.c **** *****************************************************************************/
+  30:./lib/sound.c **** /*****************************************************************************
+  31:./lib/sound.c **** *                                                                            *
+  32:./lib/sound.c **** *   This program is free software; you can redistribute it and/or modify     *
+  33:./lib/sound.c **** *   it under the terms of the GNU General Public License as published by     *
+  34:./lib/sound.c **** *   the Free Software Foundation; either version 2 of the License, or        *
+  35:./lib/sound.c **** *   any later version.                                                       *
+  36:./lib/sound.c **** *                                                                            *
+  37:./lib/sound.c **** *****************************************************************************/
+  38:./lib/sound.c **** #include "asuro.h"
+  39:./lib/sound.c **** 
+  40:./lib/sound.c **** 
+  41:./lib/sound.c **** 
+  42:./lib/sound.c **** /****************************************************************************/
+  43:./lib/sound.c **** /*!
+  44:./lib/sound.c ****   \brief
+  45:./lib/sound.c ****   Soundausgabe ueber die Motoren.
+GAS LISTING /tmp/ccQE4uc8.s 			page 4
+
+
+  46:./lib/sound.c **** 
+  47:./lib/sound.c ****   \param[in]
+  48:./lib/sound.c ****   freq          Frequenz in Hz
+  49:./lib/sound.c ****   \param[in]
+  50:./lib/sound.c ****   duration_msec Laenge in Millisekunden
+  51:./lib/sound.c ****   \param[in]
+  52:./lib/sound.c ****   amplitude     Amplitude
+  53:./lib/sound.c **** 
+  54:./lib/sound.c ****   \return
+  55:./lib/sound.c ****   nichts
+  56:./lib/sound.c **** 
+  57:./lib/sound.c ****   \par  Beispiel:
+  58:./lib/sound.c ****   (Nur zur Demonstration der Parameter/Returnwerte)
+  59:./lib/sound.c ****   \code
+  60:./lib/sound.c ****   // Laesst den Asuro einen Ton von 1kHz für eine 1/2 Sekunde
+  61:./lib/sound.c ****   // mit max. Amplitude (255) spielen.
+  62:./lib/sound.c ****   Sound (1000, 500, 255);
+  63:./lib/sound.c ****   \endcode
+  64:./lib/sound.c **** *****************************************************************************/
+  65:./lib/sound.c **** void Sound (
+  66:./lib/sound.c ****   uint16_t freq,
+  67:./lib/sound.c ****   uint16_t duration_msec,
+  68:./lib/sound.c ****   uint8_t  amplitude)
+  69:./lib/sound.c **** {
+ 127               		.stabn	68,0,69,.LM0-.LFBB1
+ 128               	.LM0:
+ 129               	.LFBB1:
+ 130 0000 8F92      		push r8
+ 131 0002 9F92      		push r9
+ 132 0004 AF92      		push r10
+ 133 0006 BF92      		push r11
+ 134 0008 CF92      		push r12
+ 135 000a DF92      		push r13
+ 136 000c EF92      		push r14
+ 137 000e FF92      		push r15
+ 138 0010 CF93      		push r28
+ 139               	/* prologue: function */
+ 140               	/* frame size = 0 */
+ 141               	/* stack size = 9 */
+ 142               	.L__stack_usage = 9
+ 143 0012 6C01      		movw r12,r24
+ 144 0014 9B01      		movw r18,r22
+ 145 0016 F42E      		mov r15,r20
+  70:./lib/sound.c ****   uint16_t wait_tics;
+  71:./lib/sound.c ****   uint32_t n,k,period_usec,dauer_usec;
+  72:./lib/sound.c **** 
+  73:./lib/sound.c ****   period_usec = 1000000L / freq;
+  74:./lib/sound.c ****   dauer_usec = 1000 * (uint32_t) duration_msec;
+ 146               		.stabn	68,0,74,.LM1-.LFBB1
+ 147               	.LM1:
+ 148 0018 A8EE      		ldi r26,lo8(-24)
+ 149 001a B3E0      		ldi r27,lo8(3)
+ 150 001c 00D0      		rcall __umulhisi3
+ 151 001e 4B01      		movw r8,r22
+ 152 0020 5C01      		movw r10,r24
+  73:./lib/sound.c ****   dauer_usec = 1000 * (uint32_t) duration_msec;
+ 153               		.stabn	68,0,73,.LM2-.LFBB1
+GAS LISTING /tmp/ccQE4uc8.s 			page 5
+
+
+ 154               	.LM2:
+ 155 0022 9601      		movw r18,r12
+ 156 0024 40E0      		ldi r20,0
+ 157 0026 50E0      		ldi r21,0
+ 158 0028 60E4      		ldi r22,lo8(64)
+ 159 002a 72E4      		ldi r23,lo8(66)
+ 160 002c 8FE0      		ldi r24,lo8(15)
+ 161 002e 90E0      		ldi r25,0
+ 162 0030 00D0      		rcall __divmodsi4
+  75:./lib/sound.c ****   k = dauer_usec / period_usec;
+ 163               		.stabn	68,0,75,.LM3-.LFBB1
+ 164               	.LM3:
+ 165 0032 C501      		movw r24,r10
+ 166 0034 B401      		movw r22,r8
+ 167 0036 00D0      		rcall __udivmodsi4
+ 168 0038 4901      		movw r8,r18
+ 169 003a 5A01      		movw r10,r20
+  76:./lib/sound.c **** 
+  77:./lib/sound.c ****   //IR Interuptfreq=36KHz
+  78:./lib/sound.c ****   //Wavefreq=18KHz
+  79:./lib/sound.c **** 
+  80:./lib/sound.c ****   wait_tics = 18000 / freq;
+ 170               		.stabn	68,0,80,.LM4-.LFBB1
+ 171               	.LM4:
+ 172 003c 80E5      		ldi r24,lo8(80)
+ 173 003e 96E4      		ldi r25,lo8(70)
+ 174 0040 B601      		movw r22,r12
+ 175 0042 00D0      		rcall __udivmodhi4
+ 176 0044 C62F      		mov r28,r22
+  81:./lib/sound.c **** 
+  82:./lib/sound.c ****   MotorSpeed (amplitude, amplitude);
+ 177               		.stabn	68,0,82,.LM5-.LFBB1
+ 178               	.LM5:
+ 179 0046 6F2D      		mov r22,r15
+ 180 0048 8F2D      		mov r24,r15
+ 181 004a 00D0      		rcall MotorSpeed
+  83:./lib/sound.c **** 
+  84:./lib/sound.c ****   for (n = 0; n < k; n++)
+ 182               		.stabn	68,0,84,.LM6-.LFBB1
+ 183               	.LM6:
+ 184 004c C12C      		mov r12,__zero_reg__
+ 185 004e D12C      		mov r13,__zero_reg__
+ 186 0050 7601      		movw r14,r12
+ 187               	.L2:
+ 188               		.stabn	68,0,84,.LM7-.LFBB1
+ 189               	.LM7:
+ 190 0052 C814      		cp r12,r8
+ 191 0054 D904      		cpc r13,r9
+ 192 0056 EA04      		cpc r14,r10
+ 193 0058 FB04      		cpc r15,r11
+ 194 005a 01F0      		breq .L5
+  85:./lib/sound.c ****   {
+  86:./lib/sound.c ****     MotorDir (FWD, FWD);
+ 195               		.stabn	68,0,86,.LM8-.LFBB1
+ 196               	.LM8:
+ 197 005c 60E2      		ldi r22,lo8(32)
+ 198 005e 80E2      		ldi r24,lo8(32)
+GAS LISTING /tmp/ccQE4uc8.s 			page 6
+
+
+ 199 0060 00D0      		rcall MotorDir
+  87:./lib/sound.c ****     Sleep (wait_tics);
+ 200               		.stabn	68,0,87,.LM9-.LFBB1
+ 201               	.LM9:
+ 202 0062 8C2F      		mov r24,r28
+ 203 0064 00D0      		rcall Sleep
+  88:./lib/sound.c ****     MotorDir (RWD, RWD);
+ 204               		.stabn	68,0,88,.LM10-.LFBB1
+ 205               	.LM10:
+ 206 0066 60E1      		ldi r22,lo8(16)
+ 207 0068 80E1      		ldi r24,lo8(16)
+ 208 006a 00D0      		rcall MotorDir
+  89:./lib/sound.c ****     Sleep (wait_tics);
+ 209               		.stabn	68,0,89,.LM11-.LFBB1
+ 210               	.LM11:
+ 211 006c 8C2F      		mov r24,r28
+ 212 006e 00D0      		rcall Sleep
+  84:./lib/sound.c ****   {
+ 213               		.stabn	68,0,84,.LM12-.LFBB1
+ 214               	.LM12:
+ 215 0070 8FEF      		ldi r24,-1
+ 216 0072 C81A      		sub r12,r24
+ 217 0074 D80A      		sbc r13,r24
+ 218 0076 E80A      		sbc r14,r24
+ 219 0078 F80A      		sbc r15,r24
+ 220 007a 00C0      		rjmp .L2
+ 221               	.L5:
+  90:./lib/sound.c ****   }
+  91:./lib/sound.c ****   MotorSpeed (0, 0);
+ 222               		.stabn	68,0,91,.LM13-.LFBB1
+ 223               	.LM13:
+ 224 007c 60E0      		ldi r22,0
+ 225 007e 80E0      		ldi r24,0
+ 226               	/* epilogue start */
+  92:./lib/sound.c **** }
+ 227               		.stabn	68,0,92,.LM14-.LFBB1
+ 228               	.LM14:
+ 229 0080 CF91      		pop r28
+ 230 0082 FF90      		pop r15
+ 231 0084 EF90      		pop r14
+ 232 0086 DF90      		pop r13
+ 233 0088 CF90      		pop r12
+ 234 008a BF90      		pop r11
+ 235 008c AF90      		pop r10
+ 236 008e 9F90      		pop r9
+ 237 0090 8F90      		pop r8
+  91:./lib/sound.c **** }
+ 238               		.stabn	68,0,91,.LM15-.LFBB1
+ 239               	.LM15:
+ 240 0092 00C0      		rjmp MotorSpeed
+ 241               		.size	Sound, .-Sound
+ 242               		.stabs	"n:r(6,6)",64,0,71,12
+ 243               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 244               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 245               	.Lscope1:
+ 246               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 247               		.stabd	78,0,0
+GAS LISTING /tmp/ccQE4uc8.s 			page 7
+
+
+ 248               		.text
+ 249               		.stabs	"",100,0,0,.Letext0
+ 250               	.Letext0:
+ 251               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccQE4uc8.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 sound.c
+     /tmp/ccQE4uc8.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccQE4uc8.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccQE4uc8.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccQE4uc8.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccQE4uc8.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccQE4uc8.s:125    .text.Sound:0000000000000000 Sound
+
+UNDEFINED SYMBOLS
+__umulhisi3
+__divmodsi4
+__udivmodsi4
+__udivmodhi4
+MotorSpeed
+MotorDir
+Sleep
