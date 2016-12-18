@@ -16,6 +16,7 @@ OBJDUMP = avr-objdump
 AVRDUDE = avrdude
 
 SRC = $(TARGET).c
+SRC += lib/pid.c
 SRC += lib/asuro.c lib/adc.c lib/adc_low.c lib/encoder.c lib/encoder_low.c lib/globals.c \
        lib/i2c.c lib/lcd.c lib/leds.c lib/motor.c lib/motor_low.c lib/my_motor_low.c \
        lib/print.c lib/printf.c lib/rc5.c lib/sound.c lib/switches.c lib/time.c lib/uart.c \
