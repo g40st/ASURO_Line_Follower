@@ -7,11 +7,11 @@
 #include "pid.h"
 
 #define SHOULD 0
-#define KP 10.2
-#define KI 0.055
-#define KD 23.0
+#define KP 4.5
+#define KI 0.00
+#define KD 4.2
 
-#define BASE_SPEED 145
+#define BASE_SPEED 170
 #define MIN_VALUE -BASE_SPEED
 #define MAX_VALUE BASE_SPEED
 
